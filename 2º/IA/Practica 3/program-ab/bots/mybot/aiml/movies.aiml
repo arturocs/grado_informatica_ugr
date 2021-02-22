@@ -1,0 +1,20 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<aiml version = "2.0" >
+   <category>
+      <pattern>  ^ agregar ^ contacto</pattern>
+      <template>dime el apellido<set name = "topic">contacto</set></template>  
+   </category>
+   
+   <topic name = "contacto">
+      <category>
+         <pattern> * </pattern>
+         <template>Watching good movie refreshes our minds.</template>
+      </category>
+      
+      <category>
+         <pattern> I LIKE WATCHING COMEDY! </pattern>
+         <template>I like comedy movies too.</template>
+      </category>
+      
+   </topic>
+</aiml> 

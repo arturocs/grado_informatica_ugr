@@ -1,0 +1,50 @@
+cambiamos /var de particion porque correos, logs,bases de datos van ahi,
+ y se suele llenar rapido
+
+lsblk para ver los discos
+
+cuando hay lvm, el nombre de la "particion - lvm" 
+se compone de "grupo de volumen"-"nombre del volumen"
+
+para ver cuanto espaio queda libre en el disco duro se usa df -h
+
+lvmdiskscan -> ver volumenes
+
+ver informacion de los volumenes fisicos lvm: pvdisplay o pvs
+"" volumenes logicos:lvdisplay lvs
+"" grupos de volumenes:vgdisplay vgs
+los display admiten un volumen (/dev/sdb/) como argumento 
+
+si se usa mapper, el volumen se monta en /dev/mapper/cl/root, y si no en /dev/cl/root
+
+pvcreate /dev/sdb crea un volumen fisico lvm
+
+vgextend cl /dev/sdb -> añadir volumen /dev/sdb al grupo cl 
+
+lvcreate -L 4G -n newvar cl -> crea un volumen logico 
+	  tamaño nombre grupo
+
+/dev/mapper/cl-newvar -> ruta del nuevo volumen
+/dev/cl/newvar
+
+crear sistema de archivos sobre el nuevo volumen logico
+mkfs -t ext4 /dev/cl/newvar -> usamos ext4 porque xfs no se puede reducir
+
+copiar var al nuevo disco:
+mkdir /mnt/newvar
+mount /dev/mapper/cl-newvar /mnt/newvar
+systemctl isolate runlevel1.target o systemctl isolate rescue.taret -> cambiar runlevel para que no interfiera con la copia
+cp -a /var/* /mnt/newvar -> copia con el contexto de ejecucion y los enlaces simbolicos
+cp --preserve=context -r /var/* /mnt/newvar
+cp --preserve=all -r /var/* /mnt/newvar
+ls -Z muertra el contexto
+
+montar el nuevo /var
+echo "/dev/mapper/cl-newvar /var ext4 defaults  0 0" >> /etc/fstab
+
+borrar el viejo var
+umount /mnt/newvar
+comentar ultima linea de fstab
+mount -a
+mover el viejo var a carpeta copia de seguridad dentro de / (mv -a)
+

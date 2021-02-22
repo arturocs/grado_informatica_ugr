@@ -1,0 +1,95 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 11.08.0 ] */
+
+/* [wxMaxima: title   start ]
+Propuesta de soluciones
+a los ejercicios de la práctica 3.
+   [wxMaxima: title   end   ] */
+
+/* [wxMaxima: comment start ]
+EJERCICIO 1. 
+
+Implementar una función "boolel(n,p)" que devuelva el menor entero positivo m >= n tal que D(m) 
+es un álgebra de Boole de p átomos.
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: input   start ] */
+boole(n):=block([fact,i],
+fact:ifactors(n),
+if is(apply("*",makelist(fact[i][2],i,1,length(fact)))=1) then true else false
+);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+patomos(n,p):=block([fact,i],
+fact:ifactors(n),
+if is(length(fact)=p) and is(apply("*",makelist(fact[i][2],i,1,length(fact)))=1) then true else false
+);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+patomos(30,3);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+factor(30);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+boolel(n,p):=block([],
+for i:n while not(patomos(n,p)) do n:n+1,
+return(n)
+);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+boolel(1000,5);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+factor(2310);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+boolel(2311,5);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+factor(2730);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+boolel(45,3);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+factor(66);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: comment start ]
+EJERCICIO 2.  
+
+Implementar una función "boolep(m,p)" tal que dados dos números naturales m y p devuelva una lista 
+[x,C] en la que x es el número de álgebras de Boole D(n) (con n <= m) con 2^p elementos y C el conjunto 
+de tales n. 
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: input   start ] */
+boolep(m,p):=block([L],
+L:{},
+for i:1 thru m do
+if boole(i) and patomos(i,p) then L:union({i},L),
+return([length(L),L])
+);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+boolep(90,3);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+factor([30,42,66,70,78]);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

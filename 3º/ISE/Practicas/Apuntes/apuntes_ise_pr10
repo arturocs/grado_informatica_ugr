@@ -1,0 +1,15 @@
+Benchmarking
+tipo -> lectura / escritura
+sistema de archivos
+aleatoria o secuencial
+if aleatoria -> distribucion de probabilidad
+tamaño de bloque
+numero de bloques -> ¿aleatoriao? -> if si -> en base a que probabilidad
+
+
+apache benchmark
+
+ps -Af | grep apa2 | wc -l
+ps -Af | grep ab | wc -l
+
+jmeter

@@ -1,0 +1,1472 @@
+==12635== Memcheck, a memory error detector
+==12635== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==12635== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==12635== Command: ./calc_client localhost 1 x 1
+==12635== 
+==12635== Syscall param socketcall.sendto(msg) points to uninitialised byte(s)
+==12635==    at 0x514814A: sendto (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517564F: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x1089A9: suma_1 (calc_clnt.c:21)
+==12635==    by 0x108C88: calcprog_1 (calc_client.c:35)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x5411d54 is 8,996 bytes inside a block of size 17,760 alloc'd
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Syscall param socketcall.sendto(msg) points to uninitialised byte(s)
+==12635==    at 0x514814A: sendto (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517564F: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108A65: resta_1 (calc_clnt.c:38)
+==12635==    by 0x108CCE: calcprog_1 (calc_client.c:39)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x5411d54 is 8,996 bytes inside a block of size 17,760 alloc'd
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Syscall param socketcall.sendto(msg) points to uninitialised byte(s)
+==12635==    at 0x514814A: sendto (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517564F: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108D14: calcprog_1 (calc_client.c:43)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x5411d54 is 8,996 bytes inside a block of size 17,760 alloc'd
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Syscall param socketcall.sendto(msg) points to uninitialised byte(s)
+==12635==    at 0x514814A: sendto (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517564F: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108BDD: div_1 (calc_clnt.c:72)
+==12635==    by 0x108D5A: calcprog_1 (calc_client.c:47)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x5411d54 is 8,996 bytes inside a block of size 17,760 alloc'd
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid read of size 8
+==12635==    at 0x108AE5: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540f9d8 is 8 bytes inside a block of size 24 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D6A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid read of size 8
+==12635==    at 0x51754A7: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540f9e0 is 16 bytes inside a block of size 24 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D6A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid read of size 8
+==12635==    at 0x51754F9: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540fa68 is 56 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid read of size 8
+==12635==    at 0x5175565: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540fa50 is 32 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid read of size 8
+==12635==    at 0x517556C: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540fa58 is 40 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid read of size 8
+==12635==    at 0x51755BE: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540fa90 is 96 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid read of size 4
+==12635==    at 0x51755C2: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540fab8 is 136 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid write of size 4
+==12635==    at 0x51755CC: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540fa88 is 88 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid read of size 4
+==12635==    at 0x517A5C0: xdrmem_setpos (in /usr/lib/libc-2.26.so)
+==12635==    by 0x51755D6: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540fab0 is 128 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid read of size 8
+==12635==    at 0x517A5C3: xdrmem_setpos (in /usr/lib/libc-2.26.so)
+==12635==    by 0x51755D6: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540faa8 is 120 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid read of size 8
+==12635==    at 0x517A5C9: xdrmem_setpos (in /usr/lib/libc-2.26.so)
+==12635==    by 0x51755D6: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540faa0 is 112 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid write of size 8
+==12635==    at 0x517A5EF: xdrmem_setpos (in /usr/lib/libc-2.26.so)
+==12635==    by 0x51755D6: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540faa0 is 112 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid write of size 4
+==12635==    at 0x517A5F3: xdrmem_setpos (in /usr/lib/libc-2.26.so)
+==12635==    by 0x51755D6: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540fab0 is 128 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid read of size 8
+==12635==    at 0x51755D7: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540fac0 is 144 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid read of size 4
+==12635==    at 0x51755E6: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x5411d2c is 8,956 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid read of size 8
+==12635==    at 0x51755E9: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540fa90 is 96 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid read of size 4
+==12635==    at 0x517A690: xdrmem_putlong (in /usr/lib/libc-2.26.so)
+==12635==    by 0x51755EF: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540fab0 is 128 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid read of size 8
+==12635==    at 0x517A69D: xdrmem_putlong (in /usr/lib/libc-2.26.so)
+==12635==    by 0x51755EF: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540faa0 is 112 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid write of size 4
+==12635==    at 0x517A6A1: xdrmem_putlong (in /usr/lib/libc-2.26.so)
+==12635==    by 0x51755EF: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540fab0 is 128 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid write of size 4
+==12635==    at 0x517A6AD: xdrmem_putlong (in /usr/lib/libc-2.26.so)
+==12635==    by 0x51755EF: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x5411d40 is 8,976 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid write of size 8
+==12635==    at 0x517A6B0: xdrmem_putlong (in /usr/lib/libc-2.26.so)
+==12635==    by 0x51755EF: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540faa0 is 112 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid read of size 8
+==12635==    at 0x51755F8: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540f9d0 is 0 bytes inside a block of size 24 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D6A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid read of size 8
+==12635==    at 0x516BA98: authnone_marshal (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5175605: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540fa90 is 96 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid read of size 4
+==12635==    at 0x517A6F0: xdrmem_putbytes (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5175605: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540fab0 is 128 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid write of size 4
+==12635==    at 0x517A710: xdrmem_putbytes (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5175605: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540fab0 is 128 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid read of size 8
+==12635==    at 0x517A713: xdrmem_putbytes (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5175605: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540faa0 is 112 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid write of size 2
+==12635==    at 0x4C314A3: memcpy@GLIBC_2.2.5 (vg_replace_strmem.c:1021)
+==12635==    by 0x517A71C: xdrmem_putbytes (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5175605: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x5411d44 is 8,980 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid read of size 8
+==12635==    at 0x517A71D: xdrmem_putbytes (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5175605: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540faa0 is 112 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid read of size 4
+==12635==    at 0x516E74E: xdr_double (in /usr/lib/libc-2.26.so)
+==12635==    by 0x109094: xdr_mul_1_argument (calc_xdr.c:31)
+==12635==    by 0x5175618: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540fa88 is 88 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid read of size 8
+==12635==    at 0x516E7C6: xdr_double (in /usr/lib/libc-2.26.so)
+==12635==    by 0x109094: xdr_mul_1_argument (calc_xdr.c:31)
+==12635==    by 0x5175618: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540fa90 is 96 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid read of size 4
+==12635==    at 0x517A690: xdrmem_putlong (in /usr/lib/libc-2.26.so)
+==12635==    by 0x516E7CC: xdr_double (in /usr/lib/libc-2.26.so)
+==12635==    by 0x109094: xdr_mul_1_argument (calc_xdr.c:31)
+==12635==    by 0x5175618: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540fab0 is 128 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid read of size 8
+==12635==    at 0x517A69D: xdrmem_putlong (in /usr/lib/libc-2.26.so)
+==12635==    by 0x516E7CC: xdr_double (in /usr/lib/libc-2.26.so)
+==12635==    by 0x109094: xdr_mul_1_argument (calc_xdr.c:31)
+==12635==    by 0x5175618: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540faa0 is 112 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid write of size 4
+==12635==    at 0x517A6A1: xdrmem_putlong (in /usr/lib/libc-2.26.so)
+==12635==    by 0x516E7CC: xdr_double (in /usr/lib/libc-2.26.so)
+==12635==    by 0x109094: xdr_mul_1_argument (calc_xdr.c:31)
+==12635==    by 0x5175618: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540fab0 is 128 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid write of size 4
+==12635==    at 0x517A6AD: xdrmem_putlong (in /usr/lib/libc-2.26.so)
+==12635==    by 0x516E7CC: xdr_double (in /usr/lib/libc-2.26.so)
+==12635==    by 0x109094: xdr_mul_1_argument (calc_xdr.c:31)
+==12635==    by 0x5175618: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x5411d54 is 8,996 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid write of size 8
+==12635==    at 0x517A6B0: xdrmem_putlong (in /usr/lib/libc-2.26.so)
+==12635==    by 0x516E7CC: xdr_double (in /usr/lib/libc-2.26.so)
+==12635==    by 0x109094: xdr_mul_1_argument (calc_xdr.c:31)
+==12635==    by 0x5175618: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540faa0 is 112 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid read of size 8
+==12635==    at 0x516E7D1: xdr_double (in /usr/lib/libc-2.26.so)
+==12635==    by 0x109094: xdr_mul_1_argument (calc_xdr.c:31)
+==12635==    by 0x5175618: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540fa90 is 96 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid read of size 4
+==12635==    at 0x517A690: xdrmem_putlong (in /usr/lib/libc-2.26.so)
+==12635==    by 0x516E7DE: xdr_double (in /usr/lib/libc-2.26.so)
+==12635==    by 0x109094: xdr_mul_1_argument (calc_xdr.c:31)
+==12635==    by 0x5175618: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540fab0 is 128 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid read of size 8
+==12635==    at 0x517A69D: xdrmem_putlong (in /usr/lib/libc-2.26.so)
+==12635==    by 0x516E7DE: xdr_double (in /usr/lib/libc-2.26.so)
+==12635==    by 0x109094: xdr_mul_1_argument (calc_xdr.c:31)
+==12635==    by 0x5175618: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540faa0 is 112 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid write of size 4
+==12635==    at 0x517A6A1: xdrmem_putlong (in /usr/lib/libc-2.26.so)
+==12635==    by 0x516E7DE: xdr_double (in /usr/lib/libc-2.26.so)
+==12635==    by 0x109094: xdr_mul_1_argument (calc_xdr.c:31)
+==12635==    by 0x5175618: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540fab0 is 128 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid write of size 4
+==12635==    at 0x517A6AD: xdrmem_putlong (in /usr/lib/libc-2.26.so)
+==12635==    by 0x516E7DE: xdr_double (in /usr/lib/libc-2.26.so)
+==12635==    by 0x109094: xdr_mul_1_argument (calc_xdr.c:31)
+==12635==    by 0x5175618: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x5411d58 is 9,000 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid write of size 8
+==12635==    at 0x517A6B0: xdrmem_putlong (in /usr/lib/libc-2.26.so)
+==12635==    by 0x516E7DE: xdr_double (in /usr/lib/libc-2.26.so)
+==12635==    by 0x109094: xdr_mul_1_argument (calc_xdr.c:31)
+==12635==    by 0x5175618: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540faa0 is 112 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid read of size 4
+==12635==    at 0x516E74E: xdr_double (in /usr/lib/libc-2.26.so)
+==12635==    by 0x1090B6: xdr_mul_1_argument (calc_xdr.c:33)
+==12635==    by 0x5175618: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540fa88 is 88 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid read of size 8
+==12635==    at 0x516E7C6: xdr_double (in /usr/lib/libc-2.26.so)
+==12635==    by 0x1090B6: xdr_mul_1_argument (calc_xdr.c:33)
+==12635==    by 0x5175618: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540fa90 is 96 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid read of size 4
+==12635==    at 0x517A690: xdrmem_putlong (in /usr/lib/libc-2.26.so)
+==12635==    by 0x516E7CC: xdr_double (in /usr/lib/libc-2.26.so)
+==12635==    by 0x1090B6: xdr_mul_1_argument (calc_xdr.c:33)
+==12635==    by 0x5175618: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540fab0 is 128 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid read of size 8
+==12635==    at 0x517A69D: xdrmem_putlong (in /usr/lib/libc-2.26.so)
+==12635==    by 0x516E7CC: xdr_double (in /usr/lib/libc-2.26.so)
+==12635==    by 0x1090B6: xdr_mul_1_argument (calc_xdr.c:33)
+==12635==    by 0x5175618: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540faa0 is 112 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid write of size 4
+==12635==    at 0x517A6A1: xdrmem_putlong (in /usr/lib/libc-2.26.so)
+==12635==    by 0x516E7CC: xdr_double (in /usr/lib/libc-2.26.so)
+==12635==    by 0x1090B6: xdr_mul_1_argument (calc_xdr.c:33)
+==12635==    by 0x5175618: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540fab0 is 128 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid write of size 4
+==12635==    at 0x517A6AD: xdrmem_putlong (in /usr/lib/libc-2.26.so)
+==12635==    by 0x516E7CC: xdr_double (in /usr/lib/libc-2.26.so)
+==12635==    by 0x1090B6: xdr_mul_1_argument (calc_xdr.c:33)
+==12635==    by 0x5175618: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x5411d5c is 9,004 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid write of size 8
+==12635==    at 0x517A6B0: xdrmem_putlong (in /usr/lib/libc-2.26.so)
+==12635==    by 0x516E7CC: xdr_double (in /usr/lib/libc-2.26.so)
+==12635==    by 0x1090B6: xdr_mul_1_argument (calc_xdr.c:33)
+==12635==    by 0x5175618: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540faa0 is 112 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid read of size 8
+==12635==    at 0x516E7D1: xdr_double (in /usr/lib/libc-2.26.so)
+==12635==    by 0x1090B6: xdr_mul_1_argument (calc_xdr.c:33)
+==12635==    by 0x5175618: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540fa90 is 96 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid read of size 4
+==12635==    at 0x517A690: xdrmem_putlong (in /usr/lib/libc-2.26.so)
+==12635==    by 0x516E7DE: xdr_double (in /usr/lib/libc-2.26.so)
+==12635==    by 0x1090B6: xdr_mul_1_argument (calc_xdr.c:33)
+==12635==    by 0x5175618: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540fab0 is 128 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid read of size 8
+==12635==    at 0x517A69D: xdrmem_putlong (in /usr/lib/libc-2.26.so)
+==12635==    by 0x516E7DE: xdr_double (in /usr/lib/libc-2.26.so)
+==12635==    by 0x1090B6: xdr_mul_1_argument (calc_xdr.c:33)
+==12635==    by 0x5175618: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540faa0 is 112 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid write of size 4
+==12635==    at 0x517A6A1: xdrmem_putlong (in /usr/lib/libc-2.26.so)
+==12635==    by 0x516E7DE: xdr_double (in /usr/lib/libc-2.26.so)
+==12635==    by 0x1090B6: xdr_mul_1_argument (calc_xdr.c:33)
+==12635==    by 0x5175618: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540fab0 is 128 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid write of size 4
+==12635==    at 0x517A6AD: xdrmem_putlong (in /usr/lib/libc-2.26.so)
+==12635==    by 0x516E7DE: xdr_double (in /usr/lib/libc-2.26.so)
+==12635==    by 0x1090B6: xdr_mul_1_argument (calc_xdr.c:33)
+==12635==    by 0x5175618: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x5411d60 is 9,008 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid write of size 8
+==12635==    at 0x517A6B0: xdrmem_putlong (in /usr/lib/libc-2.26.so)
+==12635==    by 0x516E7DE: xdr_double (in /usr/lib/libc-2.26.so)
+==12635==    by 0x1090B6: xdr_mul_1_argument (calc_xdr.c:33)
+==12635==    by 0x5175618: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540faa0 is 112 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid read of size 8
+==12635==    at 0x5175621: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540fa90 is 96 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid read of size 8
+==12635==    at 0x517A5B0: xdrmem_getpos (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517562A: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540faa0 is 112 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid read of size 8
+==12635==    at 0x517A5B4: xdrmem_getpos (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517562A: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540faa8 is 120 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid read of size 8
+==12635==    at 0x5175634: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540fac0 is 144 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid read of size 4
+==12635==    at 0x517563F: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540fa48 is 24 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid read of size 4
+==12635==    at 0x5175643: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540fa30 is 0 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Syscall param socketcall.sendto(msg) points to unaddressable byte(s)
+==12635==    at 0x514814A: sendto (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517564F: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x5411d2c is 8,956 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Syscall param socketcall.sendto(to.sa_family) points to unaddressable byte(s)
+==12635==    at 0x514814A: sendto (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517564F: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540fa38 is 8 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Syscall param socketcall.sendto(to.sin_port) points to unaddressable byte(s)
+==12635==    at 0x514814A: sendto (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517564F: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540fa3a is 10 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Syscall param socketcall.sendto(to.sin_addr) points to unaddressable byte(s)
+==12635==    at 0x514814A: sendto (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517564F: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540fa3c is 12 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid write of size 4
+==12635==    at 0x5175B56: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540fa70 is 64 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Invalid write of size 4
+==12635==    at 0x5175B61: clntudp_call (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108B21: mul_1 (calc_clnt.c:55)
+==12635==    by 0x108EDA: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Address 0x540fa78 is 72 bytes inside a block of size 17,760 free'd
+==12635==    at 0x4C2E10B: free (vg_replace_malloc.c:530)
+==12635==    by 0x517546F: clntudp_destroy (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108D8D: calcprog_1 (calc_client.c:52)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635==  Block was alloc'd at
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x5175D9A: __libc_clntudp_bufcreate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5176054: clntudp_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x517447B: clnt_create (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108C3F: calcprog_1 (calc_client.c:28)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Conditional jump or move depends on uninitialised value(s)
+==12635==    at 0x50A1938: __printf_fp_l (in /usr/lib/libc-2.26.so)
+==12635==    by 0x509EE70: vfprintf (in /usr/lib/libc-2.26.so)
+==12635==    by 0x50A69D5: printf (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108EEE: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Conditional jump or move depends on uninitialised value(s)
+==12635==    at 0x50A195B: __printf_fp_l (in /usr/lib/libc-2.26.so)
+==12635==    by 0x509EE70: vfprintf (in /usr/lib/libc-2.26.so)
+==12635==    by 0x50A69D5: printf (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108EEE: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Conditional jump or move depends on uninitialised value(s)
+==12635==    at 0x50978E0: __mpn_extract_double (in /usr/lib/libc-2.26.so)
+==12635==    by 0x50A198B: __printf_fp_l (in /usr/lib/libc-2.26.so)
+==12635==    by 0x509EE70: vfprintf (in /usr/lib/libc-2.26.so)
+==12635==    by 0x50A69D5: printf (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108EEE: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Conditional jump or move depends on uninitialised value(s)
+==12635==    at 0x50978E5: __mpn_extract_double (in /usr/lib/libc-2.26.so)
+==12635==    by 0x50A198B: __printf_fp_l (in /usr/lib/libc-2.26.so)
+==12635==    by 0x509EE70: vfprintf (in /usr/lib/libc-2.26.so)
+==12635==    by 0x50A69D5: printf (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108EEE: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Conditional jump or move depends on uninitialised value(s)
+==12635==    at 0x50A2135: __printf_fp_l (in /usr/lib/libc-2.26.so)
+==12635==    by 0x509EE70: vfprintf (in /usr/lib/libc-2.26.so)
+==12635==    by 0x50A69D5: printf (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108EEE: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Conditional jump or move depends on uninitialised value(s)
+==12635==    at 0x50A216D: __printf_fp_l (in /usr/lib/libc-2.26.so)
+==12635==    by 0x509EE70: vfprintf (in /usr/lib/libc-2.26.so)
+==12635==    by 0x50A69D5: printf (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108EEE: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Conditional jump or move depends on uninitialised value(s)
+==12635==    at 0x50A219C: __printf_fp_l (in /usr/lib/libc-2.26.so)
+==12635==    by 0x509EE70: vfprintf (in /usr/lib/libc-2.26.so)
+==12635==    by 0x50A69D5: printf (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108EEE: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Conditional jump or move depends on uninitialised value(s)
+==12635==    at 0x50A30D9: __printf_fp_l (in /usr/lib/libc-2.26.so)
+==12635==    by 0x509EE70: vfprintf (in /usr/lib/libc-2.26.so)
+==12635==    by 0x50A69D5: printf (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108EEE: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Conditional jump or move depends on uninitialised value(s)
+==12635==    at 0x50A30F0: __printf_fp_l (in /usr/lib/libc-2.26.so)
+==12635==    by 0x509EE70: vfprintf (in /usr/lib/libc-2.26.so)
+==12635==    by 0x50A69D5: printf (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108EEE: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Conditional jump or move depends on uninitialised value(s)
+==12635==    at 0x50A27BC: __printf_fp_l (in /usr/lib/libc-2.26.so)
+==12635==    by 0x509EE70: vfprintf (in /usr/lib/libc-2.26.so)
+==12635==    by 0x50A69D5: printf (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108EEE: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Conditional jump or move depends on uninitialised value(s)
+==12635==    at 0x50A2311: __printf_fp_l (in /usr/lib/libc-2.26.so)
+==12635==    by 0x509EE70: vfprintf (in /usr/lib/libc-2.26.so)
+==12635==    by 0x50A69D5: printf (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108EEE: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Conditional jump or move depends on uninitialised value(s)
+==12635==    at 0x50A23ED: __printf_fp_l (in /usr/lib/libc-2.26.so)
+==12635==    by 0x509EE70: vfprintf (in /usr/lib/libc-2.26.so)
+==12635==    by 0x50A69D5: printf (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108EEE: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Conditional jump or move depends on uninitialised value(s)
+==12635==    at 0x50A2CB3: __printf_fp_l (in /usr/lib/libc-2.26.so)
+==12635==    by 0x509EE70: vfprintf (in /usr/lib/libc-2.26.so)
+==12635==    by 0x50A69D5: printf (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108EEE: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Conditional jump or move depends on uninitialised value(s)
+==12635==    at 0x50A2C93: __printf_fp_l (in /usr/lib/libc-2.26.so)
+==12635==    by 0x509EE70: vfprintf (in /usr/lib/libc-2.26.so)
+==12635==    by 0x50A69D5: printf (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108EEE: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+==12635== Syscall param write(buf) points to uninitialised byte(s)
+==12635==    at 0x5138444: write (in /usr/lib/libc-2.26.so)
+==12635==    by 0x50CA1EC: _IO_file_write@@GLIBC_2.2.5 (in /usr/lib/libc-2.26.so)
+==12635==    by 0x50C94CE: new_do_write (in /usr/lib/libc-2.26.so)
+==12635==    by 0x50CB3E8: _IO_do_write@@GLIBC_2.2.5 (in /usr/lib/libc-2.26.so)
+==12635==    by 0x50CCFF9: _IO_flush_all_lockp (in /usr/lib/libc-2.26.so)
+==12635==    by 0x50CD255: _IO_cleanup (in /usr/lib/libc-2.26.so)
+==12635==    by 0x50883EA: __run_exit_handlers (in /usr/lib/libc-2.26.so)
+==12635==    by 0x5088499: exit (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108FC3: main (calc_client.c:88)
+==12635==  Address 0x541443d is 13 bytes inside a block of size 4,096 alloc'd
+==12635==    at 0x4C2CEDF: malloc (vg_replace_malloc.c:299)
+==12635==    by 0x50BDB9C: _IO_file_doallocate (in /usr/lib/libc-2.26.so)
+==12635==    by 0x50CC5F8: _IO_doallocbuf (in /usr/lib/libc-2.26.so)
+==12635==    by 0x50CB877: _IO_file_overflow@@GLIBC_2.2.5 (in /usr/lib/libc-2.26.so)
+==12635==    by 0x50CA8E6: _IO_file_xsputn@@GLIBC_2.2.5 (in /usr/lib/libc-2.26.so)
+==12635==    by 0x509DF7B: vfprintf (in /usr/lib/libc-2.26.so)
+==12635==    by 0x50A69D5: printf (in /usr/lib/libc-2.26.so)
+==12635==    by 0x108EEE: calcprog_1 (calc_client.c:63)
+==12635==    by 0x108FB9: main (calc_client.c:85)
+==12635== 
+Resultado: 0.000000
+==12635== 
+==12635== HEAP SUMMARY:
+==12635==     in use at exit: 0 bytes in 0 blocks
+==12635==   total heap usage: 66 allocs, 66 frees, 49,675 bytes allocated
+==12635== 
+==12635== All heap blocks were freed -- no leaks are possible
+==12635== 
+==12635== For counts of detected and suppressed errors, rerun with: -v
+==12635== Use --track-origins=yes to see where uninitialised values come from
+==12635== ERROR SUMMARY: 117 errors from 85 contexts (suppressed: 0 from 0)

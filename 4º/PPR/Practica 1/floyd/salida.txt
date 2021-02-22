@@ -1,0 +1,11 @@
+Device 0: "GeForce GTX 970" with Compute 5.2 capability
+Tiempo gastado GPU 1D= 0.175633
+
+Tiempo gastado GPU 2D= 0.171114
+
+Tiempo gastado CPU= 3.6939
+
+Ganancia= 21.0319
+Ganancia 2d= 21.5874
+ Max on GPU =1968
+3.6939	0.175633	21.0319	0.171114	21.5874

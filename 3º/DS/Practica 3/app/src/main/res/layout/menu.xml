@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/administracion"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="117dp"
+        android:text="Perfil" />
+
+    <Button
+        android:id="@+id/catalogo"
+        android:layout_width="131dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/administracion"
+        android:layout_marginEnd="31dp"
+        android:text="Catálogo" />
+
+    <Button
+        android:id="@+id/carrito"
+        android:layout_width="137dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/administracion"
+        android:layout_marginTop="188dp"
+        android:text="Carrito de compra" />
+
+    <Button
+        android:id="@+id/cerrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/carrito"
+        android:layout_alignStart="@+id/catalogo"
+        android:text="Cerrar sesión" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:text="Menú"
+        android:textColor="#000000"
+        android:textSize="@dimen/abc_dropdownitem_icon_width" />
+</RelativeLayout>

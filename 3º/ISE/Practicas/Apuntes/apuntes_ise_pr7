@@ -1,0 +1,61 @@
+IIS -> servidor web de microsoft en windows server
+Internet information services
+sudo tasksel -> instalar lamp server
+introducir contraseña de mysql
+contraseña root de linux y contraseña root de mysql son cosas distintas
+
+comprobar la instalacion
+curl localhost -> comprobacion de apache
+php -a -> comprobacion php, interprete interactivo
+mysql -u root -p ->comprobacion mysql, acceder como root a mysql
+
+instalar lamp en centos
+
+yum install httpd
+systemctl enable httpd
+
+abrimos puertos 
+firewall-cmd --permanent --add-port=80/tcp
+firewall-cmd --reload
+
+
+yum install mariadb -> instalar cliente mysql
+yum install mariadb-server -> instalar servidor mysql
+systemctl enable mariadb
+mysql_secure_installation
+introducir contraseña root actual de mysql -> intro porque por defecto no hay contraseña
+introducir nueva contraseña
+remove anonymous user -> y
+disallow root login remotely -> y
+remove tes database and access to id -> y
+reload privilege tables -> Y
+mysql -u root -p 
+
+yum install php
+php -a
+
+puerto por defecto de mysql 3306
+puerto por defecto de mariadb 3307
+
+vi /var/www/html/index.php -> añadir script php
+
+vi /etc/httpd/conf/httpd.conf -> decirle a apache que index.php sea interpretado en el servidor y su respuesta, una pagina html, sea enviada al usuario
+DirectoryIndex index.html -> añadir , index.php a esa linea
+DirectoryIndex index.html, index.php
+
+systemctl restart httpd
+
+error en el navegador web
+php index.php -> vemos el error
+a php le falta la biblioteca de conexion con mysql
+yum search mysql|grep php -> vemos php-mysql
+yum install php-mysql
+
+php index.php -> comprobamos script de nuevo, funciona en localhost pero no en web
+
+problema de selinux
+
+setbool -P httpd_can_network_connect_db on
+systemctl restart httpd
+
+/var/log/audit/audit.log -> uno de los logs de selinux

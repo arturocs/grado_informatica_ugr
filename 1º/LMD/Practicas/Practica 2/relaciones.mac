@@ -1,0 +1,476 @@
+/*********************************************************************
+ *********************************************************************
+ ***                                                               ***
+ ***                 ~*~  Relaciones  ~*~                          ***
+ ***                                                               ***
+ ***  Un paquete para estudiar relaciones en conjuntos finitos     ***
+ ***                                                               ***
+ ***   - Algunas funciones están copiadas del paquete discrete     ***     
+ ***     de Andrej Vodopivec <andrej.vodopivec@gmail.com>          ***
+ ***                                                               ***
+ ***                                                               ***
+ ***  Author:  AJRS                                                ***
+ ***                                                               ***
+ ***                                                               ***
+ *********************************************************************/
+
+load(graphs)$
+load (functs)$
+
+put('relaciones, 1, 'version)$
+
+_lcm(a,b) := a*b/gcd(a,b)$
+
+/******************************************************
+ *                                                    *
+ *   Funciones para relaciones en conjunto finitos.   *
+ *                                                    * 
+ ******************************************************/
+
+/* ************************
+ * Operaciones auxiliares *
+ **************************/
+ 
+universo(R):= setify(xreduce(append,listify(R)))$ 
+
+restriccion(R,A):=intersection(R,cartesian_product(A,A))$
+ 
+relation_product(r, [args]) :=
+  if length(args)=0 then r
+  else if length(args)=1 then _relation_product(r, args[1])
+  else relation_product(r, apply('relation_product, args))$
+
+_relation_product(R,S) := block(
+  [RS:[]],
+  for a in R do (
+    for b in S do (
+      if a[2]=b[1] then RS: cons([a[1], b[2]], RS))),
+  setify(RS))$
+
+identity_relation(A) := setify(create_list([x,x], x, listify(A)))$
+
+inverse_relation(R) := map(reverse, R)$
+
+relation_power(R, n) :=
+  if n<0 then relation_power(inverse_relation(R), -n)
+  else if n=0 then identity_relation(
+    setify(tree_reduce(append, listify(R))))
+  else if n=1 then R
+  else if evenp(n) then block(
+    [R1:relation_power(R, n/2)],
+    relation_product(R1, R1))
+  else
+    block([R1:relation_power(R,(n-1)/2)],relation_product(R, relation_product(R1,R1)))$
+
+relation_interval(A, R, a, b) := subset(A,
+  lambda([x],
+    is(
+      member([a,x], R) and
+      member([x,b], R))))$
+	  
+/* *******************************
+ * Propiedades de las relaciones *
+ *********************************/	  
+
+es_simetrica(R,[A]):= if length(A)=0 then is(inverse_relation(R)=R)
+                              else block([S:intersection(R,cartesian_product(A[1],A[1]))], 
+							  is(inverse_relation(S)=S))$
+
+es_antisimetrica(R,[A]):=if length(A)=0 then
+  subsetp(intersection(R, inverse_relation(R)),
+  identity_relation(setify(tree_reduce(append, (listify(R))))))
+    else block([B:first(A),S],S:intersection(R,cartesian_product(B,B)),
+      subsetp(intersection(S,inverse_relation(S)),identity_relation(B)))$
+
+es_transitiva(R,[A]) := if length(A)=0 then subsetp(relation_product(R,R),R)
+                               else block([B:first(A),S], S:intersection(R,cartesian_product(B,B)),
+							   subsetp(relation_product(S,S),S))$ 
+							   
+es_reflexiva(R,[A]) := subsetp(
+    if length(A)=0 then
+      identity_relation(setify(xreduce(append, listify(R))))
+    else
+      identity_relation(first(A)),
+    R)$
+	
+es_conectada(R,[A]):= block([B:listify(if length(A)=0 then universo(R) else first(A)),indica:true,long],
+                      long:length(B),
+                      for i:2 thru long do
+                        for j:1 thru i-1 while indica do indica:(elementp([B[i],B[j]],R) or elementp([B[j],B[i]],R)),
+						indica)$	
+
+/* *********************
+ * Tipos de relaciones *
+ ***********************/
+
+es_equivalencia(R,[A]):= block([B:if length(A)=0 then setify(xreduce(append,listify(R))) else first(A)],
+                       es_transitiva(R,B) and es_reflexiva(R,B) and es_simetrica(R,B))$
+
+clases_equivalencia(R) := if not es_equivalencia(R) then error("No es una relación de equivalencia!")
+                          else fullsetify(connected_components(underlying_graph(graph_of_relation(R))))$
+
+es_orden(R,[A]):= block([B:if length(A)=0 then setify(xreduce(append,listify(R))) else first(A)],
+                  es_transitiva(R,B) and 
+				  es_reflexiva(R,B) and 
+				  es_antisimetrica(R,B))$
+  
+es_orden_total(R,[A]):= block([B:if length(A)=0 then setify(xreduce(append,listify(R))) else first(A)],
+                        es_transitiva(R,B) and 
+                        es_reflexiva(R,B) and 
+                        es_antisimetrica(R,B) and 
+                        es_conectada(R,B))$ 
+  
+
+
+dividep(x):=if mod(x[2],x[1])=0 then true else false;
+
+div(A):=subset(cartesian_product(A,A),dividep);
+
+  
+/* *****************************
+ * Grafos y diagramas de Hasse *
+ *******************************/  
+
+graph_of_relation(R, [V]) := block(
+  [V: if length(V)=1 then V[1] else listify(setify(xreduce(append, listify(R)))), g],
+  g: make_graph(V, sublist(listify(R), lambda([x], is(x[1]#x[2]))), 'directed=true),
+  g)$
+
+draw_graph_of_relation(R, [V]) := block(
+  [V: if length(V)=1 then V[1] else listify(setify(xreduce(append, listify(R)))),
+   edges: sublist(listify(R), lambda([x], is(x[1]#x[2]))),
+   loops1: map(first, sublist(listify(R), lambda([x], is(x[1]=x[2])))),
+   loops:[], g],
+  g: make_graph(args(V), edges, 'directed=true),
+  for v in vertices(g) do (
+    if get_vertex_label(v,g)=false then set_vertex_label(v,v,g),
+    if member(get_vertex_label(v,g), loops1) then loops: cons(v, loops)),
+  draw_graph(g, 'loops=loops,
+    'program=circular_positions, 'head_length=0.07, 'head_angle=10,
+    'show_label=true, 'vertex_size=1, 'label_alignment='left, 'show_vertex_size=1))$
+
+hasse_diagram(g) := block(
+  [hg, vrt, edges:[], layer, h:0, pos:[], new_edges],
+  if not is_digraph(g) then g: graph_of_relation(g),
+  vrt: setify(vertices(g)),
+  layer: subset(vrt, lambda([x], is(vertex_in_degree(x, g)=0))),
+  vrt: setdifference(vrt, layer),
+  while length(layer)>0 do (
+    for i:1 thru length(layer) do (
+      pos: cons([inpart(layer, i), [i*1/(length(layer)+1), h]], pos)),
+    h:h+1,
+    layer: subset(vrt,lambda([v],
+        is( intersection(vrt, setify(in_neighbors(v, g)))={} ))),
+    vrt: setdifference(vrt, layer)),
+  vrt: vertices(g),
+  edg: edges(g),
+  for e in edg do (
+    [path: sublist(vrt, lambda([v], is (member([e[1], v], edg) and member([v, e[2]], edg))))],
+    if length(path)=0 then edges: cons(e, edges)),
+  hg: create_graph(vrt, edges, directed),
+  for v in vertices(g) do set_vertex_label(v, get_vertex_label(v, g), hg),
+  set_positions(pos, hg),
+  hg)$
+  
+/****************************
+ *                          * 
+ *  Elementos distinguidos  *
+ *                          *
+ ****************************/
+ 
+ /* ABSOLUTOS */ 
+ 
+minimo(A,[l]):= block([long:length(l)],
+                if long=0 then minimo1(A)
+                elseif is(long=1) and nonnegintegerp(first(l)) then minimo1(A)
+                elseif is(long=1) and every(nonnegintegerp,first(l)) then minimo1(A)
+                else minimo4(A,first(l)))$
+ 
+maximo(A,[l]):= block([long:length(l)],
+                if long=0 then maximo1(A)
+                elseif is(long=1) and nonnegintegerp(first(l)) then maximo1(A)
+                elseif is(long=1) and every(nonnegintegerp,first(l)) then maximo1(A)
+                else maximo4(A,first(l)))$ 
+ 
+minimales(A,[l]):= block([long:length(l)],
+                if long=0 then minimales1(A)
+                elseif is(long=1) and nonnegintegerp(first(l)) then minimales1(A)
+                elseif is(long=1) and every(nonnegintegerp,first(l)) then minimales1(A)
+                else minimales4(A,first(l)))$
+ 
+maximales(A,[l]):= block([long:length(l)],
+                if long=0 then maximales1(A)
+                elseif is(long=1) and nonnegintegerp(first(l)) then maximales1(A)
+                elseif is(long=1) and every(nonnegintegerp,first(l)) then maximales1(A)
+                else maximales4(A,first(l)))$ 
+ 
+ /* RELATIVOS */
+ 
+infimo(A,[l]):= block([long:length(l)],
+                 if long=0 then infimo1(A)
+                 elseif is(long=1) and nonnegintegerp(first(l)) then infimo3(A,first(l))
+                 elseif is(long=1) and every(nonnegintegerp,first(l)) then infimo2(A,first(l))
+                 else infimo4(A,first(l)))$
+				
+supremo(A,[l]):= block([long:length(l)],
+                 if long=0 then supremo1(A)
+                 elseif is(long=1) and nonnegintegerp(first(l)) then supremo3(A,first(l))
+                 elseif is(long=1) and every(nonnegintegerp,first(l)) then supremo2(A,first(l))
+                 else supremo4(A,first(l)))$
+
+minorantes(A,[l]):= block([long:length(l)],
+                    if long=0 then minorantes1(A)
+                    elseif is(long=1) and nonnegintegerp(first(l)) then minorantes3(A,first(l))
+                    elseif is(long=1) and every(nonnegintegerp,first(l)) then minorantes2(A,first(l))
+                    else minorantes4(A,first(l)))$
+
+mayorantes(A,[l]):= block([long:length(l)],
+                    if long=0 then mayorantes1(A)
+                    elseif is(long=1) and nonnegintegerp(first(l)) then mayorantes3(A,first(l))
+                    elseif is(long=1) and every(nonnegintegerp,first(l)) then mayorantes2(A,first(l))
+                    else mayorantes4(A,first(l)))$				
+ 
+ 
+/* Caso de un conjunto con una relación */
+ 
+ 
+minimo4(A,R) := block([S:intersection(R,cartesian_product(A,A)),res:"No hay minimo"],
+                if not es_orden(S,A) then error("No es una relación de orden!")
+                else for m in A do (if subsetp(cartesian_product({m},A),S) then res:m),
+				res)$
+
+maximo4(A,R) := block([S:intersection(R,cartesian_product(A,A)),res:"No hay maximo"],
+                if not es_orden(S,A) then error("No es una relación de orden!")
+                else for m in A do (if subsetp(cartesian_product(A,{m}),S) 
+                then res:m),
+				res)$
+
+maximo5(A,R):= minimo4(A,inverse_relation(R))$
+
+minimales4(A,R) := block([S:intersection(R,cartesian_product(A,A)),min:set()],
+                   if not es_orden(S,A) then error("No es una relación de orden!")
+                   else block([] ,for m in A do 
+				   (if cardinality(intersection(cartesian_product(A,{m}),S))=1 then min:adjoin(m,min))),
+				   min)$
+
+maximales4(A,R) := block([S:intersection(R,cartesian_product(A,A)),max:set()],
+                   if not es_orden(S,A) then error("No es una relación de orden!")
+                   else block([] ,for m in A do 
+				   (if cardinality(intersection(cartesian_product({m},A),S))=1 then max:adjoin(m,max))),
+				   max)$
+
+maximales5(A,R):=minimales4(A,inverse_relation(R));
+
+
+
+minorantes4(B,R):=block([A:setify(xreduce(append,listify(R))),mino:{},num:cardinality(B)],
+                        for m in A do (if cardinality(intersection(cartesian_product({m},B),R))=num then mino:adjoin(m,mino)),
+						mino)$
+
+mayorantes4(B,R):=block([A:setify(xreduce(append,listify(R))),mayo:{},num:cardinality(B)],
+                        for m in A do(if cardinality(intersection(cartesian_product(B,{m}),R))=num then mayo:adjoin(m,mayo)),
+						mayo)$
+
+mayorantes5(A,R):=minorantes4(A,inverse_relation(R))$
+
+infimo4(A,R):= maximo4(minorantes4(A,R),R)$
+
+supremo4(A,R):= minimo4(mayorantes4(A,R),R)$
+
+
+/* No funciona por ahora
+
+es_Ret(A,R):= block([lis:listify(A),long,i,j,seguir:true,mensaje], 
+              long:length(lis),
+              for i:2 thru long while seguir do
+                for j:1 thru i-1 while seguir do
+             (if not(_supremo4p(lis[i],lis[j],A)) then
+       (seguir:false,mensaje:simplode(["El conjunto no es un reticulo. 
+	   El supremo de ",lis[i]," y ",lis[j]," no existe en el conjunto."]))
+     else
+       if not(_infimo4p(lis[i],lis[j],A)) then
+          (seguir:false,mensaje:simplode(["El conjunto no es un reticulo. 
+		  El infimo de ",lis[i]," y ",lis[j]," no existe en el conjunto."]))),
+	seguir )$
+	
+es_Sub_Ret(A,R):=block([lis,long,i,j,seguir,mensaje], lis:listify(A),long:length(lis),seguir:true,
+for i:2 thru long while seguir do
+  for j:1 thru i-1 while seguir do
+    ( if not(elementp(lcm(lis[i],lis[j]),A)) then
+       (seguir:false,mensaje:simplode(["El conjunto no es un subretículo. 
+	   El supremo de ",lis[i]," y ",lis[j]," no pertenece al conjunto."]))
+     else
+       if not(elementp(gcd(lis[i],lis[j]),A)) then
+          (seguir:false,mensaje:simplode(["El conjunto no es un subretículo. 
+		  El ínfimo de ",lis[i]," y ",lis[j]," no pertenece al conjunto."]))),
+	seguir )$
+
+*/	
+
+/**************************************************************************
+ *                                                                        *
+ *   Funciones para la divisibilidad en conjuntos finitos de naturales.   *
+ *                                                                        * 
+ **************************************************************************/
+ 
+ _cubren(a,A):=block([],minimales1(subset(A,lambda([x],if is(x#a and mod(x,a)=0) then true else false))))$
+ 
+Hasse(x,[l]):=  if l#[] then Hasse4(x,first(l))
+                elseif  nonnegintegerp(x) then Hasse2(x)
+                elseif every(nonnegintegerp,x) then Hasse1(x)
+                else Hasse3(x)$
+ 
+Hasse1(A):=block([B:listify(A),R:{},hasse,long:length(A)],
+            for i:1 thru long do 
+			(R:union(R,cartesian_product({B[i]},_cubren(B[i],A)))),
+            hasse:create_graph(B,listify(R),directed),
+			draw_graph(hasse,show_id=true),hasse)$
+							   
+lado(l):=is (mod(l[2],l[1])=0 and primep(quotient(l[2],l[1])))$
+
+Hasse2(n):= block([V:divisors(n),Lados,hasse],
+            Lados:listify(subset(cartesian_product(V,V),lado)),
+            hasse:create_graph(listify(V),Lados,directed),
+			draw_graph(hasse,show_id=true))$
+			
+Hasse3(R):=block([hasse:hasse_diagram(R)],
+					draw_graph(hasse,show_id=true))$						
+			
+Hasse4(A,R):=block([S:intersection(cartesian_product(A,A),R),hasse],
+                    hasse:hasse_diagram(S),
+					draw_graph(hasse,show_id=true))$			
+							   
+  
+/************************************************************************
+ * Elementos distinguidos de un conjunto de enteros positivos ordenados *
+ * por divisibilidad                                                    *
+ ************************************************************************/
+
+/*  mcd y mcm de una lista de naturales (siempre será no vacía) */
+
+mcd(l):=if l=[] then 0 else gcd(l[1],mcd(rest(l)))$
+
+mcm(l):= if l=[] then 1 else lcm(l[1],mcm(rest(l)))$
+
+/* Elementos notables absolutos */
+
+minimo1(A):=block([infi:infimo1(A)], if elementp(infi,A) 
+                                       then infi 
+                                       else simplode(["El conjunto ",A," no tiene minimo"]))$
+
+maximo1(A):=block([supr:supremo1(A)], if elementp(supr,A) 
+                                        then supr 
+                                        else simplode(["El conjunto ",A," no tiene maximo"]))$										
+										
+minimales1(A):=block([C,indica,m,long],
+                      long:length(A),
+                      if long=0 then {} else
+                      (C:listify(A),
+					  m:{C[1]},
+                      for i:2 thru long do
+                      (indica:false,for j:1 thru i-1 unless indica do indica:is(mod(C[i],C[j])=0),
+					  if not indica then m:adjoin(C[i],m)),
+                      m))$				  
+					  					  
+maximales1(A):=block([C,indica,m,long],
+                      long:length(A),
+                      if long=0 then {} else					  
+                      (C:reverse(listify(A)),
+                      m:{C[1]},
+                      for i:2 thru long do
+                      (indica:false,for j:1 thru i-1 unless indica do indica:is(mod(C[j],C[i])=0),
+					  if not indica then m:adjoin(C[i],m)),
+                      m))$						  				  
+					  
+/* Elementos notables relativos */
+
+infimo1(A):=mcd(listify(A))$
+
+infimo2(B,A):=block([infi:infimo1(B)], 
+                    if elementp(infi,A) then infi 
+                    else maximo1(intersection(divisors(infi),A)))$
+
+supremo1(A):=mcm(listify(A))$
+
+supremo2(B,A):= minimo1(mayorantes2(B,A))$
+
+
+_infimop(a,b,A):=block([infi:mcd([a,b])], if elementp(infi,A) then true
+                 else elementp(maximo1(intersection(divisors(infi),A)),A))$
+
+_supremop(a,b,A):=elementp(infimo1(mayorantes2({a,b},A)),A)$
+									
+
+minorantes1(A):=divisors(infimo1(A))$
+
+mayorantes1(A):=block([s:supremo1(A)], 
+                     simplode(["Todos los multiplos naturales de ",s]))$
+					 
+minorantes2(B,A):=intersection(divisors(infimo1(B)),A)$
+
+mayorantes2(B,A):=block([sup:supremo1(B),C:listify(A),long,r:{}], 
+									 long:length(C),
+									 for i:1 thru long do
+									   if (mod(C[i],sup)=0) then r:adjoin(C[i],r),r)$
+					
+/************************************************************************
+ * Elementos distinguidos del conjunto D(n) de divisores naturales de n *
+ * ordenados por divisibilidad                                          *
+ ************************************************************************/
+
+infimo3(A,n):=mcd(listify(A))$
+
+supremo3(A,n):=mcm(listify(A))$
+
+minorantes3(A,n):=divisors(infimo1(A))$
+
+mayorantes3(A,n):=block([s:supremo1(A)], setify(makelist(s*i,i,1,n/s)))$
+
+/********************************************************
+ * Dado un conjunto finito de enteros positivos,        *
+ * decide si es o no un retículo respecto a la relación *
+ * de divisibilidad                                     * 
+ ********************************************************/
+ 
+es_Ret(A):=block([lis:listify(A),long,i,j,seguir,mensaje], long:length(lis),seguir:true,
+for i:2 thru long while seguir do
+  for j:1 thru i-1 while seguir do
+    ( if not(_supremop(lis[i],lis[j],A)) then
+       (seguir:false, print("El conjunto no es un reticulo. El supremo de ",lis[i]," y ",lis[j]," no existe en el conjunto ",A))
+     else
+       if not(_infimop(lis[i],lis[j],A)) then
+          (seguir:false,mensaje:simplode("El conjunto no es un retículo. El infimo de ",lis[i]," y ",lis[j]," no existe en el conjunto ",A))),
+	if seguir then seguir else (mensaje,seguir))$
+	
+es_Sub_Ret(A):=block([lis,long,i,j,seguir,mensaje], lis:listify(A),long:length(lis),seguir:true,
+for i:2 thru long while seguir do
+  for j:1 thru i-1 while seguir do
+    ( if not(elementp(lcm(lis[i],lis[j]),A)) then
+       (seguir:false, print("El conjunto no es un subrreticulo. El supremo en N de ",lis[i]," y ",lis[j]," no pertenece al conjunto."))
+     else
+       if not(elementp(gcd(lis[i],lis[j]),A)) then
+          (seguir:false, print("El conjunto no es un subrreticulo. El infimo en N de ",lis[i]," y ",lis[j]," no pertenece al conjunto."))),
+	      seguir)$ 	
+ 
+
+
+/* Calcula el conjunto de todos los elementos complementados del retículo de divisores D(n) */
+
+complementados(n):=subset(divisors(n),lambda([d], is(gcd(d,quotient(n,d))=1)))$
+
+/* Dado un elemento a de un conjunto A que es retículo para la divisibilidad, 
+comprueba si a tiene complemento(s) en A y en tal caso devuelve el conjunto de ellos. */
+				   
+complementos(a,A):= block([eluno:maximo1(A),elcero:minimo1(A)],
+                    subset(A,lambda([x],is(supremo2({a,x},A)=eluno) and (infimo2({a,x},A)=elcero)))
+                    )$
+
+/* Para el caso de D(n) sabemos que si existe complemento es único y utilizamos la
+funcion complemento en singular. */					
+					
+complemento(a,n):= block([candidato:n/a],
+                   if gcd(a,candidato)=1 
+				      then candidato 
+					  else simplode([a," no tiene complemento en D(",n,")"]))$ 										
+					
+

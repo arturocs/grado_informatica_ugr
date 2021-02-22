@@ -1,0 +1,89 @@
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Cliente</title>
+</head>
+
+<body>
+	<div id="resultados"></div>
+	<div id="estados">
+
+		<p id="estado_aire"> Estado del aire acondicionado:</p>
+		<p id="estado_luz"> Estado de la bombilla:</p>
+		<p id="estado_persiana"> Estado de la persiana:</p>
+		<button id="cinta_persiana">Cambiar estado de la persiana</button>
+		<br />
+		<button id="boton_aire">Cambiar estado del aire acondicionado</button>
+		<br />
+		<button id="boton_luz">Cambiar estado de la luz</button>
+		<br />
+	</div>
+	<div>
+		<p id="advertencia_lum"></p>
+		<p id="advertencia_temp"></p>
+	</div>
+</body>
+<script src="/socket.io/socket.io.js"></script>
+<script type="text/javascript">
+	var serviceURL = 'localhost:8080';
+	var socket = io.connect(serviceURL);
+
+	socket.on('modificar_temp', function (data) {
+		console.log("modificar temperatura " + data)
+
+		var res = document.getElementById('resultados');
+		var t = document.createElement('bu')
+		t.innerHTML = "Temperatura:" + data + " "
+		res.appendChild(t);
+	})
+
+	socket.on('modificar_lum', function (data) {
+		console.log("modificar luminosidad " + data)
+		var res = document.getElementById('resultados');
+		var l = document.createElement('buuu')
+		l.innerHTML = "Luminosidad:" + data + '<br/>'
+		res.appendChild(l);
+	})
+
+	socket.on('set_estado_persiana', function (data) {
+		var estado_persiana = document.getElementById('estado_persiana');
+		estado_persiana.innerHTML = "Estado de la persiana: " + data;
+	});
+
+	socket.on('get_estado_aire', function (data) {
+		var estado_aire = document.getElementById('estado_aire');
+		estado_aire.innerHTML = "Estado del aire acondicionado: " + data;
+	});
+
+	socket.on('get_estado_luz', function (data) {
+		var estado_luz = document.getElementById('estado_luz');
+		estado_luz.innerHTML = "Estado de la bombilla: " + data;
+	});
+
+	var cinta_persiana = document.getElementById('cinta_persiana');
+	cinta_persiana.onclick = function () {
+		socket.emit('cinta_persiana');
+	}
+
+	var boton_luz = document.getElementById('boton_luz');
+	boton_luz.onclick = function () {
+		socket.emit('boton_luz');
+	}
+
+	var boton_aire = document.getElementById('boton_aire');
+	boton_aire.onclick = function () {
+		socket.emit('boton_aire');
+	}
+	socket.on('advertencia_lum', function (data) {
+		document.getElementById('advertencia_lum').innerHTML = "Alerta: " +
+			" Demasiada luz: " + data;
+	});
+
+	socket.on('advertencia_temp', function (data) {
+		document.getElementById('advertencia_temp').innerHTML = "Alerta: " +
+			"Demasiada temperatura: " + data;
+	});
+</script>
+
+</html>

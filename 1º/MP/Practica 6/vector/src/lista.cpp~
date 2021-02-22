@@ -1,0 +1,163 @@
+#include <string>
+#include <fstream>
+#include "lista.h"
+
+using namespace std;
+
+Lista::Lista(){
+	cabecera=NULL;
+}
+   
+Lista::Lista(string valor){
+	cabecera = new Celda;
+	cabecera->datos = valor; 
+	cabecera->siguiente=NULL;
+}
+void Lista::destruir(){
+	Celda *borra;
+	while(cabecera != NULL){
+	borra= cabecera;
+	cabecera=cabecera->siguiente; 
+	delete borra;
+	}
+}  
+
+void Lista::insertar(string valor){
+	Celda* nueva= new Celda;
+	nueva->datos= valor;
+	nueva->siguiente=NULL;
+
+	if(cabecera == NULL){
+		cabecera= nueva;
+	}
+	else{
+		Celda *aux= cabecera;
+		while( aux->siguiente != NULL ){
+			aux= aux->siguiente;
+		}
+		aux->siguiente= nueva; 
+	}	
+}
+
+string Lista::getCelda(int pos) const{
+	string valor;
+	int contador=0;
+	Celda *aux=cabecera;
+	while(contador < pos && aux){
+		aux=aux->siguiente;
+		contador++;	
+	}	
+	if( aux != NULL){
+		valor= aux->datos;
+	}
+	return valor;
+}
+
+int Lista::longitud() const{
+	int contador=0;
+	Celda* aux;
+	aux=cabecera;
+	while( aux != NULL){
+		aux=aux->siguiente;
+		contador++;	
+	}
+	return contador;
+}
+
+bool Lista::leerLista(const char nombrefichero[]){
+	ifstream fin;
+	fin.open(nombrefichero);
+	if(!fin){
+		return false;
+	}
+	else{
+		string grises;
+		int lineas;
+		getline(fin,grises);
+		fin >> lineas;
+		getline(fin,grises);
+		if (!fin){
+			return false;
+		}
+		else {
+			int i = 0;
+			getline(fin,grises); 
+			while ((i < lineas)&&(fin)){
+				if (grises != ""){
+					insertar(grises);
+					i++;
+				}
+				getline(fin,grises);
+			}
+		}
+		fin.close();
+	}
+	return true;
+}
+
+
+//Destructor
+
+Lista::~Lista()
+{
+	//Liberar la memoria
+	Celda *borra;
+	while(cabecera != NULL){
+	borra= cabecera;
+	cabecera=cabecera->siguiente; 
+	delete borra;
+	}
+
+
+
+}
+
+
+
+//Por copia
+
+Lista::Lista(const Lista &orig)
+{
+	if(orig.cabecera!=NULL)
+	{
+
+		while(orig.cabecera != NULL)
+		{
+			cabecera=new Celda;
+			cabecera->datos=orig.cabecera->datos;
+			cabecera->siguiente=NULL;
+			cabecera=cabecera->siguiente;
+			orig.cabecera=orig.cabcera->siguiente;
+		}
+		cabecera->siguente=NULL;
+	
+
+
+	}
+{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

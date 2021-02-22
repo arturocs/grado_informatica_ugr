@@ -1,0 +1,1038 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+ <HEAD>
+  <TITLE>01-clase</TITLE>
+  <META NAME="generator" CONTENT="wxMaxima">
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+  <STYLE TYPE="text/css">
+body {
+  background-color: rgb(255,255,255);
+}
+.input {
+  color: rgb(0,0,255);
+}
+.comment {
+  color: rgb(0,0,0);
+  background-color: rgb(255,255,255);
+  padding: 2mm;
+}
+.image {
+  color: rgb(0,0,0);
+  padding: 2mm;
+}
+.section {
+  color: rgb(0,0,0);
+  font-size: 1.5em;
+  padding: 2mm;
+}
+.subsect {
+  color: rgb(0,0,0);
+  font-size: 1.2em;
+  padding: 2mm;
+}
+.title {
+  color: rgb(0,0,0);
+  font-size: 2em;
+  padding: 2mm;
+}
+.prompt {
+  color: rgb(255,0,0);
+}
+table {
+  border: 0px;
+}
+td {
+  vertical-align: top;
+  padding: 1mm;
+}
+  </STYLE>
+ </HEAD>
+ <BODY>
+
+<!---------------------------------------------------------->
+<!--          Created with wxMaxima version 14.12.1         -->
+<!---------------------------------------------------------->
+
+
+<!-- Title cell -->
+
+
+<P CLASS="title">
+Primeros pasos
+</P>
+
+
+<!-- Section cell -->
+
+
+<P CLASS="section">
+ 1 Operaciones elementales
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+Suma, producto, cociente, exponencial, raíz cuadrada
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+2+5;
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="01-clase_img/01-clase_0.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+3*(2+3/4);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="01-clase_img/01-clase_1.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+12^10;
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="01-clase_img/01-clase_2.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+sqrt(121);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="01-clase_img/01-clase_3.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+sqrt(120);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="01-clase_img/01-clase_4.png">
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+; y $ indican el fin de orden o separan varias órdenes
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+31^2;sqrt(4001);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="01-clase_img/01-clase_5.png">
+</P>
+
+
+<!-- Section cell -->
+
+
+<P CLASS="section">
+ 2 Constantes
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+Constantes predefinas<BR>
+i,π,e,razón áurea
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+%i;<BR>
+%pi;<BR>
+%e;<BR>
+%phi;
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="01-clase_img/01-clase_6.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+(2+3*%i)/(4+3*%i);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="01-clase_img/01-clase_7.png">
+</P>
+
+
+<!-- Section cell -->
+
+
+<P CLASS="section">
+ 3 Historial
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+% la última respuesta<BR>
+%i3 la tercera entrada<BR>
+%o2 la segunda respuesta
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+%^2;
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="01-clase_img/01-clase_8.png">
+</P>
+
+
+<!-- Section cell -->
+
+
+<P CLASS="section">
+ 4 Exacto vs aproximado
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+La variable numer o la entrada "numérico" del menu controla el comportamiento<BR>
+numer:true o false (modo numérico o exacto)<BR>
+<BR>
+float(numero) expresión decimal de un número<BR>
+bfloat(número) número con precisión real "grande"
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+sqrt(2);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="01-clase_img/01-clase_9.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+sqrt(2),numer;
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="01-clase_img/01-clase_10.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+float(sqrt(2)),numer;
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="01-clase_img/01-clase_11.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+numer;
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="01-clase_img/01-clase_12.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+numer:true;
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="01-clase_img/01-clase_13.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+1/2+sqrt(3);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="01-clase_img/01-clase_14.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+numer:false;
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="01-clase_img/01-clase_15.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+1/2+sqrt(3);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="01-clase_img/01-clase_16.png">
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+La variable fpprec controla con cuantos dígitos se trabaja
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+fpprec;
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="01-clase_img/01-clase_17.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+fpprec:5;
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="01-clase_img/01-clase_18.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+bfloat(sqrt(5));
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="01-clase_img/01-clase_19.png">
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+Los números en coma flotante grandes usan la notación b0,b1,.. que representa "por 10^(el número después de b)"
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+bfloat(sqrt(1241));
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="01-clase_img/01-clase_20.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+float(sqrt(1241));
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="01-clase_img/01-clase_21.png">
+</P>
+
+
+<!-- Section cell -->
+
+
+<P CLASS="section">
+ 5 Funciones usuales
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+exp, sqrt, log, sin, cos, tan, asin, acos, atan, sinh, cosh, tanh, asinh, acosh, atanh
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+Los logaritmos son neperianos, se pueden calcular logaritmos en cualquier base
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+log(%e^3);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="01-clase_img/01-clase_22.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+log(%e);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="01-clase_img/01-clase_23.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+log(10),numer;
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="01-clase_img/01-clase_24.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+log10(x):=log(x)/log(10);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="01-clase_img/01-clase_25.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+log10(8),numer;
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="01-clase_img/01-clase_26.png">
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+Las funciones trigonométricas están en radianes
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+cos(90),numer;
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="01-clase_img/01-clase_27.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+cos(%pi/2);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="01-clase_img/01-clase_28.png">
+</P>
+
+
+<!-- Subsection cell -->
+
+
+<P CLASS="subsect">
+  5.1 Más funciones
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+factorial, parte entera, valor absoluto, números aleatorios, max, min
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+3!;
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="01-clase_img/01-clase_29.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+entier(4.5);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="01-clase_img/01-clase_30.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+entier(-0.1);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="01-clase_img/01-clase_31.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+abs(-5);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="01-clase_img/01-clase_32.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+random(3);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="01-clase_img/01-clase_33.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+random(3.01);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="01-clase_img/01-clase_34.png">
+</P>
+
+
+<!-- Section cell -->
+
+
+<P CLASS="section">
+ 6 Variables, constantes, funciones
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+largo:3;ancho:4;largo*ancho;
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="01-clase_img/01-clase_35.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+f(x):=cos(x^2);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="01-clase_img/01-clase_36.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+define(g(x),sin(x+2));
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="01-clase_img/01-clase_37.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+g(1*f(2));
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="01-clase_img/01-clase_38.png">
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+Mirar menu: variables, borrar,...
+</P>
+
+
+<!-- Section cell -->
+
+
+<P CLASS="section">
+ 7 Expresiones simbólicas
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+exp(log(x));
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="01-clase_img/01-clase_39.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+p:(x+3)^3;
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="01-clase_img/01-clase_40.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+q:(x+1)*(x-2);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="01-clase_img/01-clase_41.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+p/q;
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="01-clase_img/01-clase_42.png">
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+expand, factor, partfrac
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+expand(p);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="01-clase_img/01-clase_43.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+expand(p/q);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="01-clase_img/01-clase_44.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+p/q;
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="01-clase_img/01-clase_45.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+partfrac(p/q,x);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="01-clase_img/01-clase_46.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+factor(x^2+3*x+2);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="01-clase_img/01-clase_47.png">
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+Versiones para funciones trigonométricas
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+trigexpand(cos(x+y));
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="01-clase_img/01-clase_48.png">
+</P>
+
+ <HR>
+ <SMALL> Created with <A HREF="http://wxmaxima.sourceforge.net/">wxMaxima</A>.</SMALL>
+
+ </BODY>
+</HTML>

@@ -1,0 +1,51 @@
+fail2ban -> banear ataques por fuerza bruta
+yum install epel-release
+yum install fail2ban
+
+systemctl status fail2ban
+systemctl start fail2ban
+fail2ban-client status sshd ->
+
+
+como ssh tiene el puerto cambiado, hay que editar el archivo /etc/fail2ban/jail.conf
+y añadir el puerto nuevo en el apartado port
+
+port ssh 22022
+
+hay que hacer una copia del jail.conf, ya que se reescribe con cada actualizacion
+
+
+
+para desbanear una ip 
+fail2ban-client set sshd unbanip IPBANEADA
+
+rkhunter -> especie de antivirus que envia warnings sobre ficheros mailciosos
+rkhunter -c -sk
+hay que programar su ejecucion periodica con crontab
+* * * * *
+minuto hora dia mes año
+
+
+tmux -> terminal en texto con multitud de opciones, partir pantalla, tambien tiene las funciones de screen
+
+(ctrl + B) + (shift + 2) -> partil terminal en tmux horizontalmente
+(ctrl + B) + (shift + espacio) -> partir tmux verticalmente
+
+screen -> mantiene el proceso aunque la conexion caiga o el terminal se cierre
+vi -> blablabla
+
+para salir de screen -> ctrl + D
+
+screen -r  -d -> retoma la sesion cerrada
+	reatach detach
+	-x muestra la interfaz grafica
+
+BACKUPS
+
+un backup tiene logs y fechas, una copia no
+
+rsync -aviz -> pregunta de examen
+
+devop -> developer + operator
+
+git

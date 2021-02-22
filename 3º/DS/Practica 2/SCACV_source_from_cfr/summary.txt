@@ -1,0 +1,9 @@
+Summary for /www/javadecompilers/app/public/data/26.04.18/561b8c1d7de9142780415d2eb954e572/SCACV.jar
+Decompiled with CFR 0_123
+
+
+ControlAutomatico.ControlAutomatico
+----------------------------
+
+run()
+  Exception : org.benf.cfr.reader.util.CannotPerformDecode: reachable test BLOCK was exited and re-entered.

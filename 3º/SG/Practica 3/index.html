@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Busqueda</title>
+	<script src="js/aframe.min.js"></script>
+</head>
+
+<body>
+	<a-scene>
+		<a-text id="titulo" value="VR_MICROGAMES" position="-2.7 6 -6" color="orange" scale ="3 3 3"></a-text>
+		<a-sky id="skybox" src="skybox/hub.jpg" rotation="0 -130 0" ></a-sky>
+		<a-box id="busqueda" width="2" position="-3 3 -7" scale="2 2 2" visible="false"></a-box>
+		<a-text value="Busqueda" position="-4 3 -7" color="black" scale ="3 3 3"></a-text>
+		<a-box id="esquivar"width="2" position="-3 0.5 -7" scale="2 2 2" visible="false"></a-box>
+		<a-text value="Esquivar" position="-4 0.5 -7" color="black" scale ="3 3 3"></a-text>
+		<a-box id="ordenar" width="2" position="2 3 -7" scale="2 2 2" visible="false"></a-box>
+		<a-text value="Ordenar" position="2 3 -7" color="black" scale ="3 3 3"></a-text>
+		<a-box id="encestar" width="2" position="2 0.5 -7" scale="2 2 2" visible="false"></a-box>
+		<a-text value="Encestar" position="2 0.5 -7" color="black" scale ="3 3 3"></a-text>
+
+		<a-entity id="cuerpo" position="0 0 0">
+			<a-camera id="camera" look-controls wasd-controls-enabled="false">
+				<a-entity position="0 0 -5" geometry="primitive: ring; radiusInner: 0.13; radiusOuter: 0.2;" material="color: black; shader: flat"
+				    cursor="fuse: true">
+					<a-animation begin="click" easing="ease-in" attribute="scale" fill="forwards" from="0.2 0.2 0.2" to="1 1 1" dur="150"></a-animation>
+					<a-animation begin="fusing" easing="ease-in" attribute="scale" fill="backwards" from="1 1 1" to="0.2 0.2 0.2" dur="1500"></a-animation>
+				</a-entity>
+			</a-camera>
+		</a-entity>
+
+	</a-scene>
+	<script>
+		var busqueda = document.querySelector("#busqueda")
+		busqueda.addEventListener('click', function (evt) {
+			console.log("holi")
+			window.location.href = "minijuegos/buscar.html"
+		})
+		var esquivar = document.querySelector("#esquivar")
+		esquivar.addEventListener('click', function (evt) {
+			window.location.href = "minijuegos/esquivar.html"
+		})
+		var ordenar = document.querySelector("#ordenar")
+		ordenar.addEventListener('click', function (evt) {
+			window.location.href = "minijuegos/ordenar.html"
+		})
+		var encestar = document.querySelector("#encestar")
+		encestar.addEventListener('click', function (evt) {
+			window.location.href = "minijuegos/lanzamiento.html"
+		})
+	</script>
+</body>
+
+</html>

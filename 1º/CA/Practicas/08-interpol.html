@@ -1,0 +1,700 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+ <HEAD>
+  <TITLE>08-interpol</TITLE>
+  <META NAME="generator" CONTENT="wxMaxima">
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+  <STYLE TYPE="text/css">
+body {
+  background-color: rgb(255,255,255);
+}
+.input {
+  color: rgb(0,0,255);
+}
+.comment {
+  color: rgb(0,0,0);
+  background-color: rgb(255,255,255);
+  padding: 2mm;
+}
+.image {
+  color: rgb(0,0,0);
+  padding: 2mm;
+}
+.section {
+  color: rgb(0,0,0);
+  font-size: 1.5em;
+  padding: 2mm;
+}
+.subsect {
+  color: rgb(0,0,0);
+  font-size: 1.2em;
+  padding: 2mm;
+}
+.title {
+  color: rgb(0,0,0);
+  font-size: 2em;
+  padding: 2mm;
+}
+.prompt {
+  color: rgb(255,0,0);
+}
+table {
+  border: 0px;
+}
+td {
+  vertical-align: top;
+  padding: 1mm;
+}
+  </STYLE>
+ </HEAD>
+ <BODY>
+
+<!---------------------------------------------------------->
+<!--          Created with wxMaxima version 14.12.1         -->
+<!---------------------------------------------------------->
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+¦
+  </SPAN></TD>
+</TR></TABLE>
+
+</P>
+
+
+<!-- Title cell -->
+
+
+<P CLASS="title">
+Interpolación
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+Interpolación = dada Una función de la que se conoce el valor en <BR>
+algunos puntos, calcular su valor en un punto intermedio.<BR>
+<BR>
+nodos = puntos en los que conocoemos el valor de la función
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+Por ejemplo, los valores de la función raíz cuadrada <BR>
+en 4,9 y 16 son
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i1) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+nodos:[[4,2],[9,3],[16,4]];
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="08-interpol_img/08-interpol_0.png">
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+Vamos a usar el paquete interpol. Lo cargamos previamente.
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i2) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+load(interpol);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="08-interpol_img/08-interpol_1.png">
+</P>
+
+
+<!-- Section cell -->
+
+
+<P CLASS="section">
+ 1 Interpolación lineal
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+Aproximamos los datos por la poligonal (unimos con segmentos) que <BR>
+pasa por dichos nodos
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+linearinterpol(lista de puntos) = poligonal que une la lista de <BR>
+puntos<BR>
+
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i3) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+define(f(x),linearinterpol(nodos));
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="08-interpol_img/08-interpol_2.png">
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+Comparamos la función raíz cuadrada y el polinomio de<BR>
+interpolación que se obtiene usando los puntos anteriores.
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i4) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+wxplot2d([sqrt(x),f(x)],[x,4,16]);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="08-interpol_img/08-interpol_3.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i5) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+f(12),numer;
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="08-interpol_img/08-interpol_4.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+%
+  </SPAN></TD>
+</TR></TABLE>
+
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i6) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+sqrt(12),numer;
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="08-interpol_img/08-interpol_5.png">
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+charfun2(x,a,b) = 1 si x pertenece a [a,b), 0 en otro caso<BR>
+en otras palabras, la función característica del intervalo [a,b)<BR>
+<BR>
+charfun(prop) = 1 si prop es verdadero y 0 si es falso
+</P>
+
+
+<!-- Section cell -->
+
+
+<P CLASS="section">
+ 2 Interpolación de Lagrange
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+Buscar el polinomio de menor grado posible que se ajusta a los datos <BR>
+conocidos
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+lagrange(lista de puntos) = polinomio de Lagrange que se <BR>
+ajusta esos valores.
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+Si tenemos
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i7) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+lagrange(nodos);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="08-interpol_img/08-interpol_6.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i8) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+define(g(x),expand(%));
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="08-interpol_img/08-interpol_7.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i9) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+wxplot2d([sqrt(x),g(x)],[x,4,16]);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="08-interpol_img/08-interpol_8.png">
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+Compara los resultados
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i10) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+a:12.0$<BR>
+display(sqrt(a))$<BR>
+display(f(a))$<BR>
+display(g(a))$
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="08-interpol_img/08-interpol_9.png">
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+Si usamos muchos puntos, el polinomio tiene grado<BR>
+muy alto y los errores al evaluarlo pueden ser <BR>
+importantes
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i14) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+nodos:makelist([n^2,n],n,1,15);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="08-interpol_img/08-interpol_10.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i15) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+lagrange(nodos);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="08-interpol_img/08-interpol_11.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i16) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+define(g(x),expand(lagrange(nodos)));
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="08-interpol_img/08-interpol_12.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i17) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+sqrt(0.8),numer;
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="08-interpol_img/08-interpol_13.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i18) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+g(0.8),numer;
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="08-interpol_img/08-interpol_14.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i19) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+sqrt(0.1),numer;
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="08-interpol_img/08-interpol_15.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i20) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+g(0.1),numer;
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="08-interpol_img/08-interpol_16.png">
+</P>
+
+
+<!-- Section cell -->
+
+
+<P CLASS="section">
+ 3 Polinomio de Taylor
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+Polinomio de menor grado que coincide con una función y sus derivadas <BR>
+hasta un cierto orden
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+kill(all);
+  </SPAN></TD>
+</TR></TABLE>
+
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+taylor(funcion,x,a,n) = polinomio de Taylor de la función f centrado en a <BR>
+de orden n
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+El polinomio de Taylor de la función coseno centrado en cero <BR>
+de orden 6
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i21) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+taylor(cos(x),x,0,6);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="08-interpol_img/08-interpol_17.png">
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+Comparamos el valor del polinomio y la función en 0.5
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i22) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+at(%,x=0.5);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="08-interpol_img/08-interpol_18.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i23) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+cos(0.5);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="08-interpol_img/08-interpol_19.png">
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+O mejor sus gráficas
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i24) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+wxplot2d([cos(x),taylor(cos(x),x,0,16)],[x,-10,10],[y,-3,3]);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="08-interpol_img/08-interpol_20.png">
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+Una animación: representamos una función y como mejora la <BR>
+aproximación conforme aumentamos el orden del polinomio de Taylor
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i25) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+load(draw);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="08-interpol_img/08-interpol_21.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i26) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+f(x):=cos(x);<BR>
+a:0;<BR>
+with_slider_draw(<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;n,<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;makelist(i,i,1,15),<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;color=blue,<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;line_width=2,<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;key="Funcion",<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;explicit(f(x),x,-10,10),<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;color=red,<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;line_width=1,<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;key="polinomio de Taylor",<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;explicit(taylor(f(x),x,a,n),x,-10,10),<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;yrange=[-3,3],<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;xaxis=true,<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;yaxis=true,<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;grid=true<BR>
+);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="08-interpol_img/08-interpol_22.png">
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+Observa como al aumentar el orden del polinomio <BR>
+de Taylor, mejora la exactitud de la aproximación.<BR>
+Esto que ocurre con la función coseno, no es cierto con<BR>
+otras. Prueba con la función arcotangente o la <BR>
+función logaritmo.
+</P>
+
+ <HR>
+ <SMALL> Created with <A HREF="http://wxmaxima.sourceforge.net/">wxMaxima</A>.</SMALL>
+
+ </BODY>
+</HTML>

@@ -1,0 +1,21 @@
+ansible all -m ping -> hacerle ping a todas las maquinas orquestadas
+agentless -> no necesita ningun programa ejectuandose en las maquinas
+aunque funciona con ssh, pero como ssh esta estandarizado decimos ansible que es agentless
+en vez de hacer meter la contraseña usamos ssh-copy-id para identificarnos
+
+-m mirar manual
+-a mirar manual
+
+
+primero hay que copiar el script con cualquier comando a las maquinas
+ansible all -a "python ~/mon_scripts/check_raid.py"
+ejecuta el script en todas las maquinas
+
+ansible all -m setup -> monitorizar las maquinas
+
+un playbook -> ejecuta una serie de ordenes en ansible
+
+shift + AvPag -> subir
+shift + RePag
+
+/usr/share/zabbix/conf/zabbix.conf.php

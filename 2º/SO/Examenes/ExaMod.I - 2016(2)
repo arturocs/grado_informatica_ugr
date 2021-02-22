@@ -1,0 +1,69 @@
+EJERCICIO 1
+a) Llega un nuevo usuario al sistema. Debes crearle una cuenta con las siguientes características:
+	- Nombre de usuario: usuD2
+		useradd usuD2 ó adduser usuD2
+		
+	- Cada vez que se conecte el usuario debe disponer de un alias que se llame dir y se corresponda con la ejecucion de ls -la
+		En el fichero de configuración de .bash_profile tenemos que crear el alias 
+		Para ello, nos logeamos con el usuario creado y ejecutamos ~/.bash_profile y lo editamos con nano;
+		alias dir='ls -la'
+		
+	- El usuario debe cambiar la contraseña como mucho en los tres siguientes dias en los que se conecte. Mándame la línea de cada
+	  fichero que se ha modificado o añadido por las acciones anteriores.
+	  	chage -M 3 usuD2
+	  
+b) Una vez creado el usuario, deseamos modificar su grupo que debe ser estudiantesGD2
+	creamos el grupo: groupadd estudiantesGD2 y modificamos a ese usuario de grupo: usermod -g gid user 
+
+EJERCICIO2
+a) Monta desde UML en un directorio que llamarás DirG2 tu directorio home del Ubuntu 14 desde donde arrancaste. Crea DirG2 un nuevo 	directorio llamado PRUEBA. Desmonta en UML tu directorio home ¿sigue existiendo PRUEBA? ¿Dónde? (demuéstralo listando el contenido de los directorios que creas oportunos)
+	Monto mi home en UML: mount none ./dirG2 -t hostfs -o /home/redondo
+	creo directorio PRUEBA
+	desmonto: 
+	PRUEBA no sigue existiendo en UML en el directorio dirG2, PRUEBA existe en /home/redondo. (lo demuestro con listados y ale) 
+
+b) Crea un archivo especial de dispositivo de bloques /dev/loop77 con un tamaño de 20 MB tal y como se hizo en la sesion 2 y crea en él un sistema de archivos tipo ext3. Muestra el contenido del superbloque de dicho sistema de arhcivos.
+	Creo: mknod /dev/loop77 b 7 0
+	creo el archivo: id if=..............
+	Los asocio: losetup /dev/loop77 /root/archivo_SA20
+	Creo particion: fdisk /dev/loop77 - m - n -1 enter enter.... - w
+	Ahora formateo: mkfs -t ext3 /dev/loop77
+	Para mostrar por pantalla el contenido del superbloque: tune2fs -l /dev/loop77
+	Si quiere poner alguna etiqueta: mkfs.ext3 -L 'LABEL_ext3' /dev/loop77
+
+c) Instala con RPM el paquete de quotas y modifica la cuenta del usuario usuD2 limitando su Nº de bloques y de archivos que puede utilizar el sistema de archivos creado en el apartado b
+	rpm -i quota-1:3.17-13.fc14.i686
+	
+	
+	
+
+EJERCICIO 3
+a) ¿Como puedes saber la prioridad y el estado actual que tiene un determinado proceso? ¿y como puedes incrementar dicha prioridad? Pon un ejemplo real, ejecuta alguno de tus guiones y muestra la info resultante.
+	Con la orden top fijándote en la columna PRI 
+	Para incrementar la prioridad se utiliza nice --x proceso
+
+b) ¿Por que no podemos percibir sin han existido errores durante la ejecucion del demonio cron? ¿como podemos conseguir dicha info?
+	Porque el demonio cron se ejecuta en segundo plano. Para ver si ha existido algún error tenemos que redirigir también la salida a 		error estándar por si hubiera algún error con la siguiente orden: 2>
+
+c) Crea un guión que devuelva la cantidad de espacio de swap que se consume en nuestro sistema.
+top | head -5 | tail -1 | cut -d "," -f2 | cut -d " " -f5
+El guión podría ser:
+#!/bin/bash
+
+
+NUM=`top | head -5 | tail -1 | cut -d "," -f2 | cut -d " " -f5`
+
+
+echo "El valor de Swap usada es: " $NUM >> ./SWAP
+
+
+d) Crea un archivo llamado SWAP en tu directorio home y consigue que todos los viernes a las 9 horas durante el mes de noviembre ejecute el guion del apartado c) y se guarden los resultados de ejecucion en SWAP, de tal forma que se pueda observar su evolucion del espacio de swap usado (pruébalo para ver que funcione cada minuto). 
+	touch SWAP 
+	Por otro lado tenemos nuestro archivo cron_exa que contiene:
+		00 09 * 11 05 ./guionc >> SWAP
+		para probarlo nuestro archivo cron contendrá * * * * ./guionc >> SWAP
+
+
+
+
+

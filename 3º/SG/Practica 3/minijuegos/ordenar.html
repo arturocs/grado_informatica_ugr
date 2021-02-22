@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Ordenar</title>
+	<script src="../js/aframe.min.js"></script>
+</head>
+
+<body>
+
+	<a-scene >
+		<a-assets>
+			<a-asset-item id="0" src="../modelos/0.glb"></a-asset-item>
+			<a-asset-item id="1" src="../modelos/1.glb"></a-asset-item>
+			<a-asset-item id="2" src="../modelos/2.glb"></a-asset-item>
+			<a-asset-item id="3" src="../modelos/3.glb"></a-asset-item>
+			<a-asset-item id="4" src="../modelos/4.glb"></a-asset-item>
+			<a-asset-item id="5" src="../modelos/5.glb"></a-asset-item>
+
+		</a-assets>
+		<a-sky id="skybox" color="black"></a-sky>
+		<a-sky id="skybox2" src="../skybox/numeros.jpg" rotation="0 -50 0" visible="false"></a-sky>
+		<a-entity id="modelos" visible="false">
+			<a-entity id="n0" gltf-model="#0" position="0 -0.5 -6" scale="2 2 2">
+				<a-animation begin="click" attribute="rotation" to="0 360 0" easing="linear" dur="1000" fill="backwards"></a-animation>
+			</a-entity>
+			<a-entity id="n1" gltf-model="#1" position="0 2.5 -6" scale="2 2 2">
+				<a-animation begin="click" attribute="rotation" to="0 360 0" easing="linear" dur="1000" fill="backwards"></a-animation>
+			</a-entity>
+			<a-entity id="n2" gltf-model="#2" position="-3 -0.5 -6" scale="2 2 2">
+				<a-animation begin="click" attribute="rotation" to="0 360 0" easing="linear" dur="1000" fill="backwards"></a-animation>
+			</a-entity>
+			<a-entity id="n3" gltf-model="#3" position="-3 2.5 -6" scale="2 2 2">
+				<a-animation begin="click" attribute="rotation" to="0 360 0" easing="linear" dur="1000" fill="backwards"></a-animation>
+			</a-entity>
+			<a-entity id="n4" gltf-model="#4" position="3 -0.5 -6" scale="2 2 2">
+				<a-animation begin="click" attribute="rotation" to="0 360 0" easing="linear" dur="1000" fill="backwards"></a-animation>
+			</a-entity>
+			<a-entity id="n5" gltf-model="#5" position="3 -0.5 -6" scale="2 2 2">
+				<a-animation begin="click" attribute="rotation" to="0 360 0" easing="linear" dur="1000" fill="backwards"></a-animation>
+			</a-entity>
+		</a-entity>
+		<a-entity id="cuerpo" position="0 0 0">
+			<a-camera id="camera" look-controls wasd-controls-enabled="false">
+				<a-text id="txt" value="Mira los numeros en orden" position="-0.5 0 -1.5"></a-text>
+
+				<a-entity position="0 0 -5" geometry="primitive: ring; radiusInner: 0.13; radiusOuter: 0.2;" material="color: black; shader: flat"
+				    cursor="fuse: true">
+					<a-animation begin="click" easing="ease-in" attribute="scale" fill="forwards" from="0.2 0.2 0.2" to="1 1 1" dur="150"></a-animation>
+					<a-animation begin="fusing" easing="ease-in" attribute="scale" fill="backwards" from="1 1 1" to="0.2 0.2 0.2" dur="1500"></a-animation>
+				</a-entity>
+			</a-camera>
+		</a-entity>
+
+	</a-scene>
+	<script src="../js/ordenar.js"></script>
+</body>
+
+</html>

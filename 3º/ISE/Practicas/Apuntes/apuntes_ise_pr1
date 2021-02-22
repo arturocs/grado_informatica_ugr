@@ -1,0 +1,20 @@
+ventajas de lvm: redimesionado dinamico de lvm, flexibilidad
+fde: full disk encryption
+pregunta de examen: proceso de instalacion de ubuntu
+flujo de instalacion de  ubuntu para configurar raid 1 con lvm y cifrado
+
+1 formateo de discos / crear la tabla de particiones
+2dispositivo multi device
+3gestionamos el dispositivo con lvm
+4ciframos con lvm
+
+dispositivo md = disposotovo multidevice
+pregunta de examen ¿es logico un giga pra /boot? no
+para un fde se puede montar /boot en un pendrive y que solo se pueda arrancar con el
+pregunta examen: que tamaño de clave le asignamos a swap para priorizar la eficiencia
+elegir una longitud de clave pequeña
+contraseña:practias,ISE
+mbr=master boot record
+donde nos pregunta el asistente de instalacion que va a intalar el gestor de arranque
+sda o sdb pero nunca un md0 porque tiene que ser un disco
+lsblk list block

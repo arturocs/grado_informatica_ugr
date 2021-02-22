@@ -1,0 +1,525 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+ <HEAD>
+  <TITLE>05-biseccion</TITLE>
+  <META NAME="generator" CONTENT="wxMaxima">
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+  <STYLE TYPE="text/css">
+body {
+  background-color: rgb(255,255,255);
+}
+.input {
+  color: rgb(0,0,255);
+}
+.comment {
+  color: rgb(0,0,0);
+  background-color: rgb(255,255,255);
+  padding: 2mm;
+}
+.image {
+  color: rgb(0,0,0);
+  padding: 2mm;
+}
+.section {
+  color: rgb(0,0,0);
+  font-size: 1.5em;
+  padding: 2mm;
+}
+.subsect {
+  color: rgb(0,0,0);
+  font-size: 1.2em;
+  padding: 2mm;
+}
+.title {
+  color: rgb(0,0,0);
+  font-size: 2em;
+  padding: 2mm;
+}
+.prompt {
+  color: rgb(255,0,0);
+}
+table {
+  border: 0px;
+}
+td {
+  vertical-align: top;
+  padding: 1mm;
+}
+  </STYLE>
+ </HEAD>
+ <BODY>
+
+<!---------------------------------------------------------->
+<!--          Created with wxMaxima version 14.12.1         -->
+<!---------------------------------------------------------->
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+Siempre vamos a trabajar en modo númerico
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i1) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+numer:true;
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="05-biseccion_img/05-biseccion_0.png">
+</P>
+
+
+<!-- Section cell -->
+
+
+<P CLASS="section">
+ 1 Método de Bisección
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+El método de bisección es una de las formas más elementales de <BR>
+buscar una solución de una ecuación. <BR>
+Se trata de una aplicación del teorema de Bolzano.
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i2) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+biseccion0(expr,var,ext_inf,ext_sup):=<BR>
+block(<BR>
+[a:ext_inf,b:ext_sup,c,pasos:10],<BR>
+local(f),<BR>
+define(f(x),subst(x,var,expr)),<BR>
+/* comprobamos las condiciones iniciales */<BR>
+if f(a)*f(b)>0 then error("Error: no hay cambio de signo"),<BR>
+/* si hay suerte en los extremos */<BR>
+if f(a) =0 then return(a),<BR>
+if f(b) =0 then return(b),<BR>
+for k:1 thru pasos do<BR>
+(<BR>
+c:(a+b)/2,<BR>
+if f(c)=0 then return(c),<BR>
+if f(a)*f(c)< 0 then b:c else a:c<BR>
+),<BR>
+c)$
+  </SPAN></TD>
+</TR></TABLE>
+
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i3) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+biseccion0(x^2-3,x,0,8);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="05-biseccion_img/05-biseccion_1.png">
+</P>
+
+
+<!-- Subsection cell -->
+
+
+<P CLASS="subsect">
+  1.1 Control del error, ¿Y si hay suerte?
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+Si presentamos err como el error que prefijamos, <BR>
+el número de pasos que hay que hacer será: <BR>
+ceiling(log_2((b-a)/err)= el menor entero mayor <BR>
+o igual que log_2((b-a)/err)
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+Podría ocurrir que en un determinado paso, <BR>
+antes de llegar al final<BR>
+del bucle, encontráramos el cero de f. <BR>
+Entonces, tendríamos que <BR>
+establecer cómo acabar si ocurriera esto.<BR>
+Pero no podemos ir preguntando en cada paso <BR>
+is(f(c)=0) puesto que <BR>
+en numérico<BR>
+esta pregunta puede tener respuestas sorprendentes.<BR>
+Así que establecemos lo que sería un "cero gordo"; <BR>
+es decir, si llamamos prec a una precisión, <BR>
+por ejemplo, 10^(-5), en cuanto c  verifique<BR>
+que |f(c)|<prec, eso será considerado como <BR>
+el cero ("gordo") y finalizará el bucle.
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i4) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+biseccion1(expr,var,ext_inf,ext_sup):=<BR>
+block(<BR>
+[a:ext_inf,b:ext_sup,c,k,err:10^(-8),prec:10^(-9),pasos],<BR>
+/* numero de pasos */<BR>
+local(log2,f),<BR>
+define(log2(x),log(x)/log(2)),<BR>
+define(f(x),subst(x,var,expr)),<BR>
+pasos:ceiling(log2((b-a)/err)),<BR>
+/* comprobamos las condiciones iniciales */<BR>
+if f(a)*f(b)>0 then error("Error: no hay cambio de signo"),<BR>
+/* si hay suerte en los extremos */<BR>
+if abs(f(a)) < prec then return(a),<BR>
+if abs(f(b)) < prec then return(b),<BR>
+for k:1 thru pasos do<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;(<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;c:(a+b)/2,<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;if abs(f(c))< prec then return(c),<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;if f(a)*f(c)< 0 then b:c else a:c<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;),<BR>
+c)$
+  </SPAN></TD>
+</TR></TABLE>
+
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i5) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+biseccion1(x^2-2,x,0.0,2.0);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="05-biseccion_img/05-biseccion_2.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i6) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+biseccion1(x^2-2,x,0.0,1.0);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="05-biseccion_img/05-biseccion_3.png">
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+Si resolvemos la ecuación con el comando find_root:
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i7) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+find_root(x^2-2,x,0.,1.0);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="05-biseccion_img/05-biseccion_4.png">
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+Otro ejemplo:
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i8) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+biseccion1(x^3-5,x,0.0,8.0);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="05-biseccion_img/05-biseccion_5.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i9) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+float((5)^(1/3));
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="05-biseccion_img/05-biseccion_6.png">
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+Número de pasos en el que se ha encontrado la solución
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i10) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+biseccion2(expr,var,ext_inf,ext_sup):=<BR>
+block(<BR>
+[a:ext_inf,b:ext_sup,c,pasos,err:10^(-8),prec:10^(-9),j],<BR>
+/* numero de pasos */<BR>
+local(log2,f),<BR>
+define(f(x),subst(x,var,expr)),<BR>
+define(log2(x),log(x)/log(2)),<BR>
+pasos:ceiling(log2((b-a)/err)),<BR>
+/* comprobamos las condiciones iniciales */<BR>
+if f(a)*f(b)>0 then error("Error: no hay cambio de signo"),<BR>
+/* si hay suerte en los extremos */<BR>
+if abs(f(a)) < prec then return(a),<BR>
+if abs(f(b)) < prec then return(b),<BR>
+/* hacemos el bucle for  */<BR>
+for i:1 thru pasos do<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;(j:i,<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;c:(a+b)/2,<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;if abs(f(c))< prec then return(),<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;if f(a)*f(c)< 0 then b:c else a:c<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;),<BR>
+[j,c,f(c)])$
+  </SPAN></TD>
+</TR></TABLE>
+
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i11) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+biseccion2(x^2-4,x,0,8);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="05-biseccion_img/05-biseccion_7.png">
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+Por ejemplo:
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i12) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+biseccion2(t^3-5,t,0.0,8.0);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="05-biseccion_img/05-biseccion_8.png">
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+Así sabemos en qué paso ha encontrado el<BR>
+cero de la función y cuánto valen tanto el cero, como el valor <BR>
+de f en dicho cero.
+</P>
+
+
+<!-- Subsection cell -->
+
+
+<P CLASS="subsect">
+  1.2 Una última versión
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i13) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+biseccion3(expr,var,ext_inf,ext_sup,[t]):=<BR>
+block(<BR>
+[a,b,c,pasos,fa,fb,fc,err:10^(-8),prec:10^(-9),j],<BR>
+<BR>
+/* comprobamos que t tiene dos entradas err y prec */<BR>
+if length(t)=2 then (err:t[1],prec:t[2]),<BR>
+if length(t)=1 then error("Numero erroneo de datos"), <BR>
+if length(t)>2 then error("Numero erroneo de datos"),<BR>
+<BR>
+/* los extremos pueden estar escritos desordenados */<BR>
+a:float(min(ext_inf,ext_sup)),<BR>
+b:float(max(ext_inf,ext_sup)),<BR>
+if a=b then error("Los extremos deben ser distintos"),<BR>
+<BR>
+/* numero de pasos */<BR>
+local(log2,f),<BR>
+define(log2(x),log(x)/log(2)),<BR>
+pasos:ceiling(log2((b-a)/err)),<BR>
+<BR>
+/* definimos la funcion f cambiando la variable si es necesario */<BR>
+define(f(x),subst(x,var,expr)),<BR>
+<BR>
+/* usamos fa,fb y fc para ir guardando los valores de la funcion */<BR>
+fa:f(a),<BR>
+fb:f(b),<BR>
+<BR>
+/* si hay suerte en los extremos */<BR>
+if abs(fa) < prec then return(a),<BR>
+if abs(fb) < prec then return(b),<BR>
+<BR>
+/* comprobamos las condiciones iniciales */<BR>
+if sign(fa) = sign(fb) then error("Error: no hay cambio de signo"),<BR>
+<BR>
+/* hacemos el bucle for  */<BR>
+for i:1 thru pasos do<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;(<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;j:i,<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;c:a+(b-a)/2, /* el punto medio */<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;fc:f(c),<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;if abs(fc)< prec then return(),<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;if sign(fa) # sign(fc) then (b:c,fb:fc) else (a:c,fa:fc)<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;),<BR>
+[j,c,fc])$
+  </SPAN></TD>
+</TR></TABLE>
+
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+biseccion3(x^3-7,x,0,7);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="05-biseccion_img/05-biseccion_9.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+biseccion3(x^3-7,x,7,0);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="05-biseccion_img/05-biseccion_10.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+biseccion3(x^3-5,x,0,3,10^(-4),10^(-6));
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="05-biseccion_img/05-biseccion_11.png">
+</P>
+
+ <HR>
+ <SMALL> Created with <A HREF="http://wxmaxima.sourceforge.net/">wxMaxima</A>.</SMALL>
+
+ </BODY>
+</HTML>

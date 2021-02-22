@@ -1,0 +1,2890 @@
+[17:59.07.203]  
+[17:59.07.203]  BEGIN AdaptToGlobalDPI
+[17:59.07.203]      AdaptToGlobalDPI: DPI=120
+[17:59.07.203]      BEGIN Loading flat icons (size=64)
+[17:59.07.203]          Uncompressing resource...
+[17:59.07.209]          Opening uncompressed resource
+[17:59.07.209]          Extracting icons to ImageList Im64
+[17:59.07.210]      END Loading flat icons (size=64)
+[17:59.07.210]      BEGIN Loading flat icons (size=16)
+[17:59.07.210]          Uncompressing resource...
+[17:59.07.220]          Opening uncompressed resource
+[17:59.07.221]          Extracting icons to ImageList Im16
+[17:59.07.303]      END Loading flat icons (size=16)
+[17:59.07.303]      BEGIN Loading flat icons (size=22)
+[17:59.07.303]          Uncompressing resource...
+[17:59.07.319]          Opening uncompressed resource
+[17:59.07.320]          Extracting icons to ImageList Im22
+[17:59.07.401]      END Loading flat icons (size=22)
+[17:59.07.401]  END AdaptToGlobalDPI
+[17:59.07.402]  
+[17:59.07.426]  BEGIN AddMobaConsoleFont
+[17:59.07.428]  END AddMobaConsoleFont
+[17:59.07.428]  
+[17:59.07.431]  - MobaXterm version: 12.3 Build 4208
+[17:59.07.432]  - Command line: "D:\Clase\Internet technologies and standards\Lab1\MobaXterm_Personal_12.3.exe"
+[17:59.07.432]  - Date: 2019-11-21
+[17:59.07.432]  - Win32 version: 10.0.2.18363.
+[17:59.07.432]  - Windows architecture: 64-bits
+[17:59.07.432]  - Detected DPI: 120
+[17:59.07.432]  - Current DPI: 120
+[17:59.07.432]  - CurDir: D:\Clase\INTERN~1\Lab1\
+[17:59.07.432]  - PersonalDir: C:\Users\Arturo\DOCUME~1\
+[17:59.07.433]  - AppDataDir: C:\Users\Arturo\AppData\Roaming\
+[17:59.07.433]  - LocalAppDataDir: C:\Users\Arturo\AppData\Local\
+[17:59.07.433]  - DesktopDir: C:\Users\Arturo\Desktop\
+[17:59.07.433]  - MobaProfileDir: C:\Users\Arturo\DOCUME~1\
+[17:59.07.433]  - Free space in MobaProfileDir folder: 18806MB
+[17:59.07.433]  - TempDir: C:\Users\Arturo\AppData\Local\Temp\
+[17:59.07.434]  - Free space in TempDir folder: 18806MB
+[17:59.07.434]  - Monitor #0: 1920x1080
+[17:59.07.434]  - User name: Arturo
+[17:59.07.434]  - Computer name: DESKTOP-HQF1BTV
+[17:59.07.434]  - Uptime: 1 days, 23:31:43
+[17:59.07.434]  - Windows PATH: D:\Programas\OpenJDK-11\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\Programas\VSCodium\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NoteBook FanControl\;C:\Users\Arturo\.cargo\bin;C:\Users\Arturo\AppData\Local\Microsoft\WindowsApps;
+[17:59.07.435]  - WSL PATH: C:\WINDOWS\Sysnative\wsl.exe
+[17:59.07.437]  - Cygwin1.dll not detected in the PATH folders.
+[17:59.07.513]  - Cygwin1.dll not detected in running applications.
+[17:59.07.513]  
+[17:59.07.513]  Process list:  Registry, fontdrvhost.exe, SynTPEnhService.exe, NVDisplay.Container.exe, Memory Compression, igfxCUIService.exe, PresentationFontCache.exe, wlanext.exe, NbfcService.exe, IntelCpHDCPSvc.exe, esif_uf.exe, CxAudioSvc.exe, RtkAudUService64.exe, RtkBtManServ.exe, nvcontainer.exe, RstMwService.exe, SynAudSrv.exe, MsMpEng.exe, IntelCpHeciSvc.exe, NisSrv.exe, SecurityHealthService.exe, SearchIndexer.exe, IAStorDataMgrSvc.exe, SgrmBroker.exe, fontdrvhost.exe, NVDisplay.Container.exe, C:\Program Files\NVIDIA Corporation\NvContainer\nvcontainer.exe, C:\Windows\System32\sihost.exe, C:\Windows\System32\DriverStore\FileRepository\cui_dch.inf_amd64_f3a64c75ee4defb7\igfxEM.exe, C:\Windows\System32\taskhostw.exe, C:\Program Files (x86)\NVIDIA Corporation\NvNode\NVIDIA Web Helper.exe, C:\Windows\SystemApps\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\StartMenuExperienceHost.exe, C:\Windows\System32\RuntimeBroker.exe, C:\Windows\System32\SynTPEnh.exe, C:\Windows\SystemApps\Microsoft.Windows.Cortana_cw5n1h2txyewy\SearchUI.exe, C:\Windows\System32\RuntimeBroker.exe, C:\Windows\System32\SecurityHealthSystray.exe, C:\Windows\System32\RtkAudUService64.exe, C:\Windows\System32\TiltWheelMouse.exe, C:\Program Files (x86)\NoteBook FanControl\NoteBookFanControl.exe, C:\Program Files\WindowsApps\AppUp.IntelGraphicsExperience_1.100.1725.0_x64__8j3eq9eme6ctt\GCP.ML.BackgroundSysTray\IGCCTray.exe, C:\Program Files\WindowsApps\AppUp.IntelGraphicsExperience_1.100.1725.0_x64__8j3eq9eme6ctt\IGCC.exe, C:\Windows\SystemApps\ShellExperienceHost_cw5n1h2txyewy\ShellExperienceHost.exe, C:\Windows\System32\RuntimeBroker.exe, C:\Program Files\Intel\Intel(R) Rapid Storage Technology\IAStorIcon.exe, C:\Windows\System32\dllhost.exe, D:\Programas\Virtualbox\VBoxSVC.exe, VBoxSDS.exe, C:\Windows\System32\ApplicationFrameHost.exe, C:\Program Files\WindowsApps\RealtekSemiconductorCorp.HPAudioControl_1.2.143.0_x64__dt26b99r8h8gj\HPAudioControl.exe, C:\Windows\System32\RuntimeBroker.exe, C:\Windows\System32\smartscreen.exe, C:\Windows\System32\RuntimeBroker.exe, C:\Windows\SystemApps\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\MicrosoftEdge.exe, C:\Windows\System32\browser_broker.exe, C:\Windows\System32\MicrosoftEdgeSH.exe, C:\Program Files\Mozilla Firefox\firefox.exe, C:\Program Files\Mozilla Firefox\firefox.exe, C:\Program Files\Mozilla Firefox\firefox.exe, C:\Program Files\Mozilla Firefox\firefox.exe, C:\Program Files\Mozilla Firefox\firefox.exe, C:\Windows\SystemApps\InputApp_cw5n1h2txyewy\WindowsInternal.ComposableShell.Experiences.TextInput.InputApp.exe, C:\Windows\System32\MicrosoftEdgeCP.exe, C:\Windows\SystemApps\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\MicrosoftPdfReader.exe, Windows.WARP.JITService.exe, C:\Windows\System32\MicrosoftEdgeCP.exe, C:\Windows\System32\MicrosoftEdgeCP.exe, C:\Windows\System32\MicrosoftEdgeCP.exe, C:\Windows\SystemApps\Microsoft.LockApp_cw5n1h2txyewy\LockApp.exe, C:\Windows\System32\RuntimeBroker.exe, D:\Programas\Virtualbox\VirtualBox.exe, D:\Programas\Virtualbox\VBoxHeadless.exe, D:\Programas\Virtualbox\VBoxHeadless.exe, D:\Programas\Virtualbox\VBoxHeadless.exe, WmiPrvSE.exe, C:\Windows\System32\dllhost.exe, D:\Clase\Internet technologies and standards\Lab1\MobaXterm_Personal_12.3.exe
+[17:59.07.513]  
+[17:59.07.513]  
+[17:59.07.513]  BEGIN Form1.FormCreate
+[17:59.07.513]      Detecting installed/portable version
+[17:59.07.513]      --> portable version
+[17:59.07.513]      
+[17:59.07.514]      Detecting IniSettings
+[17:59.07.515]      MobaXterm will take its configuration from file "D:\Clase\INTERN~1\Lab1\MobaXterm.ini".
+[17:59.07.515]      (selected ini file seems to be writeable)
+[17:59.07.515]      --> IniSettings= D:\Clase\INTERN~1\Lab1\MobaXterm.ini
+[17:59.07.515]      
+[17:59.07.515]      Detecting CygUtils
+[17:59.07.515]      CygUtils32 detected
+[17:59.07.515]      --> Using CygPackage D:\Clase\INTERN~1\Lab1\CygUtils.plugin
+[17:59.07.515]      
+[17:59.07.515]      Detecting MobaXVTDir
+[17:59.07.515]      BEGIN IsFolderRW(C:\Users\Arturo\AppData\Local\Temp\Mxt123)
+[17:59.07.528]          CreateSymbolicLink(C:\Users\Arturo\AppData\Local\Temp\Mxt123\drives, C:\Users\Arturo\AppData\Local\Temp\Mxt123\cygdrive);
+[17:59.07.537]          CreateSymbolicLink(C:\Users\Arturo\AppData\Local\Temp\Mxt123\drives, C:\Users\Arturo\AppData\Local\Temp\Mxt123\mnt);
+[17:59.07.539]          CreateSymbolicLink(C:\Users\Arturo\AppData\Local\Temp\Mxt123\drives, C:\Users\Arturo\AppData\Local\Temp\Mxt123\media);
+[17:59.07.541]          CreateSymbolicLink(/proc/registry, C:\Users\Arturo\AppData\Local\Temp\Mxt123\registry);
+[17:59.07.560]          CreateSymbolicLink(C:\Users\Arturo\AppData\Local\Temp\Mxt123\mx86_64b\drives, C:\Users\Arturo\AppData\Local\Temp\Mxt123\mx86_64b\cygdrive);
+[17:59.07.562]          CreateSymbolicLink(C:\Users\Arturo\AppData\Local\Temp\Mxt123\mx86_64b\drives, C:\Users\Arturo\AppData\Local\Temp\Mxt123\mx86_64b\mnt);
+[17:59.07.564]          CreateSymbolicLink(C:\Users\Arturo\AppData\Local\Temp\Mxt123\mx86_64b\drives, C:\Users\Arturo\AppData\Local\Temp\Mxt123\mx86_64b\media);
+[17:59.07.566]          CreateSymbolicLink(/proc/registry, C:\Users\Arturo\AppData\Local\Temp\Mxt123\mx86_64b\registry);
+[17:59.07.574]      END IsFolderRW(C:\Users\Arturo\AppData\Local\Temp\Mxt123) --> OK
+[17:59.07.574]      --> MobaXVTDir= C:\Users\Arturo\AppData\Local\Temp\Mxt123
+[17:59.07.574]      
+[17:59.07.574]      Detecting BinExeDir
+[17:59.07.574]      --> BinExeDir= C:\Users\Arturo\AppData\Local\Temp\Mxt123\bin\
+[17:59.07.574]      
+[17:59.07.574]      Detecting MobaXVTHomeDir
+[17:59.07.575]      --> MobaXVTHomeDir= C:\Users\Arturo\AppData\Local\Temp\Mxt123\tmp\home_Arturo
+[17:59.07.575]      
+[17:59.07.575]      Skin detection
+[17:59.07.575]      Skin selected:
+[17:59.07.575]      Set Application Title
+[17:59.07.607]      - Cygwin1.dll not detected in running applications.
+[17:59.07.607]      
+[17:59.07.607]      Process list:  Registry, fontdrvhost.exe, SynTPEnhService.exe, NVDisplay.Container.exe, Memory Compression, igfxCUIService.exe, PresentationFontCache.exe, wlanext.exe, NbfcService.exe, IntelCpHDCPSvc.exe, esif_uf.exe, CxAudioSvc.exe, RtkAudUService64.exe, RtkBtManServ.exe, nvcontainer.exe, RstMwService.exe, SynAudSrv.exe, MsMpEng.exe, IntelCpHeciSvc.exe, NisSrv.exe, SecurityHealthService.exe, SearchIndexer.exe, IAStorDataMgrSvc.exe, SgrmBroker.exe, fontdrvhost.exe, NVDisplay.Container.exe, C:\Program Files\NVIDIA Corporation\NvContainer\nvcontainer.exe, C:\Windows\System32\sihost.exe, C:\Windows\System32\DriverStore\FileRepository\cui_dch.inf_amd64_f3a64c75ee4defb7\igfxEM.exe, C:\Windows\System32\taskhostw.exe, C:\Program Files (x86)\NVIDIA Corporation\NvNode\NVIDIA Web Helper.exe, C:\Windows\SystemApps\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\StartMenuExperienceHost.exe, C:\Windows\System32\RuntimeBroker.exe, C:\Windows\System32\SynTPEnh.exe, C:\Windows\SystemApps\Microsoft.Windows.Cortana_cw5n1h2txyewy\SearchUI.exe, C:\Windows\System32\RuntimeBroker.exe, C:\Windows\System32\SecurityHealthSystray.exe, C:\Windows\System32\RtkAudUService64.exe, C:\Windows\System32\TiltWheelMouse.exe, C:\Program Files (x86)\NoteBook FanControl\NoteBookFanControl.exe, C:\Program Files\WindowsApps\AppUp.IntelGraphicsExperience_1.100.1725.0_x64__8j3eq9eme6ctt\GCP.ML.BackgroundSysTray\IGCCTray.exe, C:\Program Files\WindowsApps\AppUp.IntelGraphicsExperience_1.100.1725.0_x64__8j3eq9eme6ctt\IGCC.exe, C:\Windows\SystemApps\ShellExperienceHost_cw5n1h2txyewy\ShellExperienceHost.exe, C:\Windows\System32\RuntimeBroker.exe, C:\Program Files\Intel\Intel(R) Rapid Storage Technology\IAStorIcon.exe, C:\Windows\System32\dllhost.exe, D:\Programas\Virtualbox\VBoxSVC.exe, VBoxSDS.exe, C:\Windows\System32\ApplicationFrameHost.exe, C:\Program Files\WindowsApps\RealtekSemiconductorCorp.HPAudioControl_1.2.143.0_x64__dt26b99r8h8gj\HPAudioControl.exe, C:\Windows\System32\RuntimeBroker.exe, C:\Windows\System32\smartscreen.exe, C:\Windows\System32\RuntimeBroker.exe, C:\Windows\SystemApps\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\MicrosoftEdge.exe, C:\Windows\System32\browser_broker.exe, C:\Windows\System32\MicrosoftEdgeSH.exe, C:\Program Files\Mozilla Firefox\firefox.exe, C:\Program Files\Mozilla Firefox\firefox.exe, C:\Program Files\Mozilla Firefox\firefox.exe, C:\Program Files\Mozilla Firefox\firefox.exe, C:\Program Files\Mozilla Firefox\firefox.exe, C:\Windows\SystemApps\InputApp_cw5n1h2txyewy\WindowsInternal.ComposableShell.Experiences.TextInput.InputApp.exe, C:\Windows\System32\MicrosoftEdgeCP.exe, C:\Windows\SystemApps\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\MicrosoftPdfReader.exe, Windows.WARP.JITService.exe, C:\Windows\System32\MicrosoftEdgeCP.exe, C:\Windows\System32\MicrosoftEdgeCP.exe, C:\Windows\System32\MicrosoftEdgeCP.exe, C:\Windows\SystemApps\Microsoft.LockApp_cw5n1h2txyewy\LockApp.exe, C:\Windows\System32\RuntimeBroker.exe, D:\Programas\Virtualbox\VirtualBox.exe, D:\Programas\Virtualbox\VBoxHeadless.exe, D:\Programas\Virtualbox\VBoxHeadless.exe, D:\Programas\Virtualbox\VBoxHeadless.exe, WmiPrvSE.exe, C:\Windows\System32\dllhost.exe, D:\Clase\Internet technologies and standards\Lab1\MobaXterm_Personal_12.3.exe
+[17:59.07.607]      
+[17:59.07.670]      
+[17:59.07.670]      BEGIN LoadExtensionsImageList
+[17:59.07.698]      END LoadExtensionsImageList
+[17:59.07.698]      
+[17:59.07.698]      BEGIN ReadCustomIcons
+[17:59.07.698]          No custom icon found.
+[17:59.07.698]      END ReadCustomIcons
+[17:59.07.698]      Generating icons list (size 16)
+[17:59.07.893]      Generating icons list (size 22)
+[17:59.08.085]      Generating icons list (size 64)
+[17:59.08.102]      Creating tray icon
+[17:59.08.106]      Loading skins
+[17:59.08.107]  END Form1.Create
+[17:59.08.107]  
+[17:59.08.107]  
+[17:59.08.107]  CREATING Form4
+[17:59.08.326]  BEGIN Form4.Create
+[17:59.08.339]      BEGIN Form4.AdapterDPI
+[17:59.08.339]          Form4.AdapterDPI: DPI=120
+[17:59.08.425]          Form4.AdapterDPI: Affectation des fontes
+[17:59.08.450]      END Form4.AdapterDPI
+[17:59.08.460]      NbPingus = 4
+[17:59.08.461]      BEGIN LoadBookmarksFromIni
+[17:59.08.462]      END LoadBookmarksFromIni
+[17:59.08.462]      BEGIN LoadMacrosFromIni
+[17:59.08.467]      END LoadMacrosFromIni
+[17:59.08.482]      BEGIN LoadBookmarksFromIni
+[17:59.08.482]          FindOrCreateTreeFolders() (1)
+[17:59.08.482]      END LoadBookmarksFromIni
+[17:59.08.484]      Form4Create1
+[17:59.08.484]      Form4Create2
+[17:59.08.493]      BEGIN AdaptSidebarArrows
+[17:59.08.493]      END AdaptSidebarArrows
+[17:59.08.496]      Form4Create3
+[17:59.08.497]      GetMinWidth = 1148
+[17:59.08.498]      GetMinHeight = 691
+[17:59.08.502]      Form4Create4
+[17:59.08.502]      IsNTFS(C:\) --> NTFS
+[17:59.08.502]      Slash drive is NTFS.
+[17:59.08.502]      Form4Create5
+[17:59.08.506]      Form4Create6
+[17:59.08.506]      Displaysidebarontheleft1Click: FormClick
+[17:59.08.518]      BEGIN AdaptSidebarArrows
+[17:59.08.518]      END AdaptSidebarArrows
+[17:59.08.518]      Form4Create7
+[17:59.08.518]      Form4Create8
+[17:59.08.519]      Form4Create9
+[17:59.08.519]      ShowButtonsbar1Click: FormClick
+[17:59.08.519]      Form4Create10
+[17:59.08.519]      Form4Create12
+[17:59.08.519]      SmallButtons1Click: FormClick
+[17:59.08.523]      GetMinWidth = 1148
+[17:59.08.523]      GetMinHeight = 675
+[17:59.08.523]      Form4Create13
+[17:59.08.523]      Form4Create14
+[17:59.08.523]  END Form4.Create
+[17:59.08.523]  
+[17:59.08.523]  
+[17:59.08.524]  CREATING FormParams
+[17:59.08.671]  BEGIN TFormParams.FormCreate
+[17:59.08.850]  END TFormParams.FormCreate
+[17:59.08.850]  
+[17:59.08.850]  
+[17:59.08.850]  CREATING FormSessionEdit
+[17:59.09.097]  BEGIN FormSessionEdit.Create
+[17:59.09.152]      BEGIN TFormSessionEdit.FindIP
+[17:59.09.261]      END TFormSessionEdit.FindIP
+[17:59.09.261]      BEGIN SetupEnumAvailableComPorts
+[17:59.09.265]          SetupEnumAvailableComPorts: SetupDiClassGuidsFromName
+[17:59.09.277]          SetupEnumAvailableComPorts: SetupDiGetClassDevs
+[17:59.09.277]          SetupEnumAvailableComPorts: SetupDiEnumDeviceInfo
+[17:59.09.277]          SetupEnumAvailableComPorts: SetupDiDestroyDeviceInfoList
+[17:59.09.282]      END SetupEnumAvailableComPorts
+[17:59.09.519]  END FormSessionEdit.Create
+[17:59.09.519]  
+[17:59.09.519]  
+[17:59.09.519]  CREATING FormTransparente
+[17:59.09.530]  
+[17:59.09.530]  
+[17:59.09.530]  CREATING FormTermConfirmClose
+[17:59.09.543]  
+[17:59.09.543]  
+[17:59.09.543]  CREATING FormManagePasswords
+[17:59.09.580]  BEGIN TFormManagePasswords.FormCreate
+[17:59.09.602]  END TFormManagePasswords.FormCreate
+[17:59.09.602]  
+[17:59.09.602]  
+[17:59.09.602]  DONE CREATING FORMS
+[17:59.09.602]  
+[17:59.09.602]  
+[17:59.09.602]  
+[17:59.09.602]  
+[17:59.09.604]  BEGIN Form1.Show
+[17:59.09.604]  END Form1.Show
+[17:59.09.737]  
+[17:59.09.737]  Launching Form1.Timer1Timer
+[17:59.09.737]  BEGIN CreerFstab
+[17:59.09.738]      CreerFstab: RootDirectory = C:/Users/Arturo/AppData/Local/Temp/Mxt123
+[17:59.09.738]      CreerFstab: HomeDirectory = C:/Users/Arturo/AppData/Local/Temp/Mxt123/tmp/HOME_A~1
+[17:59.09.746]  END CreerFstab
+[17:59.09.746]  BEGIN extraireFichiers1
+[17:59.09.746]      BEGIN CreerProfile
+[17:59.09.775]      END CreerProfile
+[17:59.09.775]      BEGIN CreerSshConfig
+[17:59.09.784]      END CreerSshConfig
+[17:59.09.784]      BEGIN CreerBaseProfile
+[17:59.09.784]          NEW PLUGIN: mobase
+[17:59.09.784]          BEGIN ProcessPlugin(mobase)
+[17:59.09.784]              BEGIN GetMobaseStream
+
+[17:59.10.416]              END GetMobaseStream
+[17:59.10.417]          END ProcessPlugin(mobase)
+[17:59.10.417]          NEW PLUGIN: D:\Clase\INTERN~1\Lab1\CygUtils.plugin
+[17:59.10.417]          BEGIN ProcessPlugin(D:\Clase\INTERN~1\Lab1\CygUtils.plugin)
+
+[17:59.11.260]              
+[17:59.11.260]              --> CygUtils version: 2.60
+[17:59.11.260]              
+[17:59.11.268]          END ProcessPlugin(D:\Clase\INTERN~1\Lab1\CygUtils.plugin)
+[17:59.11.305]      END CreerBaseProfile
+[17:59.11.305]      BEGIN MkGroupFile
+[17:59.11.305]          BEGIN MkGroup
+[17:59.11.305]              BEGIN GetLocalGroups
+[17:59.11.315]              END GetLocalGroups
+[17:59.11.315]              BEGIN AD_GetUserSidStr(Administradores)
+[17:59.11.315]                  LookupAccountName1
+[17:59.11.317]                  LookupAccountName2
+[17:59.11.318]                  BEGIN AD_SidToStr
+[17:59.11.318]                  END AD_SidToStr
+[17:59.11.318]              END AD_GetUserSidStr(Administradores) --> S-1-5-32-544
+[17:59.11.318]              BEGIN AD_GetUserSidStr(Administradores de Hyper-V)
+[17:59.11.318]                  LookupAccountName1
+[17:59.11.318]                  LookupAccountName2
+[17:59.11.319]                  BEGIN AD_SidToStr
+[17:59.11.319]                  END AD_SidToStr
+[17:59.11.319]              END AD_GetUserSidStr(Administradores de Hyper-V) --> S-1-5-32-578
+[17:59.11.319]              BEGIN AD_GetUserSidStr(Duplicadores)
+[17:59.11.319]                  LookupAccountName1
+[17:59.11.319]                  LookupAccountName2
+[17:59.11.319]                  BEGIN AD_SidToStr
+[17:59.11.319]                  END AD_SidToStr
+[17:59.11.319]              END AD_GetUserSidStr(Duplicadores) --> S-1-5-32-552
+[17:59.11.319]              BEGIN AD_GetUserSidStr(IIS_IUSRS)
+[17:59.11.319]                  LookupAccountName1
+[17:59.11.320]                  LookupAccountName2
+[17:59.11.320]                  BEGIN AD_SidToStr
+[17:59.11.320]                  END AD_SidToStr
+[17:59.11.320]              END AD_GetUserSidStr(IIS_IUSRS) --> S-1-5-32-568
+[17:59.11.320]              BEGIN AD_GetUserSidStr(Invitados)
+[17:59.11.320]                  LookupAccountName1
+[17:59.11.320]                  LookupAccountName2
+[17:59.11.321]                  BEGIN AD_SidToStr
+[17:59.11.321]                  END AD_SidToStr
+[17:59.11.321]              END AD_GetUserSidStr(Invitados) --> S-1-5-32-546
+[17:59.11.321]              BEGIN AD_GetUserSidStr(Lectores del registro de eventos)
+[17:59.11.321]                  LookupAccountName1
+[17:59.11.321]                  LookupAccountName2
+[17:59.11.321]                  BEGIN AD_SidToStr
+[17:59.11.322]                  END AD_SidToStr
+[17:59.11.322]              END AD_GetUserSidStr(Lectores del registro de eventos) --> S-1-5-32-573
+[17:59.11.322]              BEGIN AD_GetUserSidStr(Operadores criptográficos)
+[17:59.11.322]                  LookupAccountName1
+[17:59.11.323]                  LookupAccountName2
+[17:59.11.323]                  BEGIN AD_SidToStr
+[17:59.11.323]                  END AD_SidToStr
+[17:59.11.323]              END AD_GetUserSidStr(Operadores criptográficos) --> S-1-5-32-569
+[17:59.11.323]              BEGIN AD_GetUserSidStr(Operadores de asistencia de control de acceso)
+[17:59.11.323]                  LookupAccountName1
+[17:59.11.323]                  LookupAccountName2
+[17:59.11.324]                  BEGIN AD_SidToStr
+[17:59.11.324]                  END AD_SidToStr
+[17:59.11.324]              END AD_GetUserSidStr(Operadores de asistencia de control de acceso) --> S-1-5-32-579
+[17:59.11.324]              BEGIN AD_GetUserSidStr(Operadores de configuración de red)
+[17:59.11.324]                  LookupAccountName1
+[17:59.11.324]                  LookupAccountName2
+[17:59.11.325]                  BEGIN AD_SidToStr
+[17:59.11.325]                  END AD_SidToStr
+[17:59.11.325]              END AD_GetUserSidStr(Operadores de configuración de red) --> S-1-5-32-556
+[17:59.11.325]              BEGIN AD_GetUserSidStr(Operadores de copia de seguridad)
+[17:59.11.325]                  LookupAccountName1
+[17:59.11.325]                  LookupAccountName2
+[17:59.11.325]                  BEGIN AD_SidToStr
+[17:59.11.325]                  END AD_SidToStr
+[17:59.11.325]              END AD_GetUserSidStr(Operadores de copia de seguridad) --> S-1-5-32-551
+[17:59.11.325]              BEGIN AD_GetUserSidStr(Propietarios del dispositivo)
+[17:59.11.325]                  LookupAccountName1
+[17:59.11.326]                  LookupAccountName2
+[17:59.11.326]                  BEGIN AD_SidToStr
+[17:59.11.326]                  END AD_SidToStr
+[17:59.11.326]              END AD_GetUserSidStr(Propietarios del dispositivo) --> S-1-5-32-583
+[17:59.11.326]              BEGIN AD_GetUserSidStr(System Managed Accounts Group)
+[17:59.11.326]                  LookupAccountName1
+[17:59.11.326]                  LookupAccountName2
+[17:59.11.327]                  BEGIN AD_SidToStr
+[17:59.11.327]                  END AD_SidToStr
+[17:59.11.327]              END AD_GetUserSidStr(System Managed Accounts Group) --> S-1-5-32-581
+[17:59.11.327]              BEGIN AD_GetUserSidStr(Usuarios)
+[17:59.11.327]                  LookupAccountName1
+[17:59.11.327]                  LookupAccountName2
+[17:59.11.327]                  BEGIN AD_SidToStr
+[17:59.11.327]                  END AD_SidToStr
+[17:59.11.327]              END AD_GetUserSidStr(Usuarios) --> S-1-5-32-545
+[17:59.11.328]              BEGIN AD_GetUserSidStr(Usuarios avanzados)
+[17:59.11.328]                  LookupAccountName1
+[17:59.11.328]                  LookupAccountName2
+[17:59.11.328]                  BEGIN AD_SidToStr
+[17:59.11.328]                  END AD_SidToStr
+[17:59.11.328]              END AD_GetUserSidStr(Usuarios avanzados) --> S-1-5-32-547
+[17:59.11.328]              BEGIN AD_GetUserSidStr(Usuarios COM distribuidos)
+[17:59.11.328]                  LookupAccountName1
+[17:59.11.329]                  LookupAccountName2
+[17:59.11.329]                  BEGIN AD_SidToStr
+[17:59.11.329]                  END AD_SidToStr
+[17:59.11.329]              END AD_GetUserSidStr(Usuarios COM distribuidos) --> S-1-5-32-562
+[17:59.11.329]              BEGIN AD_GetUserSidStr(Usuarios de administración remota)
+[17:59.11.329]                  LookupAccountName1
+[17:59.11.329]                  LookupAccountName2
+[17:59.11.330]                  BEGIN AD_SidToStr
+[17:59.11.330]                  END AD_SidToStr
+[17:59.11.330]              END AD_GetUserSidStr(Usuarios de administración remota) --> S-1-5-32-580
+[17:59.11.330]              BEGIN AD_GetUserSidStr(Usuarios de escritorio remoto)
+[17:59.11.330]                  LookupAccountName1
+[17:59.11.330]                  LookupAccountName2
+[17:59.11.330]                  BEGIN AD_SidToStr
+[17:59.11.330]                  END AD_SidToStr
+[17:59.11.330]              END AD_GetUserSidStr(Usuarios de escritorio remoto) --> S-1-5-32-555
+[17:59.11.330]              BEGIN AD_GetUserSidStr(Usuarios del monitor de sistema)
+[17:59.11.330]                  LookupAccountName1
+[17:59.11.331]                  LookupAccountName2
+[17:59.11.331]                  BEGIN AD_SidToStr
+[17:59.11.331]                  END AD_SidToStr
+[17:59.11.331]              END AD_GetUserSidStr(Usuarios del monitor de sistema) --> S-1-5-32-558
+[17:59.11.331]              BEGIN AD_GetUserSidStr(Usuarios del registro de rendimiento)
+[17:59.11.331]                  LookupAccountName1
+[17:59.11.331]                  LookupAccountName2
+[17:59.11.331]                  BEGIN AD_SidToStr
+[17:59.11.331]                  END AD_SidToStr
+[17:59.11.331]              END AD_GetUserSidStr(Usuarios del registro de rendimiento) --> S-1-5-32-559
+[17:59.11.331]          END MkGroup
+[17:59.11.331]          SaveStringListToUnixFile(C:\Users\Arturo\AppData\Local\Temp\Mxt123\etc\group)
+[17:59.11.340]          MkGroupFile OK
+[17:59.11.340]      END MkGroupFile
+[17:59.11.340]      BEGIN MkPasswdFile
+[17:59.11.340]          BEGIN AD_SidToStr
+[17:59.11.340]          END AD_SidToStr
+[17:59.11.340]          Current Domain: DESKTOP-HQF1BTV
+[17:59.11.340]          BEGIN Bui_GetWindowsUsersAccount
+[17:59.11.341]          END Bui_GetWindowsUsersAccount
+[17:59.11.341]          BEGIN AD_GetUserSidStr(Administrador)
+[17:59.11.341]              LookupAccountName1
+[17:59.11.342]              LookupAccountName2
+[17:59.11.342]              BEGIN AD_SidToStr
+[17:59.11.342]              END AD_SidToStr
+[17:59.11.342]          END AD_GetUserSidStr(Administrador) --> S-1-5-21-694330162-208676931-2065332118-500
+[17:59.11.343]          BEGIN AD_GetUserSidStr(Arturo)
+[17:59.11.343]              LookupAccountName1
+[17:59.11.343]              LookupAccountName2
+[17:59.11.343]              BEGIN AD_SidToStr
+[17:59.11.343]              END AD_SidToStr
+[17:59.11.343]          END AD_GetUserSidStr(Arturo) --> S-1-5-21-694330162-208676931-2065332118-1001
+[17:59.11.343]          BEGIN AD_GetUserSidStr(DefaultAccount)
+[17:59.11.343]              LookupAccountName1
+[17:59.11.344]              LookupAccountName2
+[17:59.11.344]              BEGIN AD_SidToStr
+[17:59.11.344]              END AD_SidToStr
+[17:59.11.344]          END AD_GetUserSidStr(DefaultAccount) --> S-1-5-21-694330162-208676931-2065332118-503
+[17:59.11.344]          BEGIN AD_GetUserSidStr(Invitado)
+[17:59.11.344]              LookupAccountName1
+[17:59.11.345]              LookupAccountName2
+[17:59.11.345]              BEGIN AD_SidToStr
+[17:59.11.345]              END AD_SidToStr
+[17:59.11.345]          END AD_GetUserSidStr(Invitado) --> S-1-5-21-694330162-208676931-2065332118-501
+[17:59.11.345]          BEGIN AD_GetUserSidStr(WDAGUtilityAccount)
+[17:59.11.345]              LookupAccountName1
+[17:59.11.345]              LookupAccountName2
+[17:59.11.346]              BEGIN AD_SidToStr
+[17:59.11.346]              END AD_SidToStr
+[17:59.11.346]          END AD_GetUserSidStr(WDAGUtilityAccount) --> S-1-5-21-694330162-208676931-2065332118-504
+[17:59.11.355]          MkPasswdFile OK
+[17:59.11.355]          User found: Arturo:unused:1001:513:U-DESKTOP-HQF1BTV\Arturo,S-1-5-21-694330162-208676931-2065332118-1001:/home/mobaxterm:/bin/bash
+[17:59.11.355]      END MkPasswdFile
+[17:59.11.355]      BEGIN CreerNsswitch
+[17:59.11.362]      END CreerNsswitch
+[17:59.11.364]      Request for file extraction: /bin/scrdaemons
+[17:59.11.364]      BEGIN Extracting "/bin/scrdaemons"
+[17:59.11.375]          File scrdaemons extracted from CygUtils.plugin.
+[17:59.11.375]      END Extracting "/bin/scrdaemons"
+[17:59.11.375]      CreateSymbolicLink(C:\Users\Arturo\AppData\Local\Temp\Mxt123\bin\scrdaemons, C:\Users\Arturo\AppData\Local\Temp\Mxt123\etc\init.d\tftp);
+[17:59.11.382]      CreateSymbolicLink(C:\Users\Arturo\AppData\Local\Temp\Mxt123\bin\scrdaemons, C:\Users\Arturo\AppData\Local\Temp\Mxt123\etc\init.d\ftp);
+[17:59.11.384]      CreateSymbolicLink(C:\Users\Arturo\AppData\Local\Temp\Mxt123\bin\scrdaemons, C:\Users\Arturo\AppData\Local\Temp\Mxt123\etc\init.d\http);
+[17:59.11.386]      CreateSymbolicLink(C:\Users\Arturo\AppData\Local\Temp\Mxt123\bin\scrdaemons, C:\Users\Arturo\AppData\Local\Temp\Mxt123\etc\init.d\ssh);
+[17:59.11.388]      CreateSymbolicLink(C:\Users\Arturo\AppData\Local\Temp\Mxt123\bin\scrdaemons, C:\Users\Arturo\AppData\Local\Temp\Mxt123\etc\init.d\telnet);
+[17:59.11.390]      CreateSymbolicLink(C:\Users\Arturo\AppData\Local\Temp\Mxt123\bin\scrdaemons, C:\Users\Arturo\AppData\Local\Temp\Mxt123\etc\init.d\nfs);
+[17:59.11.392]      CreateSymbolicLink(C:\Users\Arturo\AppData\Local\Temp\Mxt123\bin\scrdaemons, C:\Users\Arturo\AppData\Local\Temp\Mxt123\etc\init.d\vnc);
+[17:59.11.396]      Request for file extraction: /bin/cygtermd.exe
+[17:59.11.396]      BEGIN Extracting "/bin/cygtermd.exe"
+[17:59.11.425]          File cygtermd.exe extracted from CygUtils.plugin.
+[17:59.11.425]      END Extracting "/bin/cygtermd.exe"
+[17:59.11.426]      Request for file extraction: /bin/cygz.dll
+[17:59.11.426]      BEGIN Extracting "/bin/cygz.dll"
+[17:59.11.455]          Dependency found for cygz.dll:  cyggcc_s-1.dll
+[17:59.11.456]          Request for file extraction: /bin/cyggcc_s-1.dll
+[17:59.11.456]          BEGIN Extracting "/bin/cyggcc_s-1.dll"
+[17:59.11.486]              File cyggcc_s-1.dll extracted from CygUtils.plugin.
+[17:59.11.486]          END Extracting "/bin/cyggcc_s-1.dll"
+[17:59.11.486]          File cygz.dll extracted from CygUtils.plugin.
+[17:59.11.486]      END Extracting "/bin/cygz.dll"
+[17:59.11.487]      Request for file extraction: /bin/cyggcc_s-1.dll
+[17:59.11.487]      BEGIN Extracting "/bin/cyggcc_s-1.dll"
+[17:59.11.488]          File cyggcc_s-1.dll extracted from CygUtils.plugin.
+[17:59.11.488]      END Extracting "/bin/cyggcc_s-1.dll"
+[17:59.11.489]      Request for file extraction: /bin/cygwin-console-helper.exe
+[17:59.11.489]      BEGIN Extracting "/bin/cygwin-console-helper.exe"
+[17:59.11.519]          File cygwin-console-helper.exe extracted from CygUtils.plugin.
+[17:59.11.519]      END Extracting "/bin/cygwin-console-helper.exe"
+[17:59.11.520]      Request for file extraction: /bin/ssh.exe
+[17:59.11.521]      BEGIN Extracting "/bin/ssh.exe"
+[17:59.11.531]          File ssh.exe extracted from CygUtils.plugin.
+[17:59.11.532]      END Extracting "/bin/ssh.exe"
+[17:59.11.532]      Request for file extraction: /etc/bash.bash_logout
+[17:59.11.534]      Request for file extraction: /etc/profile.d
+[17:59.11.535]      Request for file extraction: /etc/profile.d/*
+[17:59.11.535]      CreerRaccourciVersMobaXterm(C:\Users\Arturo\AppData\Local\Temp\Mxt123\bin\MobaListPorts, -listports);
+[17:59.11.545]      CreerRaccourciVersMobaXterm(C:\Users\Arturo\AppData\Local\Temp\Mxt123\bin\MobaPictureViewer, -picview);
+[17:59.11.555]      CreerRaccourciVersMobaXterm(C:\Users\Arturo\AppData\Local\Temp\Mxt123\bin\MobaTextEditor, -edit);
+[17:59.11.566]      CreerRaccourciVersMobaXterm(C:\Users\Arturo\AppData\Local\Temp\Mxt123\bin\MobaCompareFiles, -compfiles);
+[17:59.11.575]      CreerRaccourciVersMobaXterm(C:\Users\Arturo\AppData\Local\Temp\Mxt123\bin\MobaCompareFolders, -compfolders);
+[17:59.11.586]      Request for file extraction: /usr/share/terminfo/78/xterm
+[17:59.11.586]      BEGIN Extracting "/usr/share/terminfo/78/xterm"
+[17:59.11.598]          File xterm extracted from CygUtils.plugin.
+[17:59.11.598]      END Extracting "/usr/share/terminfo/78/xterm"
+[17:59.11.599]      Request for file extraction: /usr/share/terminfo/63/cygwin
+[17:59.11.599]      BEGIN Extracting "/usr/share/terminfo/63/cygwin"
+[17:59.11.610]          File cygwin extracted from CygUtils.plugin.
+[17:59.11.610]      END Extracting "/usr/share/terminfo/63/cygwin"
+[17:59.11.611]      Request for file extraction: /etc/bash_completion
+[17:59.11.611]      BEGIN Extracting "/etc/bash_completion"
+[17:59.11.621]          File bash_completion extracted from CygUtils.plugin.
+[17:59.11.621]      END Extracting "/etc/bash_completion"
+[17:59.11.622]      Request for file extraction: /usr/share/zoneinfo/posixrules
+[17:59.11.623]      BEGIN Extracting "/usr/share/zoneinfo/posixrules"
+[17:59.11.631]          File posixrules extracted successfully.
+[17:59.11.631]      END Extracting "/usr/share/zoneinfo/posixrules"
+[17:59.11.632]      Request for file extraction: /etc/inputrc
+[17:59.11.632]      BEGIN Extracting "/etc/inputrc"
+[17:59.11.643]          File inputrc extracted from CygUtils.plugin.
+[17:59.11.644]      END Extracting "/etc/inputrc"
+[17:59.11.644]  END extraireFichiers1
+[17:59.11.644]  CreateSymbolicLink(/proc/registry, C:\Users\Arturo\AppData\Local\Temp\Mxt123\registry);
+[17:59.11.646]  CreateSymbolicLink(C:\Users\Arturo\AppData\Local\Temp\Mxt123\bin\bash.exe, C:\Users\Arturo\AppData\Local\Temp\Mxt123\bin\sh);
+[17:59.11.654]  CreateSymbolicLink(C:\WINDOWS\system32\drivers\etc\hosts, C:\Users\Arturo\AppData\Local\Temp\Mxt123\etc\hosts);
+[17:59.11.661]  CreateSymbolicLink(C:\WINDOWS\system32\drivers\etc\networks, C:\Users\Arturo\AppData\Local\Temp\Mxt123\etc\networks);
+[17:59.11.669]  CreateSymbolicLink(C:\WINDOWS\system32\drivers\etc\protocol, C:\Users\Arturo\AppData\Local\Temp\Mxt123\etc\protocol);
+[17:59.11.677]  CreateSymbolicLink(C:\WINDOWS\system32\drivers\etc\services, C:\Users\Arturo\AppData\Local\Temp\Mxt123\etc\services);
+[17:59.11.687]  CreateSymbolicLink(C:\Users\Arturo\Desktop\, C:\Users\Arturo\AppData\Local\Temp\Mxt123\tmp\home_Arturo\Desktop);
+[17:59.11.694]  CreateSymbolicLink(C:\Users\Arturo\DOCUME~1\, C:\Users\Arturo\AppData\Local\Temp\Mxt123\tmp\home_Arturo\MyDocuments);
+[17:59.11.701]  CreateSymbolicLink(D:\Clase\INTERN~1\Lab1\, C:\Users\Arturo\AppData\Local\Temp\Mxt123\tmp\home_Arturo\LauncherFolder);
+[17:59.11.719]  BEGIN LoadSharedSessions
+[17:59.11.719]      BEGIN TFormManagePasswords.sRadioButton4Click
+[17:59.11.719]      END TFormManagePasswords.sRadioButton4Click
+[17:59.11.719]  END LoadSharedSessions
+[17:59.11.719]  BEGIN LoadSharedSessions
+[17:59.11.719]  END LoadSharedSessions
+[17:59.11.724]  BEGIN RecreateBookmarksMenus
+[17:59.11.724]      RecreateBookmarksMenus: FreeBookmarksMenuItems(Form1.Xserver3)
+[17:59.11.724]      RecreateBookmarksMenus: FreeBookmarksMenuItems(Bookmarks1)
+[17:59.11.724]      sTreeView1.assign(Treesessions)
+[17:59.11.724]      Detecting SheetSessions width
+[17:59.11.725]      Create session menu items
+[17:59.11.725]      Create aliases
+[17:59.11.736]      TreeSessions.Expand
+[17:59.11.736]  END RecreateBookmarksMenus
+[17:59.11.737]  BEGIN WaitForAllThreads
+[17:59.11.737]  END WaitForAllThreads
+[17:59.11.751]  
+[17:59.11.751]  BEGIN Form4.FormActivate
+[17:59.11.751]      Form4.FormActivate0: First time window activation
+[17:59.11.842]      Form4.FormActivate1
+[17:59.11.877]      Form4.FormActivate2
+[17:59.11.889]      Form4.FormActivate3
+[17:59.11.902]      Form4.FormActivate4
+[17:59.11.902]      Form4.FormActivate5
+[17:59.11.902]      Registering global show/hide hotkey
+[17:59.11.902]      Registering global show/hide popup terminal
+[17:59.11.902]      BEGIN LoadParamsFromIni: D:\Clase\INTERN~1\Lab1\MobaXterm.ini
+[17:59.11.902]          LoadParamsFromIni: ComboFontName.Font.Name:=MobaFont
+[17:59.11.903]          LoadParamsFromIni: ComboFontName.ItemIndex:=16
+[17:59.11.903]          LoadParamsFromIni: ComboFontName.Font.Charset:=0
+[17:59.11.903]          LoadParamsFromIni1
+[17:59.11.903]          LoadParamsFromIni2
+[17:59.11.908]          LoadParamsFromIni9
+[17:59.11.908]          LoadParamsFromIni10
+[17:59.11.908]          LoadParamsFromIni11
+[17:59.11.909]          LoadParamsFromIni12
+[17:59.11.909]          LoadParamsFromIni13
+[17:59.11.909]          LoadParamsFromIni14
+[17:59.11.958]          LoadParamsFromIni15
+[17:59.11.958]          LoadParamsFromIni16
+[17:59.11.958]      END LoadParamsFromIni
+[17:59.11.958]      Form4.FormActivate: OldMaximized:=Form4.WindowState
+[17:59.11.958]      Form4.FormActivate: TermImage.Canvas.Font.Assign(MobaFont)
+[17:59.11.958]      Form4.FormActivate: TermImage.Canvas.Font.Size:=10
+[17:59.11.958]      Form4.FormActivate: TermImage.Canvas.Font.Name:=MobaFont
+[17:59.11.958]      Form4.FormActivate: Starting "GetMinHeight"
+[17:59.11.958]      GetMinHeight = 675
+[17:59.11.958]      Form4.FormActivate: Form4.Constraints.MinHeight:=675
+[17:59.11.958]      GetMinWidth = 1148
+[17:59.11.958]      Form4.FormActivate: Form4.Constraints.MinWidth:=1148
+[17:59.11.959]      Form4.FormActivate: Form4.Left:=386
+[17:59.11.959]      BEGIN GetNextAvailableX
+[17:59.11.959]      END GetNextAvailableX = 0
+[17:59.11.959]      
+[17:59.11.959]      CurrentX = 0
+[17:59.11.959]      ChDir(Form1.BaseDir): D:\Clase\Internet technologies and standards\Lab1\
+[17:59.11.959]      FirstParam:
+[17:59.11.959]      Launching NewTab
+[17:59.11.959]      
+[17:59.11.960]      BEGIN NEWTAB(home, 135, 0)
+[17:59.11.982]          NEWTAB: Application.ProcessMessages
+[17:59.11.983]          NEWTAB: Timer1_Disable
+[17:59.12.012]          
+[17:59.12.012]          BEGIN Form4.FormActivate
+[17:59.12.012]          END Form4.FormActivate
+[17:59.12.012]          
+[17:59.12.013]          BEGIN TFormXterm.WMActivate
+[17:59.12.013]          END TFormXterm.WMActivate
+[17:59.12.027]          BEGIN TFormXterm.FormResize
+[17:59.12.027]              TFormXterm.FormResize: CenterBtnReattachTab
+[17:59.12.028]              TFormXterm.FormResize: SplitModeResize
+[17:59.12.028]              TFormXterm.FormResize: TabMax<=0. Exiting...
+[17:59.12.028]          END TFormXterm.FormResize
+[17:59.12.028]          BEGIN WMSize
+[17:59.12.028]              BEGIN AdaptSidebarArrows
+[17:59.12.028]              END AdaptSidebarArrows
+[17:59.12.028]          END WMSize
+[17:59.12.028]          TFormXterm.WMMove
+[17:59.12.028]          NEWTAB: Verifying if max number of tabs has been reached...
+[17:59.12.028]          NEWTAB: Creating SFTPRecord...
+[17:59.12.029]          NEWTAB: Creating menu items and popup entries for new tab...
+[17:59.12.029]          NEWTAB: Trying to find OldIndice...
+[17:59.12.029]          NEWTAB: Cts1.BeginUpdate;
+[17:59.12.029]          NEWTAB: Creating new tab...
+[17:59.12.029]          NEWTAB:        Tab index: 0
+[17:59.12.029]          NEWTAB:        NumTerm  : 1
+[17:59.12.029]          NEWTAB:        Title    : Home
+[17:59.12.030]          NEWTAB:        Command  : home
+[17:59.12.030]          Cts1ActiveTabChanged: New index = 0
+[17:59.12.030]          NEWTAB: Cts1.EndUpdates
+
+
+[17:59.13.882]          NEWTAB: Changing tab index A = 0
+[17:59.13.882]          BEGIN WaitForAllThreads
+[17:59.13.882]          END WaitForAllThreads
+[17:59.13.882]          
+[17:59.13.882]          LaunchTabContent(home, Home);
+[17:59.13.882]          
+[17:59.13.883]          SetEnvironmentVariable(LOCALE, es_ES.UTF-8)
+[17:59.13.883]          SetEnvironmentVariable(PATH, C:\Users\Arturo\AppData\Local\Temp\Mxt123\bin;C:\WINDOWS\;C:\WINDOWS\system32\)
+[17:59.13.883]          MOBANOACL=onlyslash
+[17:59.13.883]          
+[17:59.13.883]          ShellExecute: motty.exe
+[17:59.13.883]          
+[17:59.13.883]          CreerSessionMoTTY(1, home, Home)
+[17:59.13.884]          Setting LOCALE=es_ES.UTF-8
+[17:59.13.892]          CreerSessionMoTTY(-1, /bin/_TCPCapture.sh, TCPCapture)
+[17:59.13.893]          Setting LOCALE=es_ES.UTF-8
+[17:59.14.027]          
+[17:59.14.027]          FindWindow()
+[17:59.14.027]          BEGIN MoTTY.SetParent
+[17:59.14.151]          END MoTTY.SetParent
+[17:59.14.151]          NEWTAB: Application.OnMessage:=AppMessage
+[17:59.14.154]          NEWTAB: Changing tab index C = 0
+[17:59.14.154]          NEWTAB: Launching DisplayCurrentTab...
+[17:59.14.154]          BEGIN DisplayCurrentTab
+[17:59.14.154]              DisplayCurrentTab: FormClick
+[17:59.14.154]              (SSH-Browser) DisplayCurrentTab(0): ActiverPanel14
+[17:59.14.154]              (SSH-Browser) BEGIN ActiverPanel14
+[17:59.14.154]              (SSH-Browser) BEGIN DesactiverPanel14
+[17:59.14.155]              (SSH-Browser) END DesactiverPanel14
+[17:59.14.155]              (SSH-Browser) END ActiverPanel14;
+[17:59.14.182]              DisplayCurrentTab: Cts1.BeginUpdate;
+[17:59.14.182]              DisplayCurrentTab: Cts1.EndUpdates
+[17:59.14.182]              DisplayCurrentTab: Show selected tab
+[17:59.14.182]              BEGIN ResizeTerminal
+[17:59.14.182]              END ResizeTerminal
+[17:59.14.182]              DisplayCurrentTab: Hide other tabs
+[17:59.14.182]              DisplayCurrentTab: Adapting buttons enable/disable states
+[17:59.14.183]              DisplayCurrentTab: DeterminerBoutonDetachOuReattach
+[17:59.14.184]              DisplayCurrentTab: DistribuerLeFocus
+[17:59.14.195]              BEGIN WMNewTab: 0
+[17:59.14.195]                  WMNewTab: FormClick
+[17:59.14.195]                  WMNewTab: LooseFocus
+[17:59.14.195]              END WMNewTab: 0
+[17:59.14.195]              BEGIN WMNewTab: 0
+[17:59.14.195]                  WMNewTab: FormClick
+[17:59.14.195]                  WMNewTab: LooseFocus
+[17:59.14.195]              END WMNewTab: 0
+[17:59.14.195]              BEGIN WMNewTab: 0
+[17:59.14.195]                  WMNewTab: FormClick
+[17:59.14.195]                  WMNewTab: LooseFocus
+[17:59.14.195]              END WMNewTab: 0
+[17:59.14.195]              BEGIN WMNewTab: 0
+[17:59.14.195]                  WMNewTab: FormClick
+[17:59.14.195]                  WMNewTab: LooseFocus
+[17:59.14.195]              END WMNewTab: 0
+[17:59.14.201]              BEGIN TFormXterm.WMActivate
+[17:59.14.201]              END TFormXterm.WMActivate
+[17:59.14.204]          END DisplayCurrentTab
+[17:59.14.204]          NEWTAB: NewTab_ReEnable_Timer1
+[17:59.14.204]          NEWTAB: MajVerticalTabs
+[17:59.14.204]          NEWTAB: Cts1.Resize;
+[17:59.14.208]      END NEWTAB(home, 135, 0)
+[17:59.14.208]      
+[17:59.14.208]      
+[17:59.14.208]      Launching bookmarks();
+[17:59.14.208]      Launching sBitBtn7Click(sBitBtn7);
+[17:59.14.208]      
+[17:59.14.208]      BEGIN LaunchX11();
+[17:59.14.208]          BEGIN MobaThreadXressources.Execute(nil);
+[17:59.14.208]          END MobaThreadXressources.Execute(nil);
+
+
+[17:59.15.930]          BEGIN WMNewTab: 0
+[17:59.15.930]              WMNewTab: FormClick
+[17:59.15.930]              WMNewTab: LooseFocus
+[17:59.15.983]          END WMNewTab: 0
+
+
+[17:59.26.210]          BEGIN MobaThreadXressources.WaitFor;
+[17:59.26.534]          END MobaThreadXressources.WaitFor;
+[17:59.26.535]          Request for file extraction: /usr/share/X11/xkb/symbols/keypad
+[17:59.26.535]          BEGIN Extracting "/usr/share/x11/xkb/symbols/mokeypad"
+[17:59.26.547]              File keypad extracted successfully.
+[17:59.26.547]          END Extracting "/usr/share/x11/xkb/symbols/mokeypad"
+[17:59.26.547]          Request for file extraction: /usr/share/X11/xkb/symbols/pc
+[17:59.26.548]          BEGIN Extracting "/usr/share/x11/xkb/symbols/mopc"
+[17:59.26.559]              File pc extracted successfully.
+[17:59.26.559]          END Extracting "/usr/share/x11/xkb/symbols/mopc"
+[17:59.26.559]          Request for file extraction: /usr/share/fonts/misc/7x13-iso8859-1.pcf
+[17:59.26.560]          Request for file extraction: /usr/share/fonts/misc/6x13-ISO8859-1.pcf
+[17:59.26.560]          Request for file extraction: /usr/share/fonts/misc/cursor.pcf
+[17:59.26.560]          Request for file extraction: /usr/share/icons/default/cursors/left_ptr
+[17:59.26.561]          Request for file extraction: /usr/share/icons/default/index.theme
+[17:59.26.561]          Request for file extraction: /usr/share/pixmaps/default/cursors/left_ptr
+[17:59.26.562]          Request for file extraction: /usr/share/pixmaps/default/index.theme
+[17:59.26.562]          Request for file extraction: /usr/share/fonts/misc/fonts.dir
+[17:59.26.562]          Request for file extraction: /usr/share/fonts/misc/fonts.alias
+[17:59.26.563]          Request for file extraction: /usr/share/fonts/75dpi/fonts.dir
+[17:59.26.563]          Request for file extraction: /usr/share/fonts/75dpi/fonts.alias
+[17:59.26.564]          Request for file extraction: /usr/share/fonts/100dpi/fonts.dir
+[17:59.26.564]          Request for file extraction: /usr/share/fonts/100dpi/fonts.alias
+[17:59.26.564]          Request for file extraction: /usr/share/fonts/Speedo/fonts.dir
+[17:59.26.565]          Request for file extraction: /usr/share/fonts/Speedo/fonts.alias
+[17:59.26.565]          Request for file extraction: /usr/share/fonts/OTF/fonts.dir
+[17:59.26.566]          Request for file extraction: /usr/share/fonts/OTF/fonts.alias
+[17:59.26.566]          Request for file extraction: /usr/share/fonts/TTF/fonts.dir
+[17:59.26.566]          Request for file extraction: /usr/share/fonts/TTF/fonts.alias
+[17:59.26.567]          Request for file extraction: /usr/share/fonts/cyrillic/fonts.dir
+[17:59.26.567]          Request for file extraction: /usr/share/fonts/cyrillic/fonts.alias
+[17:59.26.568]          Request for file extraction: /usr/share/fonts/Type1/fonts.dir
+[17:59.26.568]          Request for file extraction: /usr/share/fonts/Type1/fonts.alias
+[17:59.26.568]          Request for file extraction: /usr/share/X11/rgb.txt
+[17:59.26.569]          Request for file extraction: /usr/share/X11/XErrorDB
+[17:59.26.569]          Request for file extraction: /usr/share/X11/XKeysymDB
+[17:59.26.570]          BEGIN WaitForAllThreads
+[17:59.26.570]          END WaitForAllThreads
+[17:59.26.570]          BEGIN WaitForAllThreads
+[17:59.26.570]          END WaitForAllThreads
+[17:59.26.570]          SetEnvironmentVariable(LOCALE, es_ES.UTF-8)
+[17:59.26.571]          SetEnvironmentVariable(PATH, C:\Users\Arturo\AppData\Local\Temp\Mxt123\bin;C:\WINDOWS\;C:\WINDOWS\system32\)
+[17:59.26.571]          MOBANOACL=onlyslash
+[17:59.26.571]          
+[17:59.26.571]          XWin Exec: C:\Users\Arturo\AppData\Local\Temp\Mxt123\bin\bash.exe -l -i -c "XWin_MobaX.exe  -silent-dup-error -notrayicon -nolisten inet6 -hostintitle +bs  -clipboard -nowgl -multiwindow -noreset  -fp /usr/share/fonts/misc,/usr/share/fonts/75dpi,/usr/share/fonts/100dpi,/usr/share/fonts/Speedo,/usr/share/fonts/OTF,/usr/share/fonts/TTF,/usr/share/fonts/cyrillic,/usr/share/fonts/Type1  :0"
+[17:59.26.571]          
+[17:59.26.571]          BEGIN ShellExecuteA(C:\Users\Arturo\AppData\Local\Temp\Mxt123\bin\XWin_MobaX.exe,  -silent-dup-error -notrayicon -nolisten inet6 -hostintitle +bs  -clipboard -nowgl -multiwindow -noreset :0)
+[17:59.26.575]              ShellExecuteA: ShellExecuteEx succeeded.
+[17:59.26.575]          END ShellExecuteA(C:\Users\Arturo\AppData\Local\Temp\Mxt123\bin\XWin_MobaX.exe,  -silent-dup-error -notrayicon -nolisten inet6 -hostintitle +bs  -clipboard -nowgl -multiwindow -noreset :0)
+[17:59.26.575]      END LaunchX11();
+[17:59.26.576]  END Form4.FormActivate
+[17:59.26.576]  
+[17:59.26.576]  Form1.Timer1Timer finished.
+[17:59.26.576]  
+
+
+
+
+[18:01.54.623]  BEGIN TFormXterm.WMActivate
+[18:01.54.623]  END TFormXterm.WMActivate
+
+
+[18:01.57.285]  BEGIN TFormXterm.WMActivate
+[18:01.57.285]  END TFormXterm.WMActivate
+
+
+
+
+
+[18:06.21.249]  BEGIN TFormXterm.WMActivate
+[18:06.21.249]  END TFormXterm.WMActivate
+
+[18:06.22.370]  
+[18:06.22.543]  BEGIN NEWTAB(, 97, 0)
+[18:06.22.570]      NEWTAB: Application.ProcessMessages
+[18:06.22.572]      NEWTAB: Timer1_Disable
+[18:06.22.572]      NEWTAB: Verifying if max number of tabs has been reached...
+[18:06.22.580]      NEWTAB: Creating SFTPRecord...
+[18:06.22.581]      NEWTAB: Creating menu items and popup entries for new tab...
+[18:06.22.581]      NEWTAB: Trying to find OldIndice...
+[18:06.22.581]      NEWTAB: Cts1.BeginUpdate;
+[18:06.22.581]      NEWTAB: Creating new tab...
+[18:06.22.581]      NEWTAB:        Tab index: 1
+[18:06.22.581]      NEWTAB:        NumTerm  : 2
+[18:06.22.581]      NEWTAB:        Title    : /home/mobaxterm
+[18:06.22.582]      NEWTAB:        Command  :
+[18:06.22.582]      Cts1ActiveTabChanged: New index = 1
+[18:06.22.582]      NEWTAB: Cts1.EndUpdates
+[18:06.22.595]      NEWTAB: Changing tab index A = 1
+[18:06.22.595]      BEGIN WaitForAllThreads
+[18:06.22.596]      END WaitForAllThreads
+[18:06.22.596]      
+[18:06.22.596]      LaunchTabContent(, /home/mobaxterm);
+[18:06.22.596]      
+[18:06.22.596]      SetEnvironmentVariable(LOCALE, es_ES.UTF-8)
+[18:06.22.596]      SetEnvironmentVariable(PATH, C:\Users\Arturo\AppData\Local\Temp\Mxt123\bin;C:\WINDOWS\;C:\WINDOWS\system32\)
+[18:06.22.596]      MOBANOACL=onlyslash
+[18:06.22.596]      
+[18:06.22.596]      ShellExecute: motty.exe
+[18:06.22.596]      
+[18:06.22.596]      CreerSessionMoTTY(2, , /home/mobaxterm)
+[18:06.22.597]      Request for file extraction: /bin/motty.exe
+[18:06.22.597]      BEGIN Extracting "/bin/motty.exe"
+
+[18:06.23.103]          File motty.exe extracted successfully.
+[18:06.23.103]      END Extracting "/bin/motty.exe"
+[18:06.23.103]      Setting LOCALE=es_ES.UTF-8
+[18:06.23.113]      Request for file extraction: /bin/cygtermd.exe
+[18:06.23.113]      BEGIN Extracting "/bin/cygtermd.exe"
+[18:06.23.113]          File cygtermd.exe extracted from CygUtils.plugin.
+[18:06.23.114]      END Extracting "/bin/cygtermd.exe"
+[18:06.23.114]      Request for file extraction: /bin/cygwin1.dll
+[18:06.23.114]      BEGIN Extracting "/bin/cygwin1.dll"
+
+[18:06.23.533]          File cygwin1.dll extracted from CygUtils.plugin.
+[18:06.23.533]      END Extracting "/bin/cygwin1.dll"
+[18:06.23.533]      Request for file extraction: /bin/bash.exe
+[18:06.23.533]      BEGIN Extracting "/bin/bash.exe"
+[18:06.23.635]          File bash.exe extracted from CygUtils.plugin.
+[18:06.23.635]      END Extracting "/bin/bash.exe"
+[18:06.23.635]      Request for file extraction: /bin/busybox.exe
+[18:06.23.635]      BEGIN Extracting "/bin/busybox.exe"
+[18:06.23.706]          File busybox.exe extracted from CygUtils.plugin.
+[18:06.23.706]      END Extracting "/bin/busybox.exe"
+[18:06.23.706]      Request for file extraction: /bin/grep.exe
+[18:06.23.706]      BEGIN Extracting "/bin/grep.exe"
+[18:06.23.748]          Dependency found for grep.exe:  cygintl-8.dll
+[18:06.23.748]          Request for file extraction: /bin/cygintl-8.dll
+[18:06.23.748]          BEGIN Extracting "/bin/cygintl-8.dll"
+[18:06.23.770]              Dependency found for cygintl-8.dll:  cygiconv-2.dll
+[18:06.23.771]              Request for file extraction: /bin/cygiconv-2.dll
+[18:06.23.771]              BEGIN Extracting "/bin/cygiconv-2.dll"
+[18:06.23.912]                  File cygiconv-2.dll extracted from CygUtils.plugin.
+[18:06.23.912]              END Extracting "/bin/cygiconv-2.dll"
+[18:06.23.913]              File cygintl-8.dll extracted from CygUtils.plugin.
+[18:06.23.913]          END Extracting "/bin/cygintl-8.dll"
+[18:06.23.913]          File grep.exe extracted from CygUtils.plugin.
+[18:06.23.913]      END Extracting "/bin/grep.exe"
+[18:06.23.913]      BEGIN WaitForAllThreads
+[18:06.23.913]      END WaitForAllThreads
+[18:06.23.914]      
+[18:06.23.914]      Execute (C:\Users\Arturo\AppData\Local\Temp\Mxt123\bin\motty.exe -load "TERM2636662"
+[18:06.23.914]      BEGIN ShellExecuteS(C:\Users\Arturo\AppData\Local\Temp\Mxt123\bin\motty.exe, -load "TERM2636662")
+
+[18:06.24.449]          ShellExecuteS: ShellExecuteEx succeeded.
+[18:06.24.512]          [MoTTY]  (2)  Protocol: local terminal
+[18:06.24.513]          [MoTTY]  (2)  Initializing backend...
+[18:06.24.513]          [MoTTY]  (2)  Starting local proxy command: C:\Users\Arturo\AppData\Local\Temp\Mxt123\bin\cygtermd.exe /home/mobaxterm /bin/bash -l -i
+[18:06.24.543]          [MoTTY]  (2)  Backend initialized.
+[18:06.24.544]          SetTitle(1, /home/mobaxterm);
+[18:06.24.548]          [MoTTY]  (2)  Activating KEYWORDS syntax
+[18:06.24.553]          [MoTTY]  (2)  Ready to peek messages.
+[18:06.24.553]          ShellExecuteS: WaitForInputIdle succeeded.
+[18:06.24.553]      END ShellExecuteS(C:\Users\Arturo\AppData\Local\Temp\Mxt123\bin\motty.exe, -load "TERM2636662")
+[18:06.24.553]      Executed (C:\Users\Arturo\AppData\Local\Temp\Mxt123\bin\motty.exe -load "TERM2636662"
+[18:06.24.553]      
+[18:06.24.553]      
+[18:06.24.553]      FindWindow(CMoTTY)
+[18:06.24.553]      Found potential window: 199306
+[18:06.24.553]      Potential window 199306 successfully passed 2nd verification.
+[18:06.24.553]      --> succeeded
+[18:06.24.554]      BEGIN MoTTY.SetParent
+[18:06.24.574]      END MoTTY.SetParent
+[18:06.24.575]      NEWTAB: Application.OnMessage:=AppMessage
+[18:06.24.581]      NEWTAB: Changing tab index C = 1
+[18:06.24.581]      NEWTAB: Launching DisplayCurrentTab...
+[18:06.24.581]      BEGIN DisplayCurrentTab
+[18:06.24.581]          DisplayCurrentTab: FormClick
+[18:06.24.581]          (SSH-Browser) DisplayCurrentTab(1): ActiverPanel14
+[18:06.24.581]          (SSH-Browser) BEGIN ActiverPanel14
+[18:06.24.581]          (SSH-Browser) BEGIN DesactiverPanel14
+[18:06.24.581]          (SSH-Browser) END DesactiverPanel14
+[18:06.24.582]          (SSH-Browser) END ActiverPanel14;
+[18:06.24.619]          DisplayCurrentTab: Cts1.BeginUpdate;
+[18:06.24.619]          DisplayCurrentTab: Cts1.EndUpdates
+[18:06.24.619]          DisplayCurrentTab: Show selected tab
+[18:06.24.619]          [MoTTY]  (2)  server:	SB NEW_ENVIRON SEND
+[18:06.24.619]          DisplayCurrentTab: Hide other tabs
+[18:06.24.621]          DisplayCurrentTab: Adapting buttons enable/disable states
+[18:06.24.621]          DisplayCurrentTab: DeterminerBoutonDetachOuReattach
+[18:06.24.621]          DisplayCurrentTab: DistribuerLeFocus
+[18:06.24.621]      END DisplayCurrentTab
+[18:06.24.621]      NEWTAB: NewTab_ReEnable_Timer1
+[18:06.24.621]      NEWTAB: MajVerticalTabs
+[18:06.24.621]      NEWTAB: Cts1.Resize;
+[18:06.24.629]  END NEWTAB(, 97, 0)
+[18:06.24.629]  
+[18:06.24.629]  [MoTTY]  (2)  	LANG=es_ES.UTF-8
+[18:06.24.630]  [MoTTY]  (2)  	LANGUAGE=es_ES.UTF-8
+[18:06.24.630]  [MoTTY]  (2)  	LC_ALL=es_ES.UTF-8
+[18:06.24.631]  [MoTTY]  (2)  	LC_CTYPE=es_ES.UTF-8
+[18:06.24.632]  [MoTTY]  (2)  	LOCALE=es_ES.UTF-8
+[18:06.24.946]  SetTitle(1, /home/mobaxterm);
+
+
+
+[18:06.38.796]  BEGIN TFormXterm.WMActivate
+[18:06.38.796]  END TFormXterm.WMActivate
+[18:06.38.798]  BEGIN WMNewTab: 0
+[18:06.38.798]      WMNewTab: FormClick
+[18:06.38.798]      WMNewTab: LooseFocus
+[18:06.38.800]  END WMNewTab: 0
+
+
+[18:06.40.897]  BEGIN TFormXterm.WMActivate
+[18:06.40.897]  END TFormXterm.WMActivate
+
+[18:06.41.668]  BEGIN WMNewTab: 0
+[18:06.41.668]      WMNewTab: FormClick
+[18:06.41.668]      WMNewTab: LooseFocus
+[18:06.41.668]  END WMNewTab: 0
+[18:06.41.799]  BEGIN WMNewTab: 0
+[18:06.41.800]      WMNewTab: FormClick
+[18:06.41.800]      WMNewTab: LooseFocus
+[18:06.41.800]  END WMNewTab: 0
+
+[18:06.42.175]  BEGIN WMNewTab: 0
+[18:06.42.175]      WMNewTab: FormClick
+[18:06.42.175]      WMNewTab: LooseFocus
+[18:06.42.175]  END WMNewTab: 0
+
+
+[18:06.46.914]  BEGIN WMNewTab: 84
+[18:06.46.914]      Msg received: right-click = paste
+[18:06.46.920]  END WMNewTab: 84
+[18:06.46.970]  BEGIN TFormXterm.WMActivate
+[18:06.46.970]  END TFormXterm.WMActivate
+
+
+[18:06.50.958]  BEGIN WMNewTab: 0
+[18:06.50.958]      WMNewTab: FormClick
+[18:06.50.958]      WMNewTab: LooseFocus
+[18:06.50.961]  END WMNewTab: 0
+[18:06.50.964]  BEGIN WMNewTab: 0
+[18:06.50.964]      WMNewTab: FormClick
+[18:06.50.964]      WMNewTab: LooseFocus
+[18:06.50.966]  END WMNewTab: 0
+
+
+[18:07.01.301]  BEGIN TFormXterm.WMActivate
+[18:07.01.301]  END TFormXterm.WMActivate
+[18:07.01.302]  BEGIN WMNewTab: 0
+[18:07.01.302]      WMNewTab: FormClick
+[18:07.01.302]      WMNewTab: LooseFocus
+[18:07.01.303]  END WMNewTab: 0
+[18:07.01.381]  BEGIN WMNewTab: 0
+[18:07.01.381]      WMNewTab: FormClick
+[18:07.01.381]      WMNewTab: LooseFocus
+[18:07.01.381]  END WMNewTab: 0
+
+[18:07.01.779]  TranslateMessage(1835009, 13)
+[18:07.01.779]  SendMessage(13)
+[18:07.01.781]  SetTitle(1, -e# localhost 11101);
+[18:07.01.797]  Request for file extraction: /bin/telnet.exe
+[18:07.01.797]  BEGIN Extracting "/bin/telnet.exe"
+[18:07.01.829]      Dependency found for telnet.exe:  cygncursesw-10.dll
+[18:07.01.829]      Request for file extraction: /bin/cygncursesw-10.dll
+[18:07.01.829]      BEGIN Extracting "/bin/cygncursesw-10.dll"
+[18:07.01.873]          File cygncursesw-10.dll extracted from CygUtils.plugin.
+[18:07.01.874]      END Extracting "/bin/cygncursesw-10.dll"
+[18:07.01.874]      File telnet.exe extracted from CygUtils.plugin.
+[18:07.01.874]  END Extracting "/bin/telnet.exe"
+[18:07.01.874]  TranslateMessage(-1071906815, 13)
+[18:07.01.942]  SetTitle(1, R1);
+
+
+[18:07.04.102]  BEGIN WMNCLButtonDown
+[18:07.04.233]      BEGIN WMSysCommand (minimize/restore)
+[18:07.04.238]          TFormXterm.WMMove
+[18:07.04.271]          BEGIN TFormXterm.FormResize
+[18:07.04.271]              TFormXterm.FormResize: CenterBtnReattachTab
+[18:07.04.271]              TFormXterm.FormResize: SplitModeResize
+[18:07.04.271]              TFormXterm.FormResize: BtnSplitNo.Down
+[18:07.04.271]              TFormXterm.FormResize: ResizeTerminal(Indice,Panel1);
+[18:07.04.271]              BEGIN ResizeTerminal
+[18:07.04.291]              END ResizeTerminal
+[18:07.04.291]              TFormXterm.FormResize: AdaptSidebarArrows;
+[18:07.04.291]              BEGIN AdaptSidebarArrows
+[18:07.04.291]              END AdaptSidebarArrows
+[18:07.04.291]          END TFormXterm.FormResize
+[18:07.04.291]          BEGIN WMSize
+[18:07.04.291]              BEGIN TFormXterm.FormResize
+[18:07.04.291]                  TFormXterm.FormResize: CenterBtnReattachTab
+[18:07.04.291]                  TFormXterm.FormResize: SplitModeResize
+[18:07.04.291]                  TFormXterm.FormResize: BtnSplitNo.Down
+[18:07.04.291]                  TFormXterm.FormResize: ResizeTerminal(Indice,Panel1);
+[18:07.04.291]                  BEGIN ResizeTerminal
+[18:07.04.304]                  END ResizeTerminal
+[18:07.04.304]                  TFormXterm.FormResize: AdaptSidebarArrows;
+[18:07.04.304]                  BEGIN AdaptSidebarArrows
+[18:07.04.304]                  END AdaptSidebarArrows
+[18:07.04.304]              END TFormXterm.FormResize
+[18:07.04.304]          END WMSize
+[18:07.04.305]      END WMSysCommand
+[18:07.04.305]  END WMNCLButtonDown
+
+
+[18:07.06.397]  BEGIN WMNewTab: 0
+[18:07.06.397]      WMNewTab: FormClick
+[18:07.06.397]      WMNewTab: LooseFocus
+[18:07.06.397]  END WMNewTab: 0
+[18:07.06.498]  BEGIN WMNewTab: 0
+[18:07.06.498]      WMNewTab: FormClick
+[18:07.06.498]      WMNewTab: LooseFocus
+[18:07.06.498]  END WMNewTab: 0
+
+
+[18:07.08.060]  TranslateMessage(1835009, 13)
+[18:07.08.060]  SendMessage(13)
+[18:07.08.173]  TranslateMessage(-1071906815, 13)
+
+
+[18:07.17.584]  BEGIN WMSysCommand (minimize/restore)
+[18:07.17.592]      BEGIN TFormXterm.WMActivate
+[18:07.17.592]      END TFormXterm.WMActivate
+[18:07.17.592]      TFormXterm.WMMove
+[18:07.17.600]      BEGIN WMSize
+[18:07.17.600]      END WMSize
+[18:07.17.600]  END WMSysCommand
+
+
+
+[18:07.33.374]  BEGIN WMSysCommand (minimize/restore)
+[18:07.33.381]      BEGIN WMNewTab: 0
+[18:07.33.381]          WMNewTab: FormClick
+[18:07.33.381]          WMNewTab: LooseFocus
+[18:07.33.383]      END WMNewTab: 0
+[18:07.33.389]      TFormXterm.WMMove
+[18:07.33.416]      BEGIN WMSize
+[18:07.33.416]          BEGIN TFormXterm.FormResize
+[18:07.33.416]              TFormXterm.FormResize: CenterBtnReattachTab
+[18:07.33.416]              TFormXterm.FormResize: SplitModeResize
+[18:07.33.416]              TFormXterm.FormResize: BtnSplitNo.Down
+[18:07.33.416]              TFormXterm.FormResize: ResizeTerminal(Indice,Panel1);
+[18:07.33.416]              BEGIN ResizeTerminal
+[18:07.33.417]              END ResizeTerminal
+[18:07.33.417]              TFormXterm.FormResize: AdaptSidebarArrows;
+[18:07.33.417]              BEGIN AdaptSidebarArrows
+[18:07.33.417]              END AdaptSidebarArrows
+[18:07.33.417]          END TFormXterm.FormResize
+[18:07.33.417]      END WMSize
+[18:07.33.420]      BEGIN TFormXterm.WMActivate
+[18:07.33.421]      END TFormXterm.WMActivate
+[18:07.33.421]  END WMSysCommand
+
+
+[18:07.34.787]  Cts1MouseDown: FormClick
+[18:07.34.919]  BtnNewTabClick: FormClick
+[18:07.34.919]  
+[18:07.34.919]  BEGIN NEWTAB(home, 135, 0)
+[18:07.34.919]      
+[18:07.34.919]      BEGIN NEWTAB(, 97, 0)
+[18:07.34.935]          NEWTAB: Application.ProcessMessages
+[18:07.34.935]          NEWTAB: Timer1_Disable
+[18:07.34.935]          NEWTAB: Verifying if max number of tabs has been reached...
+[18:07.34.935]          NEWTAB: Creating SFTPRecord...
+[18:07.34.936]          NEWTAB: Creating menu items and popup entries for new tab...
+[18:07.34.936]          NEWTAB: Trying to find OldIndice...
+[18:07.34.937]          NEWTAB: Cts1.BeginUpdate;
+[18:07.34.937]          NEWTAB: Creating new tab...
+[18:07.34.937]          NEWTAB:        Tab index: 2
+[18:07.34.937]          NEWTAB:        NumTerm  : 3
+[18:07.34.937]          NEWTAB:        Title    : /home/mobaxterm
+[18:07.34.937]          NEWTAB:        Command  :
+[18:07.34.937]          Cts1ActiveTabChanged: New index = 2
+[18:07.34.937]          NEWTAB: Cts1.EndUpdates
+[18:07.34.940]          NEWTAB: Changing tab index A = 2
+[18:07.34.940]          BEGIN WaitForAllThreads
+[18:07.34.940]          END WaitForAllThreads
+[18:07.34.940]          
+[18:07.34.940]          LaunchTabContent(, /home/mobaxterm);
+[18:07.34.940]          
+[18:07.34.940]          SetEnvironmentVariable(LOCALE, es_ES.UTF-8)
+[18:07.34.941]          SetEnvironmentVariable(PATH, C:\Users\Arturo\AppData\Local\Temp\Mxt123\bin;C:\WINDOWS\;C:\WINDOWS\system32\)
+[18:07.34.941]          MOBANOACL=onlyslash
+[18:07.34.941]          
+[18:07.34.941]          ShellExecute: motty.exe
+[18:07.34.941]          
+[18:07.34.941]          CreerSessionMoTTY(3, , /home/mobaxterm)
+[18:07.34.941]          Setting LOCALE=es_ES.UTF-8
+[18:07.34.946]          BEGIN WaitForAllThreads
+[18:07.34.946]          END WaitForAllThreads
+[18:07.34.947]          
+[18:07.34.947]          Execute (C:\Users\Arturo\AppData\Local\Temp\Mxt123\bin\motty.exe -load "TERM2636663"
+[18:07.34.947]          BEGIN ShellExecuteS(C:\Users\Arturo\AppData\Local\Temp\Mxt123\bin\motty.exe, -load "TERM2636663")
+[18:07.34.975]              ShellExecuteS: ShellExecuteEx succeeded.
+[18:07.35.030]              [MoTTY]  (3)  Protocol: local terminal
+[18:07.35.031]              [MoTTY]  (3)  Initializing backend...
+[18:07.35.032]              [MoTTY]  (3)  Starting local proxy command: C:\Users\Arturo\AppData\Local\Temp\Mxt123\bin\cygtermd.exe /home/mobaxterm /bin/bash -l -i
+[18:07.35.042]              [MoTTY]  (3)  Backend initialized.
+[18:07.35.042]              SetTitle(2, /home/mobaxterm);
+[18:07.35.046]              [MoTTY]  (3)  Activating KEYWORDS syntax
+[18:07.35.050]              [MoTTY]  (3)  Ready to peek messages.
+[18:07.35.051]              ShellExecuteS: WaitForInputIdle succeeded.
+[18:07.35.051]          END ShellExecuteS(C:\Users\Arturo\AppData\Local\Temp\Mxt123\bin\motty.exe, -load "TERM2636663")
+[18:07.35.051]          Executed (C:\Users\Arturo\AppData\Local\Temp\Mxt123\bin\motty.exe -load "TERM2636663"
+[18:07.35.051]          
+[18:07.35.051]          
+[18:07.35.051]          FindWindow(CMoTTY)
+[18:07.35.051]          Found potential window: 197776
+[18:07.35.051]          Potential window 197776 successfully passed 2nd verification.
+[18:07.35.051]          --> succeeded
+[18:07.35.052]          BEGIN MoTTY.SetParent
+[18:07.35.104]          END MoTTY.SetParent
+[18:07.35.104]          NEWTAB: Application.OnMessage:=AppMessage
+[18:07.35.107]          NEWTAB: Changing tab index C = 2
+[18:07.35.107]          NEWTAB: Launching DisplayCurrentTab...
+[18:07.35.107]          BEGIN DisplayCurrentTab
+[18:07.35.107]              DisplayCurrentTab: FormClick
+[18:07.35.107]              (SSH-Browser) DisplayCurrentTab(2): ActiverPanel14
+[18:07.35.107]              (SSH-Browser) BEGIN ActiverPanel14
+[18:07.35.107]              (SSH-Browser) BEGIN DesactiverPanel14
+[18:07.35.107]              (SSH-Browser) END DesactiverPanel14
+[18:07.35.107]              (SSH-Browser) END ActiverPanel14;
+[18:07.35.140]              DisplayCurrentTab: Cts1.BeginUpdate;
+[18:07.35.140]              DisplayCurrentTab: Cts1.EndUpdates
+[18:07.35.140]              DisplayCurrentTab: Show selected tab
+[18:07.35.141]              [MoTTY]  (3)  server:	SB NEW_ENVIRON SEND
+[18:07.35.141]              DisplayCurrentTab: Hide other tabs
+[18:07.35.141]              [MoTTY]  (3)  	LANG=es_ES.UTF-8
+[18:07.35.141]              [MoTTY]  (3)  	LANGUAGE=es_ES.UTF-8
+[18:07.35.141]              [MoTTY]  (3)  	LC_ALL=es_ES.UTF-8
+[18:07.35.141]              [MoTTY]  (3)  	LC_CTYPE=es_ES.UTF-8
+[18:07.35.142]              [MoTTY]  (3)  	LOCALE=es_ES.UTF-8
+[18:07.35.149]              DisplayCurrentTab: Adapting buttons enable/disable states
+[18:07.35.149]              DisplayCurrentTab: DeterminerBoutonDetachOuReattach
+[18:07.35.149]              DisplayCurrentTab: DistribuerLeFocus
+[18:07.35.149]          END DisplayCurrentTab
+[18:07.35.149]          NEWTAB: NewTab_ReEnable_Timer1
+[18:07.35.149]          NEWTAB: MajVerticalTabs
+[18:07.35.149]          NEWTAB: Cts1.Resize;
+[18:07.35.162]      END NEWTAB(, 97, 0)
+[18:07.35.162]      
+[18:07.35.162]  END NEWTAB(home, 135, 0)
+[18:07.35.162]  
+[18:07.35.389]  SetTitle(2, /home/mobaxterm);
+
+
+[18:07.37.078]  SendMessage(16)
+
+[18:07.37.561]  BEGIN WMNewTab: 0
+[18:07.37.561]      WMNewTab: FormClick
+[18:07.37.561]      WMNewTab: LooseFocus
+[18:07.37.561]  END WMNewTab: 0
+
+[18:07.38.185]  SendMessage(16)
+
+[18:07.38.953]  BEGIN WMNewTab: 0
+[18:07.38.954]      WMNewTab: FormClick
+[18:07.38.954]      WMNewTab: LooseFocus
+[18:07.38.954]  END WMNewTab: 0
+[18:07.39.082]  BEGIN WMNewTab: 0
+[18:07.39.083]      WMNewTab: FormClick
+[18:07.39.083]      WMNewTab: LooseFocus
+[18:07.39.083]  END WMNewTab: 0
+
+[18:07.39.926]  BEGIN WMNewTab: 0
+[18:07.39.926]      WMNewTab: FormClick
+[18:07.39.926]      WMNewTab: LooseFocus
+[18:07.39.927]  END WMNewTab: 0
+[18:07.40.047]  BEGIN WMNewTab: 0
+[18:07.40.047]      WMNewTab: FormClick
+[18:07.40.047]      WMNewTab: LooseFocus
+[18:07.40.047]  END WMNewTab: 0
+
+
+[18:07.41.696]  TranslateMessage(1835009, 13)
+[18:07.41.696]  SendMessage(13)
+[18:07.41.699]  SetTitle(2, -e# localhost 11102);
+[18:07.41.749]  SetTitle(2, R2);
+[18:07.41.803]  TranslateMessage(-1071906815, 13)
+
+
+[18:07.43.592]  BEGIN WMNewTab: 0
+[18:07.43.592]      WMNewTab: FormClick
+[18:07.43.592]      WMNewTab: LooseFocus
+[18:07.43.593]  END WMNewTab: 0
+[18:07.43.634]  BEGIN WMNewTab: 0
+[18:07.43.634]      WMNewTab: FormClick
+[18:07.43.634]      WMNewTab: LooseFocus
+[18:07.43.634]  END WMNewTab: 0
+[18:07.43.783]  TranslateMessage(1835009, 13)
+[18:07.43.783]  SendMessage(13)
+[18:07.43.868]  TranslateMessage(-1071906815, 13)
+
+
+[18:07.45.794]  BEGIN WMSysCommand (minimize/restore)
+[18:07.45.803]      BEGIN TFormXterm.WMActivate
+[18:07.45.803]      END TFormXterm.WMActivate
+[18:07.45.803]      TFormXterm.WMMove
+[18:07.45.808]      BEGIN WMSize
+[18:07.45.808]      END WMSize
+[18:07.45.810]  END WMSysCommand
+
+
+[18:07.55.255]  BEGIN WMSysCommand (minimize/restore)
+[18:07.55.264]      BEGIN WMNewTab: 0
+[18:07.55.264]          WMNewTab: FormClick
+[18:07.55.264]          WMNewTab: LooseFocus
+[18:07.55.266]      END WMNewTab: 0
+[18:07.55.272]      TFormXterm.WMMove
+[18:07.55.308]      BEGIN WMSize
+[18:07.55.308]          BEGIN TFormXterm.FormResize
+[18:07.55.308]              TFormXterm.FormResize: CenterBtnReattachTab
+[18:07.55.308]              TFormXterm.FormResize: SplitModeResize
+[18:07.55.308]              TFormXterm.FormResize: BtnSplitNo.Down
+[18:07.55.308]              TFormXterm.FormResize: ResizeTerminal(Indice,Panel1);
+[18:07.55.308]              BEGIN ResizeTerminal
+[18:07.55.318]              END ResizeTerminal
+[18:07.55.318]              TFormXterm.FormResize: AdaptSidebarArrows;
+[18:07.55.318]              BEGIN AdaptSidebarArrows
+[18:07.55.318]              END AdaptSidebarArrows
+[18:07.55.318]          END TFormXterm.FormResize
+[18:07.55.318]      END WMSize
+[18:07.55.320]      BEGIN TFormXterm.WMActivate
+[18:07.55.320]      END TFormXterm.WMActivate
+[18:07.55.320]  END WMSysCommand
+
+
+[18:07.57.187]  Cts1MouseDown: FormClick
+[18:07.57.318]  BtnNewTabClick: FormClick
+[18:07.57.318]  
+[18:07.57.318]  BEGIN NEWTAB(home, 135, 0)
+[18:07.57.318]      
+[18:07.57.318]      BEGIN NEWTAB(, 97, 0)
+[18:07.57.326]          NEWTAB: Application.ProcessMessages
+[18:07.57.326]          NEWTAB: Timer1_Disable
+[18:07.57.326]          NEWTAB: Verifying if max number of tabs has been reached...
+[18:07.57.326]          NEWTAB: Creating SFTPRecord...
+[18:07.57.328]          NEWTAB: Creating menu items and popup entries for new tab...
+[18:07.57.328]          NEWTAB: Trying to find OldIndice...
+[18:07.57.328]          NEWTAB: Cts1.BeginUpdate;
+[18:07.57.328]          NEWTAB: Creating new tab...
+[18:07.57.328]          NEWTAB:        Tab index: 3
+[18:07.57.328]          NEWTAB:        NumTerm  : 4
+[18:07.57.328]          NEWTAB:        Title    : /home/mobaxterm
+[18:07.57.328]          NEWTAB:        Command  :
+[18:07.57.328]          Cts1ActiveTabChanged: New index = 3
+[18:07.57.328]          NEWTAB: Cts1.EndUpdates
+[18:07.57.332]          NEWTAB: Changing tab index A = 3
+[18:07.57.332]          BEGIN WaitForAllThreads
+[18:07.57.332]          END WaitForAllThreads
+[18:07.57.332]          
+[18:07.57.332]          LaunchTabContent(, /home/mobaxterm);
+[18:07.57.332]          
+[18:07.57.332]          SetEnvironmentVariable(LOCALE, es_ES.UTF-8)
+[18:07.57.333]          SetEnvironmentVariable(PATH, C:\Users\Arturo\AppData\Local\Temp\Mxt123\bin;C:\WINDOWS\;C:\WINDOWS\system32\)
+[18:07.57.333]          MOBANOACL=onlyslash
+[18:07.57.333]          
+[18:07.57.333]          ShellExecute: motty.exe
+[18:07.57.333]          
+[18:07.57.333]          CreerSessionMoTTY(4, , /home/mobaxterm)
+[18:07.57.333]          Setting LOCALE=es_ES.UTF-8
+[18:07.57.339]          BEGIN WaitForAllThreads
+[18:07.57.339]          END WaitForAllThreads
+[18:07.57.340]          
+[18:07.57.340]          Execute (C:\Users\Arturo\AppData\Local\Temp\Mxt123\bin\motty.exe -load "TERM2636664"
+[18:07.57.340]          BEGIN ShellExecuteS(C:\Users\Arturo\AppData\Local\Temp\Mxt123\bin\motty.exe, -load "TERM2636664")
+[18:07.57.372]              ShellExecuteS: ShellExecuteEx succeeded.
+[18:07.57.426]              [MoTTY]  (4)  Protocol: local terminal
+[18:07.57.427]              [MoTTY]  (4)  Initializing backend...
+[18:07.57.427]              [MoTTY]  (4)  Starting local proxy command: C:\Users\Arturo\AppData\Local\Temp\Mxt123\bin\cygtermd.exe /home/mobaxterm /bin/bash -l -i
+[18:07.57.436]              [MoTTY]  (4)  Backend initialized.
+[18:07.57.436]              SetTitle(3, /home/mobaxterm);
+[18:07.57.440]              [MoTTY]  (4)  Activating KEYWORDS syntax
+[18:07.57.445]              [MoTTY]  (4)  Ready to peek messages.
+[18:07.57.446]              ShellExecuteS: WaitForInputIdle succeeded.
+[18:07.57.446]          END ShellExecuteS(C:\Users\Arturo\AppData\Local\Temp\Mxt123\bin\motty.exe, -load "TERM2636664")
+[18:07.57.446]          Executed (C:\Users\Arturo\AppData\Local\Temp\Mxt123\bin\motty.exe -load "TERM2636664"
+[18:07.57.446]          
+[18:07.57.446]          
+[18:07.57.446]          FindWindow(CMoTTY)
+[18:07.57.446]          Found potential window: 394322
+[18:07.57.446]          Potential window 394322 successfully passed 2nd verification.
+[18:07.57.446]          --> succeeded
+[18:07.57.447]          BEGIN MoTTY.SetParent
+[18:07.57.498]          END MoTTY.SetParent
+[18:07.57.498]          NEWTAB: Application.OnMessage:=AppMessage
+[18:07.57.503]          NEWTAB: Changing tab index C = 3
+[18:07.57.503]          NEWTAB: Launching DisplayCurrentTab...
+[18:07.57.503]          BEGIN DisplayCurrentTab
+[18:07.57.503]              DisplayCurrentTab: FormClick
+[18:07.57.504]              (SSH-Browser) DisplayCurrentTab(3): ActiverPanel14
+[18:07.57.504]              (SSH-Browser) BEGIN ActiverPanel14
+[18:07.57.504]              (SSH-Browser) BEGIN DesactiverPanel14
+[18:07.57.504]              (SSH-Browser) END DesactiverPanel14
+[18:07.57.504]              (SSH-Browser) END ActiverPanel14;
+[18:07.57.537]              DisplayCurrentTab: Cts1.BeginUpdate;
+[18:07.57.537]              DisplayCurrentTab: Cts1.EndUpdates
+[18:07.57.537]              DisplayCurrentTab: Show selected tab
+[18:07.57.538]              [MoTTY]  (4)  server:	SB NEW_ENVIRON SEND
+[18:07.57.538]              DisplayCurrentTab: Hide other tabs
+[18:07.57.538]              [MoTTY]  (4)  	LANG=es_ES.UTF-8
+[18:07.57.539]              [MoTTY]  (4)  	LANGUAGE=es_ES.UTF-8
+[18:07.57.540]              [MoTTY]  (4)  	LC_ALL=es_ES.UTF-8
+[18:07.57.540]              [MoTTY]  (4)  	LC_CTYPE=es_ES.UTF-8
+[18:07.57.541]              DisplayCurrentTab: Adapting buttons enable/disable states
+[18:07.57.541]              DisplayCurrentTab: DeterminerBoutonDetachOuReattach
+[18:07.57.541]              DisplayCurrentTab: DistribuerLeFocus
+[18:07.57.541]          END DisplayCurrentTab
+[18:07.57.541]          NEWTAB: NewTab_ReEnable_Timer1
+[18:07.57.541]          NEWTAB: MajVerticalTabs
+[18:07.57.541]          NEWTAB: Cts1.Resize;
+[18:07.57.559]      END NEWTAB(, 97, 0)
+[18:07.57.559]      
+[18:07.57.559]  END NEWTAB(home, 135, 0)
+[18:07.57.559]  
+[18:07.57.567]  [MoTTY]  (4)  	LOCALE=es_ES.UTF-8
+[18:07.57.806]  SetTitle(3, /home/mobaxterm);
+
+
+[18:08.00.203]  BEGIN WMNewTab: 0
+[18:08.00.203]      WMNewTab: FormClick
+[18:08.00.203]      WMNewTab: LooseFocus
+[18:08.00.203]  END WMNewTab: 0
+
+
+[18:08.03.114]  BEGIN TFormXterm.WMActivate
+[18:08.03.114]  END TFormXterm.WMActivate
+
+[18:08.03.960]  BEGIN WMNewTab: 0
+[18:08.03.960]      WMNewTab: FormClick
+[18:08.03.960]      WMNewTab: LooseFocus
+[18:08.03.961]  END WMNewTab: 0
+
+
+[18:08.11.811]  BEGIN TFormXterm.WMActivate
+[18:08.11.811]  END TFormXterm.WMActivate
+
+[18:08.12.896]  SendMessage(16)
+
+[18:08.13.374]  BEGIN WMNewTab: 0
+[18:08.13.374]      WMNewTab: FormClick
+[18:08.13.374]      WMNewTab: LooseFocus
+[18:08.13.374]  END WMNewTab: 0
+
+[18:08.13.874]  SendMessage(16)
+
+
+[18:08.17.355]  BEGIN TFormXterm.WMActivate
+[18:08.17.355]  END TFormXterm.WMActivate
+[18:08.17.364]  BEGIN WMNewTab: 0
+[18:08.17.364]      WMNewTab: FormClick
+[18:08.17.364]      WMNewTab: LooseFocus
+[18:08.17.364]  END WMNewTab: 0
+[18:08.17.494]  BEGIN WMNewTab: 0
+[18:08.17.494]      WMNewTab: FormClick
+[18:08.17.494]      WMNewTab: LooseFocus
+[18:08.17.494]  END WMNewTab: 0
+
+[18:08.18.023]  BEGIN WMNewTab: 0
+[18:08.18.023]      WMNewTab: FormClick
+[18:08.18.023]      WMNewTab: LooseFocus
+[18:08.18.024]  END WMNewTab: 0
+
+
+[18:08.19.356]  BEGIN TFormXterm.WMActivate
+[18:08.19.356]  END TFormXterm.WMActivate
+
+
+[18:08.23.303]  BEGIN WMNewTab: 0
+[18:08.23.303]      WMNewTab: FormClick
+[18:08.23.303]      WMNewTab: LooseFocus
+[18:08.23.303]  END WMNewTab: 0
+
+
+[18:08.28.627]  BEGIN TFormXterm.WMActivate
+[18:08.28.627]  END TFormXterm.WMActivate
+[18:08.28.734]  SetTitle(3, /home/mobaxterm);
+
+
+[18:08.38.096]  BEGIN TFormXterm.WMActivate
+[18:08.38.096]  END TFormXterm.WMActivate
+[18:08.38.098]  BEGIN WMNewTab: 0
+[18:08.38.098]      WMNewTab: FormClick
+[18:08.38.098]      WMNewTab: LooseFocus
+[18:08.38.101]  END WMNewTab: 0
+[18:08.38.176]  BEGIN WMNewTab: 0
+[18:08.38.176]      WMNewTab: FormClick
+[18:08.38.176]      WMNewTab: LooseFocus
+[18:08.38.177]  END WMNewTab: 0
+
+[18:08.38.802]  SendMessage(8)
+
+[18:08.39.303]  SendMessage(8)
+[18:08.39.332]  SendMessage(8)
+[18:08.39.363]  SendMessage(8)
+[18:08.39.393]  SendMessage(8)
+[18:08.39.423]  SendMessage(8)
+[18:08.39.453]  SendMessage(8)
+[18:08.39.483]  SendMessage(8)
+[18:08.39.514]  SendMessage(8)
+[18:08.39.543]  SendMessage(8)
+[18:08.39.573]  SendMessage(8)
+[18:08.39.604]  SendMessage(8)
+[18:08.39.634]  SendMessage(8)
+[18:08.39.663]  SendMessage(8)
+[18:08.39.693]  SendMessage(8)
+[18:08.39.724]  SendMessage(8)
+[18:08.39.755]  SendMessage(8)
+[18:08.39.785]  SendMessage(8)
+[18:08.39.815]  SendMessage(8)
+[18:08.39.846]  SendMessage(8)
+[18:08.39.876]  SendMessage(8)
+[18:08.39.905]  SendMessage(8)
+[18:08.39.935]  SendMessage(8)
+[18:08.39.966]  SendMessage(8)
+[18:08.39.996]  SendMessage(8)
+[18:08.40.026]  SendMessage(8)
+[18:08.40.056]  SendMessage(8)
+[18:08.40.086]  SendMessage(8)
+[18:08.40.116]  SendMessage(8)
+[18:08.40.146]  SendMessage(8)
+[18:08.40.177]  SendMessage(8)
+[18:08.40.207]  SendMessage(8)
+[18:08.40.236]  SendMessage(8)
+[18:08.40.266]  SendMessage(8)
+[18:08.40.298]  SendMessage(8)
+[18:08.40.327]  SendMessage(8)
+[18:08.40.357]  SendMessage(8)
+[18:08.40.386]  SendMessage(8)
+[18:08.40.417]  SendMessage(8)
+[18:08.40.447]  SendMessage(8)
+[18:08.40.478]  SendMessage(8)
+[18:08.40.507]  SendMessage(8)
+[18:08.40.537]  SendMessage(8)
+[18:08.40.567]  SendMessage(8)
+[18:08.40.598]  SendMessage(8)
+[18:08.40.627]  SendMessage(8)
+[18:08.40.658]  SendMessage(8)
+[18:08.40.687]  SendMessage(8)
+[18:08.40.717]  SendMessage(8)
+[18:08.40.749]  SendMessage(8)
+[18:08.40.779]  SendMessage(8)
+[18:08.40.809]  SendMessage(8)
+[18:08.40.839]  SendMessage(8)
+[18:08.40.870]  SendMessage(8)
+[18:08.40.900]  SendMessage(8)
+[18:08.40.929]  SendMessage(8)
+[18:08.40.942]  TranslateMessage(-1072824319, 8)
+
+
+[18:08.42.696]  BEGIN WMNewTab: 0
+[18:08.42.696]      WMNewTab: FormClick
+[18:08.42.696]      WMNewTab: LooseFocus
+[18:08.42.696]  END WMNewTab: 0
+[18:08.42.816]  BEGIN WMNewTab: 0
+[18:08.42.816]      WMNewTab: FormClick
+[18:08.42.816]      WMNewTab: LooseFocus
+[18:08.42.816]  END WMNewTab: 0
+
+[18:08.43.979]  SendMessage(8)
+[18:08.44.053]  TranslateMessage(-1072824319, 8)
+[18:08.44.190]  SendMessage(8)
+[18:08.44.285]  TranslateMessage(-1072824319, 8)
+
+
+[18:08.46.489]  TranslateMessage(262145, 51)
+[18:08.46.489]  SendMessage(51)
+[18:08.46.661]  TranslateMessage(-1073479679, 51)
+
+
+[18:08.48.420]  TranslateMessage(1835009, 13)
+[18:08.48.421]  SendMessage(13)
+[18:08.48.432]  SetTitle(3, -e# localhost 11103);
+[18:08.48.482]  TranslateMessage(-1071906815, 13)
+[18:08.48.484]  SetTitle(3, R3);
+
+
+[18:08.51.166]  Cts1MouseDown: FormClick
+[18:08.51.298]  BtnNewTabClick: FormClick
+[18:08.51.298]  
+[18:08.51.298]  BEGIN NEWTAB(home, 135, 0)
+[18:08.51.298]      
+[18:08.51.298]      BEGIN NEWTAB(, 97, 0)
+[18:08.51.306]          NEWTAB: Application.ProcessMessages
+[18:08.51.306]          NEWTAB: Timer1_Disable
+[18:08.51.306]          NEWTAB: Verifying if max number of tabs has been reached...
+[18:08.51.306]          NEWTAB: Creating SFTPRecord...
+[18:08.51.308]          NEWTAB: Creating menu items and popup entries for new tab...
+[18:08.51.308]          NEWTAB: Trying to find OldIndice...
+[18:08.51.308]          NEWTAB: Cts1.BeginUpdate;
+[18:08.51.308]          NEWTAB: Creating new tab...
+[18:08.51.308]          NEWTAB:        Tab index: 4
+[18:08.51.308]          NEWTAB:        NumTerm  : 5
+[18:08.51.308]          NEWTAB:        Title    : /home/mobaxterm
+[18:08.51.308]          NEWTAB:        Command  :
+[18:08.51.308]          Cts1ActiveTabChanged: New index = 4
+[18:08.51.308]          NEWTAB: Cts1.EndUpdates
+[18:08.51.312]          NEWTAB: Changing tab index A = 4
+[18:08.51.312]          BEGIN WaitForAllThreads
+[18:08.51.312]          END WaitForAllThreads
+[18:08.51.312]          
+[18:08.51.312]          LaunchTabContent(, /home/mobaxterm);
+[18:08.51.312]          
+[18:08.51.313]          SetEnvironmentVariable(LOCALE, es_ES.UTF-8)
+[18:08.51.313]          SetEnvironmentVariable(PATH, C:\Users\Arturo\AppData\Local\Temp\Mxt123\bin;C:\WINDOWS\;C:\WINDOWS\system32\)
+[18:08.51.313]          MOBANOACL=onlyslash
+[18:08.51.313]          
+[18:08.51.313]          ShellExecute: motty.exe
+[18:08.51.313]          
+[18:08.51.313]          CreerSessionMoTTY(5, , /home/mobaxterm)
+[18:08.51.314]          Setting LOCALE=es_ES.UTF-8
+[18:08.51.320]          BEGIN WaitForAllThreads
+[18:08.51.320]          END WaitForAllThreads
+[18:08.51.321]          
+[18:08.51.321]          Execute (C:\Users\Arturo\AppData\Local\Temp\Mxt123\bin\motty.exe -load "TERM2636665"
+[18:08.51.321]          BEGIN ShellExecuteS(C:\Users\Arturo\AppData\Local\Temp\Mxt123\bin\motty.exe, -load "TERM2636665")
+[18:08.51.350]              ShellExecuteS: ShellExecuteEx succeeded.
+[18:08.51.405]              [MoTTY]  (5)  Protocol: local terminal
+[18:08.51.406]              [MoTTY]  (5)  Initializing backend...
+[18:08.51.406]              [MoTTY]  (5)  Starting local proxy command: C:\Users\Arturo\AppData\Local\Temp\Mxt123\bin\cygtermd.exe /home/mobaxterm /bin/bash -l -i
+[18:08.51.416]              [MoTTY]  (5)  Backend initialized.
+[18:08.51.416]              SetTitle(4, /home/mobaxterm);
+[18:08.51.421]              [MoTTY]  (5)  Activating KEYWORDS syntax
+[18:08.51.425]              [MoTTY]  (5)  Ready to peek messages.
+[18:08.51.425]              ShellExecuteS: WaitForInputIdle succeeded.
+[18:08.51.425]          END ShellExecuteS(C:\Users\Arturo\AppData\Local\Temp\Mxt123\bin\motty.exe, -load "TERM2636665")
+[18:08.51.425]          Executed (C:\Users\Arturo\AppData\Local\Temp\Mxt123\bin\motty.exe -load "TERM2636665"
+[18:08.51.425]          
+[18:08.51.425]          
+[18:08.51.425]          FindWindow(CMoTTY)
+[18:08.51.426]          Found potential window: 656438
+[18:08.51.426]          Potential window 656438 successfully passed 2nd verification.
+[18:08.51.426]          --> succeeded
+[18:08.51.427]          BEGIN MoTTY.SetParent
+[18:08.51.477]          END MoTTY.SetParent
+[18:08.51.477]          NEWTAB: Application.OnMessage:=AppMessage
+[18:08.51.481]          NEWTAB: Changing tab index C = 4
+[18:08.51.481]          NEWTAB: Launching DisplayCurrentTab...
+[18:08.51.481]          BEGIN DisplayCurrentTab
+[18:08.51.481]              DisplayCurrentTab: FormClick
+[18:08.51.481]              (SSH-Browser) DisplayCurrentTab(4): ActiverPanel14
+[18:08.51.481]              (SSH-Browser) BEGIN ActiverPanel14
+[18:08.51.481]              (SSH-Browser) BEGIN DesactiverPanel14
+[18:08.51.481]              (SSH-Browser) END DesactiverPanel14
+[18:08.51.481]              (SSH-Browser) END ActiverPanel14;
+[18:08.51.515]              DisplayCurrentTab: Cts1.BeginUpdate;
+[18:08.51.515]              DisplayCurrentTab: Cts1.EndUpdates
+[18:08.51.515]              DisplayCurrentTab: Show selected tab
+[18:08.51.515]              [MoTTY]  (5)  server:	SB NEW_ENVIRON SEND
+[18:08.51.516]              DisplayCurrentTab: Hide other tabs
+[18:08.51.516]              [MoTTY]  (5)  	LANG=es_ES.UTF-8
+[18:08.51.516]              [MoTTY]  (5)  	LANGUAGE=es_ES.UTF-8
+[18:08.51.516]              [MoTTY]  (5)  	LC_ALL=es_ES.UTF-8
+[18:08.51.517]              [MoTTY]  (5)  	LC_CTYPE=es_ES.UTF-8
+[18:08.51.517]              [MoTTY]  (5)  	LOCALE=es_ES.UTF-8
+[18:08.51.518]              DisplayCurrentTab: Adapting buttons enable/disable states
+[18:08.51.518]              DisplayCurrentTab: DeterminerBoutonDetachOuReattach
+[18:08.51.518]              DisplayCurrentTab: DistribuerLeFocus
+[18:08.51.518]          END DisplayCurrentTab
+[18:08.51.518]          NEWTAB: NewTab_ReEnable_Timer1
+[18:08.51.518]          NEWTAB: MajVerticalTabs
+[18:08.51.518]          NEWTAB: Cts1.Resize;
+[18:08.51.544]      END NEWTAB(, 97, 0)
+[18:08.51.545]      
+[18:08.51.545]  END NEWTAB(home, 135, 0)
+[18:08.51.545]  
+[18:08.51.743]  SetTitle(4, /home/mobaxterm);
+
+[18:08.52.873]  BEGIN WMNewTab: 0
+[18:08.52.873]      WMNewTab: FormClick
+[18:08.52.873]      WMNewTab: LooseFocus
+[18:08.52.874]  END WMNewTab: 0
+[18:08.52.994]  BEGIN WMNewTab: 0
+[18:08.52.994]      WMNewTab: FormClick
+[18:08.52.994]      WMNewTab: LooseFocus
+[18:08.52.994]  END WMNewTab: 0
+
+[18:08.54.092]  SendMessage(8)
+[18:08.54.160]  TranslateMessage(-1072824319, 8)
+[18:08.54.269]  SendMessage(8)
+[18:08.54.433]  TranslateMessage(-1072824319, 8)
+
+[18:08.54.814]  TranslateMessage(327681, 52)
+[18:08.54.814]  SendMessage(52)
+[18:08.54.953]  TranslateMessage(-1073414143, 52)
+[18:08.55.183]  TranslateMessage(1835009, 13)
+[18:08.55.183]  SendMessage(13)
+[18:08.55.186]  SetTitle(4, -e# localhost 11104);
+[18:08.55.239]  SetTitle(4, R4);
+[18:08.55.267]  TranslateMessage(-1071906815, 13)
+
+[18:08.56.301]  SendMessage(16)
+[18:08.56.313]  SendMessage(16)
+
+[18:08.57.174]  TranslateMessage(1835009, 13)
+[18:08.57.174]  SendMessage(13)
+[18:08.57.250]  TranslateMessage(-1071906815, 13)
+
+
+[18:09.00.294]  Cts1MouseDown: FormClick
+[18:09.00.300]  Cts1ActiveTabChanged: New index = 3
+[18:09.00.300]  BEGIN DisplayCurrentTab
+[18:09.00.300]      DisplayCurrentTab: FormClick
+[18:09.00.300]      (SSH-Browser) DisplayCurrentTab(3): ActiverPanel14
+[18:09.00.300]      (SSH-Browser) BEGIN ActiverPanel14
+[18:09.00.300]      (SSH-Browser) BEGIN DesactiverPanel14
+[18:09.00.300]      (SSH-Browser) END DesactiverPanel14
+[18:09.00.300]      (SSH-Browser) END ActiverPanel14;
+[18:09.00.334]      DisplayCurrentTab: Cts1.BeginUpdate;
+[18:09.00.334]      DisplayCurrentTab: Cts1.EndUpdates
+[18:09.00.337]      DisplayCurrentTab: Show selected tab
+[18:09.00.338]      DisplayCurrentTab: Hide other tabs
+[18:09.00.339]      DisplayCurrentTab: Adapting buttons enable/disable states
+[18:09.00.341]      DisplayCurrentTab: DeterminerBoutonDetachOuReattach
+[18:09.00.341]      DisplayCurrentTab: DistribuerLeFocus
+[18:09.00.342]  END DisplayCurrentTab
+
+[18:09.01.324]  TranslateMessage(1835009, 13)
+[18:09.01.325]  SendMessage(13)
+[18:09.01.416]  TranslateMessage(-1071906815, 13)
+
+
+[18:09.03.848]  Cts1MouseDown: FormClick
+[18:09.03.980]  BtnNewTabClick: FormClick
+[18:09.03.980]  
+[18:09.03.980]  BEGIN NEWTAB(home, 135, 0)
+[18:09.03.980]      
+[18:09.03.980]      BEGIN NEWTAB(, 97, 0)
+[18:09.03.988]          NEWTAB: Application.ProcessMessages
+[18:09.03.988]          NEWTAB: Timer1_Disable
+[18:09.03.988]          NEWTAB: Verifying if max number of tabs has been reached...
+[18:09.03.988]          NEWTAB: Creating SFTPRecord...
+[18:09.03.990]          NEWTAB: Creating menu items and popup entries for new tab...
+[18:09.03.990]          NEWTAB: Trying to find OldIndice...
+[18:09.03.990]          NEWTAB: Cts1.BeginUpdate;
+[18:09.03.990]          NEWTAB: Creating new tab...
+[18:09.03.990]          NEWTAB:        Tab index: 5
+[18:09.03.990]          NEWTAB:        NumTerm  : 6
+[18:09.03.990]          NEWTAB:        Title    : /home/mobaxterm
+[18:09.03.990]          NEWTAB:        Command  :
+[18:09.03.990]          Cts1ActiveTabChanged: New index = 5
+[18:09.03.990]          NEWTAB: Cts1.EndUpdates
+[18:09.03.995]          NEWTAB: Changing tab index A = 5
+[18:09.03.995]          BEGIN WaitForAllThreads
+[18:09.03.995]          END WaitForAllThreads
+[18:09.03.995]          
+[18:09.03.995]          LaunchTabContent(, /home/mobaxterm);
+[18:09.03.995]          
+[18:09.03.995]          SetEnvironmentVariable(LOCALE, es_ES.UTF-8)
+[18:09.03.996]          SetEnvironmentVariable(PATH, C:\Users\Arturo\AppData\Local\Temp\Mxt123\bin;C:\WINDOWS\;C:\WINDOWS\system32\)
+[18:09.03.996]          MOBANOACL=onlyslash
+[18:09.03.996]          
+[18:09.03.996]          ShellExecute: motty.exe
+[18:09.03.996]          
+[18:09.03.996]          CreerSessionMoTTY(6, , /home/mobaxterm)
+[18:09.03.996]          Setting LOCALE=es_ES.UTF-8
+[18:09.04.003]          BEGIN WaitForAllThreads
+[18:09.04.003]          END WaitForAllThreads
+[18:09.04.004]          
+[18:09.04.004]          Execute (C:\Users\Arturo\AppData\Local\Temp\Mxt123\bin\motty.exe -load "TERM2636666"
+[18:09.04.004]          BEGIN ShellExecuteS(C:\Users\Arturo\AppData\Local\Temp\Mxt123\bin\motty.exe, -load "TERM2636666")
+[18:09.04.032]              ShellExecuteS: ShellExecuteEx succeeded.
+[18:09.04.088]              [MoTTY]  (6)  Protocol: local terminal
+[18:09.04.089]              [MoTTY]  (6)  Initializing backend...
+[18:09.04.089]              [MoTTY]  (6)  Starting local proxy command: C:\Users\Arturo\AppData\Local\Temp\Mxt123\bin\cygtermd.exe /home/mobaxterm /bin/bash -l -i
+[18:09.04.099]              [MoTTY]  (6)  Backend initialized.
+[18:09.04.099]              SetTitle(5, /home/mobaxterm);
+[18:09.04.104]              [MoTTY]  (6)  Activating KEYWORDS syntax
+[18:09.04.108]              [MoTTY]  (6)  Ready to peek messages.
+[18:09.04.108]              ShellExecuteS: WaitForInputIdle succeeded.
+[18:09.04.108]          END ShellExecuteS(C:\Users\Arturo\AppData\Local\Temp\Mxt123\bin\motty.exe, -load "TERM2636666")
+[18:09.04.108]          Executed (C:\Users\Arturo\AppData\Local\Temp\Mxt123\bin\motty.exe -load "TERM2636666"
+[18:09.04.108]          
+[18:09.04.108]          
+[18:09.04.109]          FindWindow(CMoTTY)
+[18:09.04.109]          Found potential window: 395936
+[18:09.04.109]          Potential window 395936 successfully passed 2nd verification.
+[18:09.04.109]          --> succeeded
+[18:09.04.109]          BEGIN MoTTY.SetParent
+[18:09.04.146]              [MoTTY]  (6)  server:	SB NEW_ENVIRON SEND
+[18:09.04.161]              [MoTTY]  (6)  	LANG=es_ES.UTF-8
+[18:09.04.161]              [MoTTY]  (6)  	LANGUAGE=es_ES.UTF-8
+[18:09.04.161]              [MoTTY]  (6)  	LC_ALL=es_ES.UTF-8
+[18:09.04.178]          END MoTTY.SetParent
+[18:09.04.178]          NEWTAB: Application.OnMessage:=AppMessage
+[18:09.04.181]          NEWTAB: Changing tab index C = 5
+[18:09.04.181]          NEWTAB: Launching DisplayCurrentTab...
+[18:09.04.181]          BEGIN DisplayCurrentTab
+[18:09.04.181]              DisplayCurrentTab: FormClick
+[18:09.04.181]              (SSH-Browser) DisplayCurrentTab(5): ActiverPanel14
+[18:09.04.181]              (SSH-Browser) BEGIN ActiverPanel14
+[18:09.04.181]              (SSH-Browser) BEGIN DesactiverPanel14
+[18:09.04.181]              (SSH-Browser) END DesactiverPanel14
+[18:09.04.181]              (SSH-Browser) END ActiverPanel14;
+[18:09.04.215]              DisplayCurrentTab: Cts1.BeginUpdate;
+[18:09.04.215]              DisplayCurrentTab: Cts1.EndUpdates
+[18:09.04.215]              DisplayCurrentTab: Show selected tab
+[18:09.04.216]              [MoTTY]  (6)  	LC_CTYPE=es_ES.UTF-8
+[18:09.04.216]              DisplayCurrentTab: Hide other tabs
+[18:09.04.216]              [MoTTY]  (6)  	LOCALE=es_ES.UTF-8
+[18:09.04.220]              DisplayCurrentTab: Adapting buttons enable/disable states
+[18:09.04.220]              DisplayCurrentTab: DeterminerBoutonDetachOuReattach
+[18:09.04.220]              DisplayCurrentTab: DistribuerLeFocus
+[18:09.04.220]          END DisplayCurrentTab
+[18:09.04.220]          NEWTAB: NewTab_ReEnable_Timer1
+[18:09.04.220]          NEWTAB: MajVerticalTabs
+[18:09.04.220]          NEWTAB: Cts1.Resize;
+[18:09.04.255]      END NEWTAB(, 97, 0)
+[18:09.04.255]      
+[18:09.04.255]  END NEWTAB(home, 135, 0)
+[18:09.04.255]  
+[18:09.04.459]  SetTitle(5, /home/mobaxterm);
+
+
+[18:09.05.819]  BEGIN WMNewTab: 0
+[18:09.05.819]      WMNewTab: FormClick
+[18:09.05.819]      WMNewTab: LooseFocus
+[18:09.05.820]  END WMNewTab: 0
+[18:09.05.940]  BEGIN WMNewTab: 0
+[18:09.05.940]      WMNewTab: FormClick
+[18:09.05.940]      WMNewTab: LooseFocus
+[18:09.05.940]  END WMNewTab: 0
+
+[18:09.06.777]  SendMessage(8)
+[18:09.06.835]  TranslateMessage(-1072824319, 8)
+[18:09.06.926]  SendMessage(8)
+[18:09.07.046]  TranslateMessage(-1072824319, 8)
+
+[18:09.07.548]  TranslateMessage(393217, 53)
+[18:09.07.548]  SendMessage(53)
+[18:09.07.695]  TranslateMessage(-1073348607, 53)
+[18:09.07.991]  TranslateMessage(1835009, 13)
+[18:09.07.991]  SendMessage(13)
+[18:09.08.001]  SetTitle(5, -e# localhost 11105);
+[18:09.08.053]  SetTitle(5, R5);
+[18:09.08.085]  TranslateMessage(-1071906815, 13)
+
+[18:09.08.694]  SendMessage(37)
+[18:09.08.750]  SendMessage(37)
+
+[18:09.09.213]  TranslateMessage(1835009, 13)
+[18:09.09.213]  SendMessage(13)
+[18:09.09.332]  TranslateMessage(-1071906815, 13)
+
+[18:09.10.129]  TranslateMessage(1835009, 13)
+[18:09.10.129]  SendMessage(13)
+[18:09.10.282]  TranslateMessage(-1071906815, 13)
+
+
+
+
+[18:11.30.749]  BEGIN TFormXterm.WMActivate
+[18:11.30.749]  END TFormXterm.WMActivate
+[18:11.30.754]  BEGIN WMNewTab: 0
+[18:11.30.754]      WMNewTab: FormClick
+[18:11.30.754]      WMNewTab: LooseFocus
+[18:11.30.757]  END WMNewTab: 0
+[18:11.30.827]  BEGIN WMNewTab: 0
+[18:11.30.827]      WMNewTab: FormClick
+[18:11.30.827]      WMNewTab: LooseFocus
+[18:11.30.827]  END WMNewTab: 0
+
+
+[18:11.32.695]  BEGIN WMSysCommand (minimize/restore)
+[18:11.32.724]      BEGIN TFormXterm.WMActivate
+[18:11.32.725]      END TFormXterm.WMActivate
+[18:11.32.725]      TFormXterm.WMMove
+[18:11.32.731]      BEGIN WMSize
+[18:11.32.731]      END WMSize
+[18:11.32.731]  END WMSysCommand
+
+
+
+
+
+
+
+[18:31.11.707]  BEGIN WMSysCommand (minimize/restore)
+[18:31.11.716]      BEGIN WMNewTab: 0
+[18:31.11.716]          WMNewTab: FormClick
+[18:31.11.716]          WMNewTab: LooseFocus
+[18:31.11.717]      END WMNewTab: 0
+[18:31.11.724]      TFormXterm.WMMove
+[18:31.11.792]      BEGIN WMSize
+[18:31.11.792]          BEGIN TFormXterm.FormResize
+[18:31.11.792]              TFormXterm.FormResize: CenterBtnReattachTab
+[18:31.11.793]              TFormXterm.FormResize: SplitModeResize
+[18:31.11.793]              TFormXterm.FormResize: BtnSplitNo.Down
+[18:31.11.793]              TFormXterm.FormResize: ResizeTerminal(Indice,Panel1);
+[18:31.11.793]              BEGIN ResizeTerminal
+[18:31.11.793]              END ResizeTerminal
+[18:31.11.793]              TFormXterm.FormResize: AdaptSidebarArrows;
+[18:31.11.793]              BEGIN AdaptSidebarArrows
+[18:31.11.793]              END AdaptSidebarArrows
+[18:31.11.793]          END TFormXterm.FormResize
+[18:31.11.794]      END WMSize
+[18:31.11.796]      BEGIN TFormXterm.WMActivate
+[18:31.11.796]      END TFormXterm.WMActivate
+[18:31.11.796]  END WMSysCommand
+
+
+[18:31.13.192]  BEGIN WMSysCommand (minimize/restore)
+[18:31.13.200]      BEGIN TFormXterm.WMActivate
+[18:31.13.200]      END TFormXterm.WMActivate
+[18:31.13.200]      TFormXterm.WMMove
+[18:31.13.206]      BEGIN WMSize
+[18:31.13.206]      END WMSize
+[18:31.13.207]  END WMSysCommand
+
+
+
+
+
+
+[18:41.08.518]  BEGIN WMSysCommand (minimize/restore)
+[18:41.08.525]      BEGIN WMNewTab: 0
+[18:41.08.525]          WMNewTab: FormClick
+[18:41.08.525]          WMNewTab: LooseFocus
+[18:41.08.526]      END WMNewTab: 0
+[18:41.08.532]      TFormXterm.WMMove
+[18:41.08.594]      BEGIN WMSize
+[18:41.08.594]          BEGIN TFormXterm.FormResize
+[18:41.08.594]              TFormXterm.FormResize: CenterBtnReattachTab
+[18:41.08.594]              TFormXterm.FormResize: SplitModeResize
+[18:41.08.594]              TFormXterm.FormResize: BtnSplitNo.Down
+[18:41.08.594]              TFormXterm.FormResize: ResizeTerminal(Indice,Panel1);
+[18:41.08.594]              BEGIN ResizeTerminal
+[18:41.08.603]              END ResizeTerminal
+[18:41.08.603]              TFormXterm.FormResize: AdaptSidebarArrows;
+[18:41.08.603]              BEGIN AdaptSidebarArrows
+[18:41.08.603]              END AdaptSidebarArrows
+[18:41.08.603]          END TFormXterm.FormResize
+[18:41.08.604]      END WMSize
+[18:41.08.607]      BEGIN TFormXterm.WMActivate
+[18:41.08.607]      END TFormXterm.WMActivate
+[18:41.08.608]  END WMSysCommand
+
+
+
+[18:41.47.890]  TFormXterm.WMMove
+[18:41.47.897]  BEGIN TFormXterm.FormResize
+[18:41.47.897]      TFormXterm.FormResize: CenterBtnReattachTab
+[18:41.47.898]      TFormXterm.FormResize: SplitModeResize
+[18:41.47.898]      TFormXterm.FormResize: BtnSplitNo.Down
+[18:41.47.898]      TFormXterm.FormResize: ResizeTerminal(Indice,Panel1);
+[18:41.47.898]      BEGIN ResizeTerminal
+[18:41.47.905]      END ResizeTerminal
+[18:41.47.905]      TFormXterm.FormResize: AdaptSidebarArrows;
+[18:41.47.905]      BEGIN AdaptSidebarArrows
+[18:41.47.905]      END AdaptSidebarArrows
+[18:41.47.905]  END TFormXterm.FormResize
+[18:41.47.905]  BEGIN WMSize
+[18:41.47.905]  END WMSize
+
+
+
+
+
+
+[18:49.08.098]  BEGIN TFormXterm.WMActivate
+[18:49.08.098]  END TFormXterm.WMActivate
+[18:49.08.098]  BEGIN WMSysCommand (minimize/restore)
+[18:49.08.099]      BEGIN WMNewTab: 0
+[18:49.08.099]          WMNewTab: FormClick
+[18:49.08.099]          WMNewTab: LooseFocus
+[18:49.08.101]      END WMNewTab: 0
+[18:49.08.109]      TFormXterm.WMMove
+[18:49.08.173]      BEGIN WMSize
+[18:49.08.173]          BEGIN TFormXterm.FormResize
+[18:49.08.173]              TFormXterm.FormResize: CenterBtnReattachTab
+[18:49.08.175]              TFormXterm.FormResize: SplitModeResize
+[18:49.08.175]              TFormXterm.FormResize: BtnSplitNo.Down
+[18:49.08.176]              TFormXterm.FormResize: ResizeTerminal(Indice,Panel1);
+[18:49.08.177]              BEGIN ResizeTerminal
+[18:49.08.215]              END ResizeTerminal
+[18:49.08.215]              TFormXterm.FormResize: AdaptSidebarArrows;
+[18:49.08.215]              BEGIN AdaptSidebarArrows
+[18:49.08.215]              END AdaptSidebarArrows
+[18:49.08.216]          END TFormXterm.FormResize
+[18:49.08.216]      END WMSize
+[18:49.08.221]      BEGIN TFormXterm.WMActivate
+[18:49.08.221]      END TFormXterm.WMActivate
+[18:49.08.221]  END WMSysCommand
+
+
+[18:49.10.703]  BEGIN WMSysCommand (minimize/restore)
+[18:49.10.712]      BEGIN TFormXterm.WMActivate
+[18:49.10.712]      END TFormXterm.WMActivate
+[18:49.10.713]      TFormXterm.WMMove
+[18:49.10.720]      BEGIN WMSize
+[18:49.10.720]      END WMSize
+[18:49.10.722]  END WMSysCommand
+
+
+
+
+
+
+
+
+[19:13.09.780]  BEGIN WMSysCommand (minimize/restore)
+[19:13.09.792]      BEGIN WMNewTab: 0
+[19:13.09.792]          WMNewTab: FormClick
+[19:13.09.792]          WMNewTab: LooseFocus
+[19:13.09.793]      END WMNewTab: 0
+[19:13.09.803]      TFormXterm.WMMove
+[19:13.09.873]      BEGIN WMSize
+[19:13.09.873]          BEGIN TFormXterm.FormResize
+[19:13.09.873]              TFormXterm.FormResize: CenterBtnReattachTab
+[19:13.09.873]              TFormXterm.FormResize: SplitModeResize
+[19:13.09.873]              TFormXterm.FormResize: BtnSplitNo.Down
+[19:13.09.873]              TFormXterm.FormResize: ResizeTerminal(Indice,Panel1);
+[19:13.09.873]              BEGIN ResizeTerminal
+[19:13.09.874]              END ResizeTerminal
+[19:13.09.874]              TFormXterm.FormResize: AdaptSidebarArrows;
+[19:13.09.874]              BEGIN AdaptSidebarArrows
+[19:13.09.874]              END AdaptSidebarArrows
+[19:13.09.874]          END TFormXterm.FormResize
+[19:13.09.874]      END WMSize
+[19:13.09.875]      BEGIN TFormXterm.WMActivate
+[19:13.09.875]      END TFormXterm.WMActivate
+[19:13.09.875]  END WMSysCommand
+
+
+[19:13.11.488]  BEGIN WMSysCommand (minimize/restore)
+[19:13.11.496]      BEGIN TFormXterm.WMActivate
+[19:13.11.496]      END TFormXterm.WMActivate
+[19:13.11.497]      TFormXterm.WMMove
+[19:13.11.508]      BEGIN WMSize
+[19:13.11.508]      END WMSize
+[19:13.11.509]  END WMSysCommand
+
+
+
+
+
+
+
+
+[20:39.34.866]  BEGIN WMSysCommand (minimize/restore)
+[20:39.34.934]      BEGIN WMNewTab: 0
+[20:39.34.935]          WMNewTab: FormClick
+[20:39.34.954]          WMNewTab: LooseFocus
+[20:39.35.018]      END WMNewTab: 0
+[20:39.35.035]      TFormXterm.WMMove
+[20:39.35.271]      BEGIN WMSize
+[20:39.35.271]          BEGIN TFormXterm.FormResize
+[20:39.35.271]              TFormXterm.FormResize: CenterBtnReattachTab
+[20:39.35.271]              TFormXterm.FormResize: SplitModeResize
+[20:39.35.291]              TFormXterm.FormResize: BtnSplitNo.Down
+[20:39.35.291]              TFormXterm.FormResize: ResizeTerminal(Indice,Panel1);
+[20:39.35.292]              BEGIN ResizeTerminal
+[20:39.35.295]              END ResizeTerminal
+[20:39.35.295]              TFormXterm.FormResize: AdaptSidebarArrows;
+[20:39.35.295]              BEGIN AdaptSidebarArrows
+[20:39.35.295]              END AdaptSidebarArrows
+[20:39.35.295]          END TFormXterm.FormResize
+[20:39.35.295]      END WMSize
+[20:39.35.310]      BEGIN TFormXterm.WMActivate
+[20:39.35.310]      END TFormXterm.WMActivate
+[20:39.35.310]  END WMSysCommand
+[20:39.35.493]  BEGIN WMSysCommand (minimize/restore)
+[20:39.35.503]      BEGIN TFormXterm.WMActivate
+[20:39.35.503]      END TFormXterm.WMActivate
+[20:39.35.504]      TFormXterm.WMMove
+[20:39.35.510]      BEGIN WMSize
+[20:39.35.510]      END WMSize
+[20:39.35.510]  END WMSysCommand
+
+[20:39.36.131]  BEGIN WMSysCommand (minimize/restore)
+[20:39.36.138]      BEGIN WMNewTab: 0
+[20:39.36.138]          WMNewTab: FormClick
+[20:39.36.138]          WMNewTab: LooseFocus
+[20:39.36.140]      END WMNewTab: 0
+[20:39.36.147]      TFormXterm.WMMove
+[20:39.36.209]      BEGIN WMSize
+[20:39.36.209]          BEGIN TFormXterm.FormResize
+[20:39.36.209]              TFormXterm.FormResize: CenterBtnReattachTab
+[20:39.36.210]              TFormXterm.FormResize: SplitModeResize
+[20:39.36.210]              TFormXterm.FormResize: BtnSplitNo.Down
+[20:39.36.210]              TFormXterm.FormResize: ResizeTerminal(Indice,Panel1);
+[20:39.36.210]              BEGIN ResizeTerminal
+[20:39.36.219]              END ResizeTerminal
+[20:39.36.219]              TFormXterm.FormResize: AdaptSidebarArrows;
+[20:39.36.219]              BEGIN AdaptSidebarArrows
+[20:39.36.219]              END AdaptSidebarArrows
+[20:39.36.219]          END TFormXterm.FormResize
+[20:39.36.219]      END WMSize
+[20:39.36.223]      BEGIN TFormXterm.WMActivate
+[20:39.36.223]      END TFormXterm.WMActivate
+[20:39.36.223]  END WMSysCommand
+
+
+[20:39.38.553]  Cts1MouseDown: FormClick
+[20:39.38.658]  Cts1ActiveTabChanged: New index = 1
+[20:39.38.658]  BEGIN DisplayCurrentTab
+[20:39.38.658]      DisplayCurrentTab: FormClick
+[20:39.38.658]      (SSH-Browser) DisplayCurrentTab(1): ActiverPanel14
+[20:39.38.658]      (SSH-Browser) BEGIN ActiverPanel14
+[20:39.38.687]      (SSH-Browser) BEGIN DesactiverPanel14
+[20:39.38.688]      (SSH-Browser) END DesactiverPanel14
+[20:39.38.688]      (SSH-Browser) END ActiverPanel14;
+[20:39.38.732]      DisplayCurrentTab: Cts1.BeginUpdate;
+[20:39.38.732]      DisplayCurrentTab: Cts1.EndUpdates
+[20:39.38.736]      DisplayCurrentTab: Show selected tab
+[20:39.38.739]      DisplayCurrentTab: Hide other tabs
+[20:39.38.741]      DisplayCurrentTab: Adapting buttons enable/disable states
+[20:39.38.742]      DisplayCurrentTab: DeterminerBoutonDetachOuReattach
+[20:39.38.742]      DisplayCurrentTab: DistribuerLeFocus
+[20:39.38.743]  END DisplayCurrentTab
+
+
+[20:39.44.612]  BEGIN LockControl(sPanel1, HideSessionBar)
+[20:39.44.612]  END LockControl(sPanel1, HideSessionBar)
+[20:39.44.616]  BEGIN AdaptSidebarArrows
+[20:39.44.616]  END AdaptSidebarArrows
+[20:39.44.630]  GetMinWidth = 875
+[20:39.44.630]  BEGIN UnlockControl(sPanel1, HideSessionBar)
+[20:39.44.631]  END UnlockControl(sPanel1, HideSessionBar)
+[20:39.44.631]  BEGIN TFormXterm.FormResize
+[20:39.44.631]      TFormXterm.FormResize: CenterBtnReattachTab
+[20:39.44.633]      TFormXterm.FormResize: SplitModeResize
+[20:39.44.633]      TFormXterm.FormResize: BtnSplitNo.Down
+[20:39.44.634]      TFormXterm.FormResize: ResizeTerminal(Indice,Panel1);
+[20:39.44.634]      BEGIN ResizeTerminal
+[20:39.44.673]      END ResizeTerminal
+[20:39.44.673]      TFormXterm.FormResize: AdaptSidebarArrows;
+[20:39.44.673]      BEGIN AdaptSidebarArrows
+[20:39.44.673]      END AdaptSidebarArrows
+[20:39.44.673]  END TFormXterm.FormResize
+
+[20:39.45.536]  BEGIN WMNCLButtonDown
+[20:39.45.536]      BEGIN WMSysCommand (minimize/restore)
+[20:39.45.682]          TFormXterm.WMEnterSizeMove
+[20:39.45.693]          TFormXterm.WMMove
+[20:39.45.734]          BEGIN TFormXterm.FormResize
+[20:39.45.734]              TFormXterm.FormResize: CenterBtnReattachTab
+[20:39.45.734]              TFormXterm.FormResize: SplitModeResize
+[20:39.45.734]              TFormXterm.FormResize: BtnSplitNo.Down
+[20:39.45.734]              TFormXterm.FormResize: ResizeTerminal(Indice,Panel1);
+[20:39.45.734]              BEGIN ResizeTerminal
+[20:39.45.745]              END ResizeTerminal
+[20:39.45.745]              TFormXterm.FormResize: AdaptSidebarArrows;
+[20:39.45.745]              BEGIN AdaptSidebarArrows
+[20:39.45.745]              END AdaptSidebarArrows
+[20:39.45.745]          END TFormXterm.FormResize
+[20:39.45.745]          BEGIN WMSize
+[20:39.45.745]              BEGIN AdaptSidebarArrows
+[20:39.45.745]              END AdaptSidebarArrows
+[20:39.45.745]          END WMSize
+[20:39.45.778]          TFormXterm.WMMove
+[20:39.45.781]          TFormXterm.WMMove
+[20:39.45.792]          TFormXterm.WMMove
+[20:39.45.801]          TFormXterm.WMMove
+[20:39.45.812]          TFormXterm.WMMove
+[20:39.45.822]          TFormXterm.WMMove
+[20:39.45.832]          TFormXterm.WMMove
+[20:39.45.842]          TFormXterm.WMMove
+[20:39.45.853]          TFormXterm.WMMove
+[20:39.45.862]          TFormXterm.WMMove
+[20:39.45.873]          TFormXterm.WMMove
+[20:39.45.882]          TFormXterm.WMMove
+[20:39.45.893]          TFormXterm.WMMove
+[20:39.45.903]          TFormXterm.WMMove
+[20:39.45.914]          TFormXterm.WMMove
+[20:39.45.923]          TFormXterm.WMMove
+[20:39.45.933]          TFormXterm.WMMove
+[20:39.45.944]          TFormXterm.WMMove
+[20:39.45.954]          TFormXterm.WMMove
+[20:39.45.966]          TFormXterm.WMMove
+[20:39.45.978]          TFormXterm.WMMove
+[20:39.46.017]          BEGIN TFormXterm.FormResize
+[20:39.46.017]              TFormXterm.FormResize: CenterBtnReattachTab
+[20:39.46.018]              TFormXterm.FormResize: SplitModeResize
+[20:39.46.018]              TFormXterm.FormResize: BtnSplitNo.Down
+[20:39.46.018]              TFormXterm.FormResize: ResizeTerminal(Indice,Panel1);
+[20:39.46.018]              BEGIN ResizeTerminal
+[20:39.46.024]              END ResizeTerminal
+[20:39.46.024]              TFormXterm.FormResize: AdaptSidebarArrows;
+[20:39.46.024]              BEGIN AdaptSidebarArrows
+[20:39.46.024]              END AdaptSidebarArrows
+[20:39.46.024]          END TFormXterm.FormResize
+[20:39.46.024]          BEGIN WMSize
+[20:39.46.024]              BEGIN AdaptSidebarArrows
+[20:39.46.024]              END AdaptSidebarArrows
+[20:39.46.024]          END WMSize
+[20:39.46.026]          TFormXterm.WMExitSizeMove
+[20:39.46.026]          BEGIN UnlockControl(FormXterm, WMExitSizeMove)
+[20:39.46.026]          END UnlockControl(FormXterm, WMExitSizeMove)
+[20:39.46.047]      END WMSysCommand
+[20:39.46.048]  END WMNCLButtonDown
+
+
+
+[20:40.43.841]  BEGIN TFormXterm.WMActivate
+[20:40.43.841]  END TFormXterm.WMActivate
+[20:40.43.842]  BEGIN WMNewTab: 0
+[20:40.43.842]      WMNewTab: FormClick
+[20:40.43.842]      WMNewTab: LooseFocus
+[20:40.43.842]  END WMNewTab: 0
+[20:40.43.918]  BEGIN WMNewTab: 0
+[20:40.43.918]      WMNewTab: FormClick
+[20:40.43.918]      WMNewTab: LooseFocus
+[20:40.43.918]  END WMNewTab: 0
+
+[20:40.44.704]  TranslateMessage(1507329, 73)
+[20:40.44.704]  SendMessage(105)
+[20:40.44.779]  TranslateMessage(-1072234495, 73)
+[20:40.44.875]  TranslateMessage(1638401, 80)
+[20:40.44.875]  SendMessage(112)
+[20:40.45.037]  TranslateMessage(-1072103423, 80)
+[20:40.45.261]  TranslateMessage(3735553, 32)
+[20:40.45.261]  SendMessage(32)
+[20:40.45.390]  TranslateMessage(-1070006271, 32)
+
+[20:40.45.983]  TranslateMessage(1966081, 65)
+[20:40.45.983]  SendMessage(97)
+[20:40.46.115]  TranslateMessage(-1071775743, 65)
+[20:40.46.122]  TranslateMessage(2097153, 68)
+[20:40.46.122]  SendMessage(100)
+[20:40.46.241]  TranslateMessage(-1071644671, 68)
+[20:40.46.328]  TranslateMessage(2097153, 68)
+[20:40.46.328]  SendMessage(100)
+[20:40.46.440]  TranslateMessage(-1071644671, 68)
+[20:40.46.580]  TranslateMessage(1245185, 82)
+[20:40.46.580]  SendMessage(114)
+[20:40.46.696]  TranslateMessage(1179649, 69)
+[20:40.46.696]  SendMessage(101)
+[20:40.46.791]  TranslateMessage(-1072496639, 82)
+[20:40.46.809]  TranslateMessage(-1072562175, 69)
+[20:40.46.935]  TranslateMessage(2031617, 83)
+[20:40.46.935]  SendMessage(115)
+[20:40.47.009]  TranslateMessage(-1071710207, 83)
+[20:40.47.104]  TranslateMessage(2031617, 83)
+[20:40.47.104]  SendMessage(115)
+[20:40.47.231]  TranslateMessage(-1071710207, 83)
+[20:40.47.320]  TranslateMessage(3735553, 32)
+[20:40.47.321]  SendMessage(32)
+[20:40.47.438]  TranslateMessage(-1070006271, 32)
+
+
+
+[20:42.07.212]  BEGIN TFormXterm.WMActivate
+[20:42.07.212]  END TFormXterm.WMActivate
+
+
+[20:42.08.826]  BEGIN WMNewTab: 0
+[20:42.08.826]      WMNewTab: FormClick
+[20:42.08.826]      WMNewTab: LooseFocus
+[20:42.08.826]  END WMNewTab: 0
+[20:42.08.956]  BEGIN WMNewTab: 0
+[20:42.08.956]      WMNewTab: FormClick
+[20:42.08.956]      WMNewTab: LooseFocus
+[20:42.08.956]  END WMNewTab: 0
+
+
+[20:42.10.297]  TranslateMessage(131073, 49)
+[20:42.10.297]  SendMessage(49)
+[20:42.10.439]  TranslateMessage(-1073610751, 49)
+[20:42.10.554]  TranslateMessage(655361, 57)
+[20:42.10.554]  SendMessage(57)
+[20:42.10.639]  TranslateMessage(-1073086463, 57)
+[20:42.10.739]  TranslateMessage(196609, 50)
+[20:42.10.739]  SendMessage(50)
+[20:42.10.868]  TranslateMessage(-1073545215, 50)
+
+[20:42.11.381]  TranslateMessage(3407873, 190)
+[20:42.11.381]  SendMessage(46)
+[20:42.11.475]  TranslateMessage(-1070333951, 190)
+[20:42.11.569]  TranslateMessage(131073, 49)
+[20:42.11.570]  SendMessage(49)
+[20:42.11.672]  TranslateMessage(-1073610751, 49)
+
+[20:42.12.171]  TranslateMessage(458753, 54)
+[20:42.12.171]  SendMessage(54)
+[20:42.12.257]  TranslateMessage(-1073283071, 54)
+
+[20:42.12.673]  TranslateMessage(589825, 56)
+[20:42.12.673]  SendMessage(56)
+[20:42.12.753]  TranslateMessage(-1073151999, 56)
+
+[20:42.13.386]  TranslateMessage(3407873, 190)
+[20:42.13.386]  SendMessage(46)
+[20:42.13.493]  TranslateMessage(-1070333951, 190)
+[20:42.13.585]  TranslateMessage(131073, 49)
+[20:42.13.585]  SendMessage(49)
+[20:42.13.707]  TranslateMessage(-1073610751, 49)
+[20:42.13.768]  TranslateMessage(3407873, 190)
+[20:42.13.768]  SendMessage(46)
+[20:42.13.876]  TranslateMessage(-1070333951, 190)
+
+[20:42.14.495]  SendMessage(8)
+[20:42.14.554]  TranslateMessage(-1072824319, 8)
+[20:42.14.672]  SendMessage(8)
+[20:42.14.788]  TranslateMessage(-1072824319, 8)
+
+[20:42.15.546]  TranslateMessage(720897, 48)
+[20:42.15.547]  SendMessage(48)
+[20:42.15.621]  TranslateMessage(-1073020927, 48)
+[20:42.15.876]  TranslateMessage(3407873, 190)
+[20:42.15.876]  SendMessage(46)
+[20:42.15.974]  TranslateMessage(-1070333951, 190)
+[20:42.16.067]  TranslateMessage(131073, 49)
+[20:42.16.067]  SendMessage(49)
+[20:42.16.210]  TranslateMessage(-1073610751, 49)
+
+[20:42.16.632]  TranslateMessage(3735553, 32)
+[20:42.16.632]  SendMessage(32)
+[20:42.16.727]  TranslateMessage(-1070006271, 32)
+
+
+[20:42.18.163]  TranslateMessage(196609, 50)
+[20:42.18.163]  SendMessage(50)
+[20:42.18.316]  TranslateMessage(-1073545215, 50)
+
+[20:42.18.709]  TranslateMessage(393217, 53)
+[20:42.18.709]  SendMessage(53)
+[20:42.18.811]  TranslateMessage(-1073348607, 53)
+[20:42.18.900]  TranslateMessage(393217, 53)
+[20:42.18.900]  SendMessage(53)
+[20:42.19.025]  TranslateMessage(-1073348607, 53)
+[20:42.19.126]  TranslateMessage(3407873, 190)
+[20:42.19.126]  SendMessage(46)
+[20:42.19.349]  TranslateMessage(-1070333951, 190)
+[20:42.19.540]  TranslateMessage(196609, 50)
+[20:42.19.540]  SendMessage(50)
+[20:42.19.686]  TranslateMessage(-1073545215, 50)
+[20:42.19.935]  TranslateMessage(393217, 53)
+[20:42.19.936]  SendMessage(53)
+[20:42.19.996]  TranslateMessage(-1073348607, 53)
+[20:42.20.090]  TranslateMessage(393217, 53)
+[20:42.20.090]  SendMessage(53)
+[20:42.20.214]  TranslateMessage(-1073348607, 53)
+[20:42.20.281]  TranslateMessage(3407873, 190)
+[20:42.20.281]  SendMessage(46)
+[20:42.20.438]  TranslateMessage(-1070333951, 190)
+[20:42.20.499]  TranslateMessage(196609, 50)
+[20:42.20.499]  SendMessage(50)
+[20:42.20.634]  TranslateMessage(-1073545215, 50)
+[20:42.20.797]  TranslateMessage(393217, 53)
+[20:42.20.797]  SendMessage(53)
+[20:42.20.884]  TranslateMessage(-1073348607, 53)
+[20:42.20.984]  TranslateMessage(393217, 53)
+[20:42.20.984]  SendMessage(53)
+[20:42.21.096]  TranslateMessage(-1073348607, 53)
+[20:42.21.220]  TranslateMessage(3407873, 190)
+[20:42.21.220]  SendMessage(46)
+[20:42.21.352]  TranslateMessage(-1070333951, 190)
+[20:42.21.435]  TranslateMessage(196609, 50)
+[20:42.21.435]  SendMessage(50)
+[20:42.21.581]  TranslateMessage(393217, 53)
+[20:42.21.581]  SendMessage(53)
+[20:42.21.596]  TranslateMessage(-1073545215, 50)
+[20:42.21.688]  TranslateMessage(-1073348607, 53)
+[20:42.21.801]  TranslateMessage(393217, 53)
+[20:42.21.801]  SendMessage(53)
+[20:42.21.914]  TranslateMessage(-1073348607, 53)
+
+
+[20:42.24.289]  TranslateMessage(1835009, 13)
+[20:42.24.289]  SendMessage(13)
+[20:42.24.328]  TranslateMessage(-1071906815, 13)
+
+
+[20:42.33.069]  TranslateMessage(3014657, 67)
+[20:42.33.069]  SendMessage(99)
+[20:42.33.185]  TranslateMessage(-1070727167, 67)
+[20:42.33.463]  TranslateMessage(1572865, 79)
+[20:42.33.463]  SendMessage(111)
+[20:42.33.541]  TranslateMessage(-1072168959, 79)
+
+[20:42.34.144]  TranslateMessage(3211265, 78)
+[20:42.34.145]  SendMessage(110)
+[20:42.34.266]  TranslateMessage(-1070530559, 78)
+[20:42.34.323]  TranslateMessage(2162689, 70)
+[20:42.34.323]  SendMessage(102)
+[20:42.34.449]  TranslateMessage(-1071579135, 70)
+[20:42.34.483]  TranslateMessage(1507329, 73)
+[20:42.34.483]  SendMessage(105)
+[20:42.34.576]  TranslateMessage(-1072234495, 73)
+
+
+[20:42.35.948]  TranslateMessage(2228225, 71)
+[20:42.35.948]  SendMessage(103)
+[20:42.36.112]  TranslateMessage(-1071513599, 71)
+
+[20:42.36.538]  TranslateMessage(1441793, 85)
+[20:42.36.538]  SendMessage(117)
+[20:42.36.621]  TranslateMessage(-1072300031, 85)
+[20:42.36.651]  TranslateMessage(1245185, 82)
+[20:42.36.651]  SendMessage(114)
+[20:42.36.728]  TranslateMessage(1179649, 69)
+[20:42.36.728]  SendMessage(101)
+[20:42.36.838]  TranslateMessage(-1072496639, 82)
+[20:42.36.878]  TranslateMessage(3735553, 32)
+[20:42.36.878]  SendMessage(32)
+[20:42.36.892]  TranslateMessage(-1072562175, 69)
+[20:42.37.019]  TranslateMessage(-1070006271, 32)
+[20:42.37.058]  TranslateMessage(1310721, 84)
+[20:42.37.059]  SendMessage(116)
+[20:42.37.189]  TranslateMessage(-1072431103, 84)
+[20:42.37.239]  TranslateMessage(1179649, 69)
+[20:42.37.239]  SendMessage(101)
+[20:42.37.371]  TranslateMessage(1245185, 82)
+[20:42.37.371]  SendMessage(114)
+[20:42.37.432]  TranslateMessage(-1072562175, 69)
+[20:42.37.505]  TranslateMessage(3276801, 77)
+[20:42.37.505]  SendMessage(109)
+[20:42.37.526]  TranslateMessage(-1072496639, 82)
+[20:42.37.619]  TranslateMessage(-1070465023, 77)
+[20:42.37.735]  TranslateMessage(1507329, 73)
+[20:42.37.735]  SendMessage(105)
+[20:42.37.806]  TranslateMessage(-1072234495, 73)
+[20:42.37.926]  TranslateMessage(3211265, 78)
+[20:42.37.926]  SendMessage(110)
+[20:42.37.996]  TranslateMessage(1966081, 65)
+[20:42.37.996]  SendMessage(97)
+[20:42.38.007]  TranslateMessage(-1070530559, 78)
+[20:42.38.109]  TranslateMessage(-1071775743, 65)
+[20:42.38.135]  TranslateMessage(2490369, 76)
+[20:42.38.135]  SendMessage(108)
+[20:42.38.223]  TranslateMessage(-1071251455, 76)
+
+[20:42.38.928]  TranslateMessage(1835009, 13)
+[20:42.38.928]  SendMessage(13)
+[20:42.39.021]  TranslateMessage(-1071906815, 13)
+
+
+[20:42.40.409]  SendMessage(38)
+[20:42.40.530]  SendMessage(38)
+[20:42.40.665]  SendMessage(38)
+[20:42.40.765]  SendMessage(38)
+[20:42.41.034]  SendMessage(38)
+[20:42.41.205]  SendMessage(38)
+
+
+[20:42.43.819]  BEGIN WMNewTab: 0
+[20:42.43.819]      WMNewTab: FormClick
+[20:42.43.819]      WMNewTab: LooseFocus
+[20:42.43.819]  END WMNewTab: 0
+
+
+[20:42.45.576]  BEGIN WMNewTab: 0
+[20:42.45.576]      WMNewTab: FormClick
+[20:42.45.576]      WMNewTab: LooseFocus
+[20:42.45.579]  END WMNewTab: 0
+
+[20:42.46.146]  BEGIN WMNewTab: 0
+[20:42.46.146]      WMNewTab: FormClick
+[20:42.46.146]      WMNewTab: LooseFocus
+[20:42.46.147]  END WMNewTab: 0
+[20:42.46.267]  BEGIN WMNewTab: 0
+[20:42.46.267]      WMNewTab: FormClick
+[20:42.46.267]      WMNewTab: LooseFocus
+[20:42.46.267]  END WMNewTab: 0
+
+
+[20:42.48.332]  TranslateMessage(1835009, 13)
+[20:42.48.332]  SendMessage(13)
+[20:42.48.398]  TranslateMessage(-1071906815, 13)
+
+
+
+[20:43.13.346]  SendMessage(38)
+[20:43.13.529]  SendMessage(38)
+
+[20:43.14.703]  SendMessage(37)
+
+[20:43.15.209]  SendMessage(37)
+[20:43.15.239]  SendMessage(37)
+[20:43.15.270]  SendMessage(37)
+[20:43.15.301]  SendMessage(37)
+[20:43.15.330]  SendMessage(37)
+[20:43.15.360]  SendMessage(37)
+[20:43.15.391]  SendMessage(37)
+[20:43.15.420]  SendMessage(37)
+[20:43.15.450]  SendMessage(37)
+[20:43.15.480]  SendMessage(37)
+[20:43.15.511]  SendMessage(37)
+[20:43.15.540]  SendMessage(37)
+[20:43.15.570]  SendMessage(37)
+[20:43.15.602]  SendMessage(37)
+[20:43.15.632]  SendMessage(37)
+[20:43.15.662]  SendMessage(37)
+[20:43.15.692]  SendMessage(37)
+[20:43.15.722]  SendMessage(37)
+[20:43.15.752]  SendMessage(37)
+[20:43.15.786]  SendMessage(37)
+[20:43.15.816]  SendMessage(37)
+[20:43.15.843]  SendMessage(37)
+[20:43.16.195]  SendMessage(40)
+[20:43.16.297]  SendMessage(40)
+
+
+[20:43.27.626]  TranslateMessage(1507329, 73)
+[20:43.27.626]  SendMessage(105)
+[20:43.27.704]  TranslateMessage(-1072234495, 73)
+[20:43.27.886]  TranslateMessage(3211265, 78)
+[20:43.27.886]  SendMessage(110)
+[20:43.27.987]  TranslateMessage(-1070530559, 78)
+[20:43.28.230]  TranslateMessage(1310721, 84)
+[20:43.28.230]  SendMessage(116)
+[20:43.28.390]  TranslateMessage(-1072431103, 84)
+[20:43.28.394]  TranslateMessage(1179649, 69)
+[20:43.28.394]  SendMessage(101)
+[20:43.28.556]  TranslateMessage(1245185, 82)
+[20:43.28.556]  SendMessage(114)
+[20:43.28.629]  TranslateMessage(-1072562175, 69)
+[20:43.28.675]  TranslateMessage(-1072496639, 82)
+[20:43.28.847]  TranslateMessage(2162689, 70)
+[20:43.28.847]  SendMessage(102)
+[20:43.28.994]  TranslateMessage(-1071579135, 70)
+[20:43.29.020]  TranslateMessage(1966081, 65)
+[20:43.29.020]  SendMessage(97)
+[20:43.29.142]  TranslateMessage(-1071775743, 65)
+[20:43.29.193]  TranslateMessage(3014657, 67)
+[20:43.29.193]  SendMessage(99)
+[20:43.29.359]  TranslateMessage(-1070727167, 67)
+[20:43.29.365]  TranslateMessage(1179649, 69)
+[20:43.29.365]  SendMessage(101)
+[20:43.29.517]  TranslateMessage(-1072562175, 69)
+[20:43.29.679]  TranslateMessage(3735553, 32)
+[20:43.29.679]  SendMessage(32)
+[20:43.29.813]  TranslateMessage(-1070006271, 32)
+[20:43.29.900]  TranslateMessage(2490369, 76)
+[20:43.29.900]  SendMessage(108)
+[20:43.30.018]  TranslateMessage(-1071251455, 76)
+[20:43.30.156]  TranslateMessage(1572865, 79)
+[20:43.30.156]  SendMessage(111)
+[20:43.30.220]  TranslateMessage(-1072168959, 79)
+[20:43.30.315]  TranslateMessage(1572865, 79)
+[20:43.30.316]  SendMessage(111)
+[20:43.30.376]  TranslateMessage(-1072168959, 79)
+[20:43.30.530]  TranslateMessage(1638401, 80)
+[20:43.30.530]  SendMessage(112)
+[20:43.30.610]  TranslateMessage(-1072103423, 80)
+
+[20:43.31.309]  TranslateMessage(3145729, 66)
+[20:43.31.309]  SendMessage(98)
+[20:43.31.384]  TranslateMessage(-1070596095, 66)
+[20:43.31.393]  TranslateMessage(1966081, 65)
+[20:43.31.393]  SendMessage(97)
+[20:43.31.524]  TranslateMessage(-1071775743, 65)
+[20:43.31.779]  TranslateMessage(3014657, 67)
+[20:43.31.779]  SendMessage(99)
+[20:43.31.882]  TranslateMessage(-1070727167, 67)
+[20:43.31.907]  TranslateMessage(2424833, 75)
+[20:43.31.907]  SendMessage(107)
+[20:43.32.063]  TranslateMessage(-1071316991, 75)
+[20:43.32.127]  TranslateMessage(3735553, 32)
+[20:43.32.128]  SendMessage(32)
+[20:43.32.248]  TranslateMessage(-1070006271, 32)
+[20:43.32.605]  TranslateMessage(720897, 48)
+[20:43.32.605]  SendMessage(48)
+[20:43.32.682]  TranslateMessage(-1073020927, 48)
+[20:43.32.943]  TranslateMessage(1835009, 13)
+[20:43.32.943]  SendMessage(13)
+[20:43.32.979]  TranslateMessage(-1071906815, 13)
+
+
+[20:43.35.488]  SendMessage(38)
+[20:43.35.574]  SendMessage(38)
+[20:43.35.720]  SendMessage(38)
+[20:43.35.822]  SendMessage(38)
+
+
+[20:43.41.654]  TranslateMessage(1835009, 13)
+[20:43.41.654]  SendMessage(13)
+[20:43.41.756]  TranslateMessage(-1071906815, 13)
+
+
+
+
+
+
+[20:50.19.640]  BEGIN TFormXterm.WMActivate
+[20:50.19.640]  END TFormXterm.WMActivate
+
+
+
+
+
+
+
+[21:07.17.462]  BEGIN TFormXterm.WMActivate
+[21:07.17.462]  END TFormXterm.WMActivate
+
+
+[21:07.26.756]  BEGIN TFormXterm.WMActivate
+[21:07.26.756]  END TFormXterm.WMActivate
+
+
+
+[21:08.12.531]  TFormXterm.WMMove
+[21:08.12.537]  BEGIN TFormXterm.FormResize
+[21:08.12.537]      TFormXterm.FormResize: CenterBtnReattachTab
+[21:08.12.538]      TFormXterm.FormResize: SplitModeResize
+[21:08.12.538]      TFormXterm.FormResize: BtnSplitNo.Down
+[21:08.12.540]      TFormXterm.FormResize: ResizeTerminal(Indice,Panel1);
+[21:08.12.540]      BEGIN ResizeTerminal
+[21:08.12.547]      END ResizeTerminal
+[21:08.12.547]      TFormXterm.FormResize: AdaptSidebarArrows;
+[21:08.12.547]      BEGIN AdaptSidebarArrows
+[21:08.12.547]      END AdaptSidebarArrows
+[21:08.12.547]  END TFormXterm.FormResize
+[21:08.12.547]  BEGIN WMSize
+[21:08.12.548]  END WMSize
+
+
+[21:08.15.935]  BEGIN TFormXterm.WMActivate
+[21:08.15.935]  END TFormXterm.WMActivate
+
+
+
+
+[21:10.48.277]  BEGIN TFormXterm.WMActivate
+[21:10.48.277]  END TFormXterm.WMActivate
+[21:10.48.278]  BEGIN WMSysCommand (minimize/restore)
+[21:10.48.280]      BEGIN WMNewTab: 0
+[21:10.48.280]          WMNewTab: FormClick
+[21:10.48.280]          WMNewTab: LooseFocus
+[21:10.48.283]      END WMNewTab: 0
+[21:10.48.290]      TFormXterm.WMMove
+[21:10.48.338]      BEGIN WMSize
+[21:10.48.338]          BEGIN AdaptSidebarArrows
+[21:10.48.338]          END AdaptSidebarArrows
+[21:10.48.338]      END WMSize
+[21:10.48.340]      BEGIN TFormXterm.WMActivate
+[21:10.48.340]      END TFormXterm.WMActivate
+[21:10.48.340]  END WMSysCommand
+
+
+[21:10.54.030]  BEGIN TFormXterm.WMActivate
+[21:10.54.030]  END TFormXterm.WMActivate
+
+
+
+
+[21:13.02.823]  BEGIN TFormXterm.WMActivate
+[21:13.02.823]  END TFormXterm.WMActivate
+
+
+[21:13.13.986]  BEGIN WMSysCommand (minimize/restore)
+[21:13.13.994]      BEGIN TFormXterm.WMActivate
+[21:13.13.994]      END TFormXterm.WMActivate
+[21:13.13.995]      TFormXterm.WMMove
+[21:13.13.999]      BEGIN WMSize
+[21:13.13.999]      END WMSize
+[21:13.14.000]  END WMSysCommand
+
+
+
+
+
+
+
+[21:26.45.325]  BEGIN TFormXterm.WMActivate
+[21:26.45.325]  END TFormXterm.WMActivate
+
+
+
+[21:27.14.454]  BEGIN TFormXterm.WMActivate
+[21:27.14.454]  END TFormXterm.WMActivate
+
+
+
+[21:28.55.785]  BEGIN TFormXterm.WMActivate
+[21:28.55.785]  END TFormXterm.WMActivate
+
+
+[21:29.03.666]  BEGIN TFormXterm.WMActivate
+[21:29.03.666]  END TFormXterm.WMActivate
+[21:29.03.667]  BEGIN WMSysCommand (minimize/restore)
+[21:29.03.667]      BEGIN WMNewTab: 0
+[21:29.03.667]          WMNewTab: FormClick
+[21:29.03.667]          WMNewTab: LooseFocus
+[21:29.03.668]      END WMNewTab: 0
+[21:29.03.676]      TFormXterm.WMMove
+[21:29.03.726]      BEGIN WMSize
+[21:29.03.726]          BEGIN AdaptSidebarArrows
+[21:29.03.726]          END AdaptSidebarArrows
+[21:29.03.726]      END WMSize
+[21:29.03.728]      BEGIN TFormXterm.WMActivate
+[21:29.03.728]      END TFormXterm.WMActivate
+[21:29.03.728]  END WMSysCommand
+
+[21:29.04.844]  BEGIN WMSysCommand (minimize/restore)
+[21:29.04.853]      BEGIN TFormXterm.WMActivate
+[21:29.04.853]      END TFormXterm.WMActivate
+[21:29.04.856]      TFormXterm.WMMove
+[21:29.04.861]      BEGIN WMSize
+[21:29.04.861]      END WMSize
+[21:29.04.861]  END WMSysCommand
+
+
+
+
+
+[21:35.02.634]  BEGIN WMSysCommand (minimize/restore)
+[21:35.02.642]      BEGIN WMNewTab: 0
+[21:35.02.642]          WMNewTab: FormClick
+[21:35.02.642]          WMNewTab: LooseFocus
+[21:35.02.643]      END WMNewTab: 0
+[21:35.02.649]      TFormXterm.WMMove
+[21:35.02.688]      BEGIN WMSize
+[21:35.02.688]          BEGIN AdaptSidebarArrows
+[21:35.02.688]          END AdaptSidebarArrows
+[21:35.02.688]      END WMSize
+[21:35.02.690]      BEGIN TFormXterm.WMActivate
+[21:35.02.690]      END TFormXterm.WMActivate
+[21:35.02.690]  END WMSysCommand
+[21:35.02.848]  LoadPingusImgs
+[21:35.03.206]  Request for file extraction: /usr/share/ImgsPingus.bmp
+[21:35.03.206]  BEGIN Extracting "/usr/share/imgspingus.bmp"
+[21:35.03.328]      File ImgsPingus.bmp extracted from CygUtils.plugin.
+[21:35.03.328]  END Extracting "/usr/share/imgspingus.bmp"
+[21:35.03.369]  Launching consolesaver...
+
+
+
+[21:35.18.304]  BEGIN TFormXterm.WMActivate
+[21:35.18.304]  END TFormXterm.WMActivate
+
+[21:35.18.719]  Panel1Click: FormClick
+[21:35.18.719]  BEGIN DisplayCurrentTab
+[21:35.18.719]      DisplayCurrentTab: FormClick
+[21:35.18.719]      (SSH-Browser) DisplayCurrentTab(1): ActiverPanel14
+[21:35.18.719]      (SSH-Browser) BEGIN ActiverPanel14
+[21:35.18.719]      (SSH-Browser) BEGIN DesactiverPanel14
+[21:35.18.725]      (SSH-Browser) END DesactiverPanel14
+[21:35.18.725]      (SSH-Browser) END ActiverPanel14;
+[21:35.18.769]      DisplayCurrentTab: Cts1.BeginUpdate;
+[21:35.18.769]      DisplayCurrentTab: Cts1.EndUpdates
+[21:35.18.769]      DisplayCurrentTab: Show selected tab
+[21:35.18.781]      DisplayCurrentTab: Hide other tabs
+[21:35.18.825]      DisplayCurrentTab: Adapting buttons enable/disable states
+[21:35.18.825]      DisplayCurrentTab: DeterminerBoutonDetachOuReattach
+[21:35.18.825]      DisplayCurrentTab: DistribuerLeFocus
+[21:35.18.827]  END DisplayCurrentTab
+[21:35.18.842]  TimPingusTimer: Cts1.EndUpdates
+
+
+[21:35.26.191]  BEGIN WMNCLButtonDown
+[21:35.26.191]      BEGIN WMSysCommand (minimize/restore)
+
+
+[21:35.27.761]      END WMSysCommand
+[21:35.27.762]  END WMNCLButtonDown
+[21:35.27.762]  BtnHelpClick: FormClick
+[21:35.27.858]  
+[21:35.27.858]  BEGIN LIVE-CREATING TFormAbout
+[21:35.28.203]      BEGIN FormAbout.Create
+[21:35.28.379]      END FormAbout.Create
+[21:35.28.379]  END LIVE-CREATING TFormAbout
+[21:35.28.380]  
+[21:35.28.441]  BEGIN TFormAbout.FormShow
+[21:35.28.441]  END TFormAbout.FormShow
+
+
+
+
+
+[21:39.49.339]  BEGIN TFormXterm.WMActivate
+[21:39.49.339]  END TFormXterm.WMActivate
+
+
+[21:39.51.780]  BEGIN TFormXterm.WMActivate
+[21:39.51.780]  END TFormXterm.WMActivate
+
+[21:39.52.758]  BEGIN WMNCLButtonDown
+[21:39.52.891]      BEGIN WMSysCommand (minimize/restore)
+[21:39.52.891]          BEGIN Form4.CloseQuery
+[21:39.52.925]              
+[21:39.52.925]              BEGIN CloseTab(5)
+[21:39.52.925]                  CloseTab:  Tab is external app
+[21:39.52.925]                  CloseTab:  Send WM_CLOSE (0) to external app
+[21:39.52.925]                  Form4.Closing = false
+[21:39.52.925]              END CloseTab(5)
+[21:39.52.926]              
+[21:39.52.926]              
+[21:39.52.926]              BEGIN CloseTab(4)
+[21:39.52.926]                  CloseTab:  Tab is external app
+[21:39.52.926]                  CloseTab:  Send WM_CLOSE (0) to external app
+[21:39.52.926]                  Form4.Closing = false
+[21:39.52.926]              END CloseTab(4)
+[21:39.52.926]              
+[21:39.52.926]              
+[21:39.52.926]              BEGIN CloseTab(3)
+[21:39.52.926]                  CloseTab:  Tab is external app
+[21:39.52.926]                  CloseTab:  Send WM_CLOSE (0) to external app
+[21:39.52.926]                  Form4.Closing = false
+[21:39.52.926]              END CloseTab(3)
+[21:39.52.926]              
+[21:39.52.926]              
+[21:39.52.926]              BEGIN CloseTab(2)
+[21:39.52.926]                  CloseTab:  Tab is external app
+[21:39.52.926]                  CloseTab:  Send WM_CLOSE (0) to external app
+[21:39.52.926]                  Form4.Closing = false
+[21:39.52.926]              END CloseTab(2)
+[21:39.52.926]              
+[21:39.52.926]              
+[21:39.52.926]              BEGIN CloseTab(1)
+[21:39.52.926]                  CloseTab:  Tab is external app
+[21:39.52.926]                  CloseTab:  Send WM_CLOSE (0) to external app
+[21:39.52.926]                  Form4.Closing = false
+[21:39.52.927]              END CloseTab(1)
+[21:39.52.927]              
+[21:39.52.927]              
+[21:39.52.927]              BEGIN CloseTab(0)
+[21:39.52.927]                  CloseTab:  Tab is Home
+[21:39.52.927]                  Freeing object FrmHome2 (TFrameHome)
+[21:39.52.934]                  CloseTab:  Delete MobaScript file
+[21:39.52.935]                  CloseTab:  Close TFormDetachedTab
+[21:39.52.935]                  CloseTab:  Verifying if a gateway connection has been started for session #0
+[21:39.52.935]                  CloseTab: Cts1.BeginUpdate;
+[21:39.52.935]                  CloseTab: Cts1.Tabs.Delete(0);
+[21:39.52.937]                  CloseTab: Cts1.Tabs.Delete(0);
+[21:39.52.937]                  (SSH-Browser) TabSFTP[0].Free;
+[21:39.52.937]                  Freeing object TMobaThread
+[21:39.52.965]                  Freeing object TElSftpClient
+[21:39.52.983]                  Freeing object TElSSHClient
+[21:39.52.984]                  Freeing object TElSocket
+[21:39.52.985]                  Freeing object TSshBrowserList
+[21:39.52.985]                  Freeing object TElSSHTunnelList
+[21:39.52.985]                  Freeing object TElSubsystemSSHTunnel
+[21:39.52.985]                  Freeing object TList
+[21:39.52.985]                  Freeing object TTimer
+[21:39.52.986]                  BEGIN DisplayCurrentTab
+[21:39.52.987]                      DisplayCurrentTab: FormClick
+[21:39.52.987]                      (SSH-Browser) DisplayCurrentTab(1): ActiverPanel14
+[21:39.52.987]                      (SSH-Browser) BEGIN ActiverPanel14
+[21:39.52.987]                      (SSH-Browser) BEGIN DesactiverPanel14
+[21:39.52.987]                      (SSH-Browser) END DesactiverPanel14
+[21:39.52.987]                      (SSH-Browser) END ActiverPanel14;
+[21:39.53.030]                      DisplayCurrentTab: Cts1.BeginUpdate;
+[21:39.53.030]                      Cts1ActiveTabChanged: New index = 1
+[21:39.53.030]                      DisplayCurrentTab: Cts1.EndUpdates
+[21:39.53.033]                      DisplayCurrentTab: Show selected tab
+[21:39.53.038]                      DisplayCurrentTab: Hide other tabs
+[21:39.53.038]                      DisplayCurrentTab: Adapting buttons enable/disable states
+[21:39.53.039]                      DisplayCurrentTab: DeterminerBoutonDetachOuReattach
+[21:39.53.039]                      DisplayCurrentTab: DistribuerLeFocus
+[21:39.53.039]                  END DisplayCurrentTab
+[21:39.53.039]              END CloseTab(0)
+[21:39.53.039]              
+[21:39.53.039]              ReEnable_Timer1_6_2
+[21:39.53.039]          END Form4.CloseQuery
+[21:39.53.040]      END WMSysCommand
+[21:39.53.040]  END WMNCLButtonDown
+
+[21:39.53.848]  
+[21:39.53.848]  Timer1: CloseTab(4);
+[21:39.53.848]  
+[21:39.53.848]  BEGIN CloseTab(4)
+[21:39.53.848]      CloseTab:  Tab is external app
+[21:39.53.848]      CloseTab:  Delete MobaScript file
+[21:39.53.848]      CloseTab:  Close TFormDetachedTab
+[21:39.53.848]      CloseTab:  Verifying if a gateway connection has been started for session #4
+[21:39.53.848]      CloseTab: Cts1.BeginUpdate;
+[21:39.53.848]      CloseTab: Cts1.Tabs.Delete(4);
+[21:39.53.848]      CloseTab: Cts1.Tabs.Delete(4);
+[21:39.53.848]      (SSH-Browser) TabSFTP[4].Free;
+[21:39.53.848]      Freeing object TMobaThread
+[21:39.53.848]      Freeing object TElSftpClient
+[21:39.53.849]      Freeing object TElSSHClient
+[21:39.53.849]      Freeing object TElSocket
+[21:39.53.849]      Freeing object TSshBrowserList
+[21:39.53.849]      Freeing object TElSSHTunnelList
+[21:39.53.849]      Freeing object TElSubsystemSSHTunnel
+[21:39.53.849]      Freeing object TList
+[21:39.53.849]      Freeing object TTimer
+[21:39.53.850]      BEGIN DisplayCurrentTab
+[21:39.53.850]          DisplayCurrentTab: FormClick
+[21:39.53.850]          (SSH-Browser) DisplayCurrentTab(1): ActiverPanel14
+[21:39.53.850]          (SSH-Browser) BEGIN ActiverPanel14
+[21:39.53.850]          (SSH-Browser) BEGIN DesactiverPanel14
+[21:39.53.851]          (SSH-Browser) END DesactiverPanel14
+[21:39.53.851]          (SSH-Browser) END ActiverPanel14;
+[21:39.53.889]          DisplayCurrentTab: Cts1.BeginUpdate;
+[21:39.53.889]          DisplayCurrentTab: Cts1.EndUpdates
+[21:39.53.892]          DisplayCurrentTab: Show selected tab
+[21:39.53.892]          DisplayCurrentTab: Hide other tabs
+[21:39.53.892]          DisplayCurrentTab: Adapting buttons enable/disable states
+[21:39.53.892]          DisplayCurrentTab: DeterminerBoutonDetachOuReattach
+[21:39.53.892]          DisplayCurrentTab: DistribuerLeFocus
+[21:39.53.892]      END DisplayCurrentTab
+[21:39.53.892]  END CloseTab(4)
+[21:39.53.892]  
+[21:39.53.892]  
+[21:39.53.892]  Timer1: CloseTab(3);
+[21:39.53.892]  
+[21:39.53.892]  BEGIN CloseTab(3)
+[21:39.53.892]      CloseTab:  Tab is external app
+[21:39.53.892]      CloseTab:  Delete MobaScript file
+[21:39.53.893]      CloseTab:  Close TFormDetachedTab
+[21:39.53.893]      CloseTab:  Verifying if a gateway connection has been started for session #3
+[21:39.53.893]      CloseTab: Cts1.BeginUpdate;
+[21:39.53.893]      CloseTab: Cts1.Tabs.Delete(3);
+[21:39.53.893]      CloseTab: Cts1.Tabs.Delete(3);
+[21:39.53.893]      (SSH-Browser) TabSFTP[3].Free;
+[21:39.53.893]      Freeing object TMobaThread
+[21:39.53.893]      Freeing object TElSftpClient
+[21:39.53.893]      Freeing object TElSSHClient
+[21:39.53.893]      Freeing object TElSocket
+[21:39.53.893]      Freeing object TSshBrowserList
+[21:39.53.893]      Freeing object TElSSHTunnelList
+[21:39.53.894]      Freeing object TElSubsystemSSHTunnel
+[21:39.53.894]      Freeing object TList
+[21:39.53.894]      Freeing object TTimer
+[21:39.53.895]      BEGIN DisplayCurrentTab
+[21:39.53.895]          DisplayCurrentTab: FormClick
+[21:39.53.895]          (SSH-Browser) DisplayCurrentTab(1): ActiverPanel14
+[21:39.53.895]          (SSH-Browser) BEGIN ActiverPanel14
+[21:39.53.895]          (SSH-Browser) BEGIN DesactiverPanel14
+[21:39.53.895]          (SSH-Browser) END DesactiverPanel14
+[21:39.53.895]          (SSH-Browser) END ActiverPanel14;
+[21:39.53.933]          DisplayCurrentTab: Cts1.BeginUpdate;
+[21:39.53.933]          DisplayCurrentTab: Cts1.EndUpdates
+[21:39.53.936]          DisplayCurrentTab: Show selected tab
+[21:39.53.936]          DisplayCurrentTab: Hide other tabs
+[21:39.53.936]          DisplayCurrentTab: Adapting buttons enable/disable states
+[21:39.53.936]          DisplayCurrentTab: DeterminerBoutonDetachOuReattach
+[21:39.53.936]          DisplayCurrentTab: DistribuerLeFocus
+[21:39.53.936]      END DisplayCurrentTab
+[21:39.53.936]  END CloseTab(3)
+[21:39.53.936]  
+[21:39.53.936]  
+[21:39.53.936]  Timer1: CloseTab(2);
+[21:39.53.936]  
+[21:39.53.936]  BEGIN CloseTab(2)
+[21:39.53.936]      CloseTab:  Tab is external app
+[21:39.53.936]      CloseTab:  Delete MobaScript file
+[21:39.53.937]      CloseTab:  Close TFormDetachedTab
+[21:39.53.937]      CloseTab:  Verifying if a gateway connection has been started for session #2
+[21:39.53.937]      CloseTab: Cts1.BeginUpdate;
+[21:39.53.937]      CloseTab: Cts1.Tabs.Delete(2);
+[21:39.53.937]      CloseTab: Cts1.Tabs.Delete(2);
+[21:39.53.937]      (SSH-Browser) TabSFTP[2].Free;
+[21:39.53.937]      Freeing object TMobaThread
+[21:39.53.937]      Freeing object TElSftpClient
+[21:39.53.937]      Freeing object TElSSHClient
+[21:39.53.939]      Freeing object TElSocket
+[21:39.53.939]      Freeing object TSshBrowserList
+[21:39.53.939]      Freeing object TElSSHTunnelList
+[21:39.53.939]      Freeing object TElSubsystemSSHTunnel
+[21:39.53.939]      Freeing object TList
+[21:39.53.939]      Freeing object TTimer
+[21:39.53.940]      BEGIN DisplayCurrentTab
+[21:39.53.940]          DisplayCurrentTab: FormClick
+[21:39.53.940]          (SSH-Browser) DisplayCurrentTab(1): ActiverPanel14
+[21:39.53.940]          (SSH-Browser) BEGIN ActiverPanel14
+[21:39.53.941]          (SSH-Browser) BEGIN DesactiverPanel14
+[21:39.53.941]          (SSH-Browser) END DesactiverPanel14
+[21:39.53.941]          (SSH-Browser) END ActiverPanel14;
+[21:39.53.982]          DisplayCurrentTab: Cts1.BeginUpdate;
+[21:39.53.982]          DisplayCurrentTab: Cts1.EndUpdates
+[21:39.53.984]          DisplayCurrentTab: Show selected tab
+[21:39.53.984]          DisplayCurrentTab: Hide other tabs
+[21:39.53.984]          DisplayCurrentTab: Adapting buttons enable/disable states
+[21:39.53.984]          DisplayCurrentTab: DeterminerBoutonDetachOuReattach
+[21:39.53.984]          DisplayCurrentTab: DistribuerLeFocus
+[21:39.53.984]      END DisplayCurrentTab
+[21:39.53.984]  END CloseTab(2)
+[21:39.53.984]  
+[21:39.53.985]  
+[21:39.53.985]  Timer1: CloseTab(1);
+[21:39.53.985]  
+[21:39.53.985]  BEGIN CloseTab(1)
+[21:39.53.985]      CloseTab:  Tab is external app
+[21:39.53.985]      CloseTab:  Delete MobaScript file
+[21:39.53.985]      CloseTab:  Close TFormDetachedTab
+[21:39.53.985]      CloseTab:  Verifying if a gateway connection has been started for session #1
+[21:39.53.985]      CloseTab: Cts1.BeginUpdate;
+[21:39.53.985]      CloseTab: Cts1.Tabs.Delete(1);
+[21:39.53.985]      Cts1ActiveTabChanged: New index = 0
+[21:39.53.985]      CloseTab: Cts1.Tabs.Delete(1);
+[21:39.53.985]      (SSH-Browser) TabSFTP[1].Free;
+[21:39.53.985]      Freeing object TMobaThread
+[21:39.53.985]      Freeing object TElSftpClient
+[21:39.53.986]      Freeing object TElSSHClient
+[21:39.53.987]      Freeing object TElSocket
+[21:39.53.987]      Freeing object TSshBrowserList
+[21:39.53.987]      Freeing object TElSSHTunnelList
+[21:39.53.987]      Freeing object TElSubsystemSSHTunnel
+[21:39.53.987]      Freeing object TList
+[21:39.53.987]      Freeing object TTimer
+[21:39.53.989]      BEGIN DisplayCurrentTab
+[21:39.53.989]          DisplayCurrentTab: FormClick
+[21:39.53.989]          (SSH-Browser) DisplayCurrentTab(0): ActiverPanel14
+[21:39.53.989]          (SSH-Browser) BEGIN ActiverPanel14
+[21:39.53.989]          (SSH-Browser) BEGIN DesactiverPanel14
+[21:39.53.989]          (SSH-Browser) END DesactiverPanel14
+[21:39.53.989]          (SSH-Browser) END ActiverPanel14;
+[21:39.54.027]          DisplayCurrentTab: Cts1.BeginUpdate;
+[21:39.54.027]          DisplayCurrentTab: Cts1.EndUpdates
+[21:39.54.029]          DisplayCurrentTab: Show selected tab
+[21:39.54.029]          DisplayCurrentTab: Hide other tabs
+[21:39.54.029]          DisplayCurrentTab: Adapting buttons enable/disable states
+[21:39.54.030]          DisplayCurrentTab: DeterminerBoutonDetachOuReattach
+[21:39.54.030]          DisplayCurrentTab: DistribuerLeFocus
+[21:39.54.030]      END DisplayCurrentTab
+[21:39.54.030]  END CloseTab(1)
+[21:39.54.030]  
+[21:39.54.030]  
+[21:39.54.030]  Timer1: CloseTab(0);
+[21:39.54.030]  
+[21:39.54.030]  BEGIN CloseTab(0)
+[21:39.54.030]      CloseTab:  Tab is external app
+[21:39.54.030]      CloseTab:  Delete MobaScript file
+[21:39.54.030]      CloseTab:  Close TFormDetachedTab
+[21:39.54.030]      CloseTab:  Verifying if a gateway connection has been started for session #0
+[21:39.54.030]      CloseTab: Cts1.BeginUpdate;
+[21:39.54.030]      CloseTab: Cts1.Tabs.Delete(0);
+[21:39.54.030]      CloseTab: Cts1.Tabs.Delete(0);
+[21:39.54.031]      (SSH-Browser) TabSFTP[0].Free;
+[21:39.54.031]      Freeing object TMobaThread
+[21:39.54.031]      Freeing object TElSftpClient
+[21:39.54.031]      Freeing object TElSSHClient
+[21:39.54.031]      Freeing object TElSocket
+[21:39.54.031]      Freeing object TSshBrowserList
+[21:39.54.031]      Freeing object TElSSHTunnelList
+[21:39.54.031]      Freeing object TElSubsystemSSHTunnel
+[21:39.54.031]      Freeing object TList
+[21:39.54.031]      Freeing object TTimer
+[21:39.54.032]      Changing tab index D = -1
+[21:39.54.032]      BEGIN DisplayCurrentTab
+[21:39.54.032]          DisplayCurrentTab: FormClick
+[21:39.54.032]      END DisplayCurrentTab
+[21:39.54.032]      Form4.Close2
+[21:39.54.032]      BEGIN Form4.CloseQuery
+[21:39.54.032]          BEGIN Form1.CloseQuery
+[21:39.54.033]          END Form1.CloseQuery
+[21:39.54.033]          BEGIN Form1.Close
+[21:39.54.033]          END Form1.Close
+[21:39.54.033]      END Form4.CloseQuery
+[21:39.54.033]  END CloseTab(0)
+[21:39.54.033]  
+[21:39.54.033]  Form4.Close3
+[21:39.54.033]  BEGIN Form4.CloseQuery
+[21:39.54.033]      Form4.CloseQuery:  CanClose:=true;
+[21:39.54.033]  END Form4.CloseQuery
+[21:39.54.033]  BEGIN Form4.Close
+[21:39.54.033]      Timer1.Enabled:=false
+[21:39.54.033]      Freeing VNC tabs
+[21:39.54.033]      Freeing MobaVNC tabs
+[21:39.54.033]      Freeing X11 tabs
+[21:39.54.033]      Freeing FTP tabs
+[21:39.54.033]      Freeing Home tabs
+[21:39.54.033]  END Form4.Close
+[21:39.54.070]  BEGIN TFormManagePasswords.FormDestroy
+[21:39.54.071]      Form4 is not visible
+[21:39.54.071]  END TFormManagePasswords.FormDestroy
+[21:39.54.178]  BEGIN TFormSessionEdit.FormDestroy
+[21:39.54.179]  END TFormSessionEdit.FormDestroy
+[21:39.54.280]  BEGIN Form4.Destroy
+[21:39.54.280]      DeleteRegistryKeyIfEmpty(Software\Mobatek)
+[21:39.54.281]      Timer1.Enabled:=false
+[21:39.54.281]      Freeing VNC tabs
+[21:39.54.281]      Freeing MobaVNC tabs
+[21:39.54.281]      Freeing X11 tabs
+[21:39.54.281]      Freeing FTP tabs
+[21:39.54.281]      Freeing Home tabs
+[21:39.54.281]      Freeing object TIcon
+[21:39.54.281]      Freeing object TStringList
+[21:39.54.281]  END Form4.Destroy
+[21:39.54.329]  BEGIN RemoveMobaConsoleFont
+[21:39.54.329]  END RemoveMobaConsoleFont
+[21:39.54.330]  
+[21:39.54.330]  
+[21:39.54.330]  Starting procedure TForm1.FormDestroy...
+[21:39.54.330]  TForm1.FormDestroy: Ini36.UpdateIniFileWithVerification(D:\Clase\INTERN~1\Lab1\MobaXterm.ini)
+[21:39.54.424]  TForm1.FormDestroy: Launching BackupIniFile
+[21:39.54.424]  
+[21:39.54.424]  BackupINIFile (D:\Clase\INTERN~1\Lab1\MobaXterm.ini, D:\Clase\INTERN~1\Lab1\MobaXterm backup.zip);
+[21:39.54.444]  --> done.
+[21:39.54.444]  TForm1.FormDestroy: Freeing Ini36
+
+
+[21:39.56.710]  Form1.FormDestroyed
+[21:39.56.710]  --> Flushing Log file to disk

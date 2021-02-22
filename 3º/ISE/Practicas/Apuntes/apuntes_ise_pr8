@@ -1,0 +1,26 @@
+cadesconectamos un disco del raid
+lm-sensors
+dmesg
+/proc/mdstat
+cat /proc/mdstat
+
+[UU]->up, discos funcionando, [_] discos caidos 
+
+mdadm
+
+mdadm -R /dev/md0
+
+personalities -> tipos de raid que soporta el kernel
+
+salimos del intramd Ctrl+D
+
+monitorizar con mdadm
+mdadm --detail /dev/md0
+mdadm --monitor  --daemonise --mail=root@localhost --delay=1800 /dev/md2
+
+añadir disco de nuevo
+
+mdadm --add /dev/md0 /dev/sdb
+
+watch -n 2 cat /proc/mdstat
+

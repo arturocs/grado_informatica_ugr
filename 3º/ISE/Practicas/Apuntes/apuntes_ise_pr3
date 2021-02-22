@@ -1,0 +1,94 @@
+creamos un nuevo dispositivo multidevice con mdadm
+yum install mdadm
+mdadm --create /dev/md0 --level=1 --raid-devices=2 /dev/sdb /dev/sdc
+	nombre 		RAID1	  numero de discos	discos
+
+ip addr
+dhclient -v -> activar la red en centos
+yum install mdadm
+
+mdadm --create /dev/md0 --level=1 --raid-devices=2 /dev/sdb /dev/sdc
+
+pvcreate /dev/md0 -> creamos volumen fisico en /dev/md0
+
+vgcreate pmraid1 /dev/md0 -> creamos un grupo de volumenes llamado pmraid1 en el volumen fisico /dev/md0. con esto nos aseguramos que al estar en un distinto grupo de volumenes /var estara en el raid1
+
+lvcreate -L 1G -n newvar pmraid1
+
+lvrename antiguo nuevo -> cambiar el nombre a un volumen logico
+
+crear sistema de archivos y montarlo
+
+mkfs -t xfs /dev/mapper/pmraid1-newvar
+mkdir /mnt/vartemp
+mount /dev/mapper/pmraid1-newvar /mnt/vartemp
+
+aislar el sistema
+
+systemctl isolate runlevel1.target
+
+cp -a /var/* /mnt/vartemp -> copiar /var al nuevo sistema conservando el contexto de ejecucion de selinux (-a)
+cp /etc/fstab /etc/fstab.backup
+
+echo "/dev/mapper/pmraid1-newvar /var xfs defaults 0 0" >> /etc/fstab
+
+vi -> por defecto en modo edicion, se accede al modo comandos con escape. 
+:wq -> salimos guardando los cambios
+:q! -> salimos sin guardar los cambios
+i -> modo edicion
+
+mount -a -> monta todo lo que hay en fstab
+
+umount /mnt/vartemp
+
+restorecon /var restaura el contexto de unos archivos, en este caso /var
+
+comentamos la nueva linea de fstab
+mount -a
+umount /var -> en virtualbox 5.1 mount -a no funciona, por lo que usamos umount
+mkdir /varsura
+mv /var/* /varsura
+
+descomentamos la linea de fstab y mount -a
+
+cifrado
+
+luks on lvm -> se cifran las particiones lvm
+lvm on luks -> se cifra el disco y se le pone el volumen lvm encima
+
+yum install cryptsetup
+
+umount /var
+
+cryptsetup luksFormat /dev/mapper/pmraid1-newvar -> encriptar
+
+cryptsetup luksOpen /dev/mapper/pmraid1-newvar pmraid1-newvar_crypt -> abrir el dispositivo encriptado y para montarlo
+
+mkfs -t xfs /dev/mapper/pmraid1-newvar_crypt
+
+mount /dev/mapper/pmraid1-newvar_crypt /mnt
+
+ls -l /dev/mapper
+
+cp -a /var /mnt
+
+editar fsab para añadir /dev/mapper/pmraid1-newvar_crypt
+
+editar /etc/crypttab
+
+blkid | grep crypto >> /etc/crypttab -> quitar ultima parte, las comillas del uuid y el /dev/mapper solo dejando el nombre
+cryptsetup luksUUID /dev/mapper/pmraid1-newvar -> opcional, otra forma de mostrar el uuid
+
+destino			uuid del disco 			opciones
+pmraid1-newvar_crypt		uuid			  none
+mismo nombre que en fstab	uuid del disco		  sin opciones
+
+----segundo dia de practica 3----
+
+physical volume -> pvcreate
+grupo de volumenes -> creamos un grupo de volumenes para grantizarnos que todo
+		   lo que escribamos en el volumen logico estará en el raid espejo
+volumenes logicos
+shred -> para limpiar el disco antes de cifrar
+
+

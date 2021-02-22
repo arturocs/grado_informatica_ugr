@@ -1,0 +1,34 @@
+añadir red solo-anfitrion y habilitarla en las maquinas añadiendo un segundo conector de red
+
+ubuntu server
+
+/etc/network/interfaces
+añadir
+auto enp0s8
+iface enp0s8 inet static
+address 192.168.56.105
+netmask 255.255.255.0
+gateway 192.168.56.1
+
+ifdown enp0s3
+ifup enp0s3
+
+systemctl restart networking -> activar la nueva red
+
+centos
+
+/etc/sysconfig/network-scripts/ifcfg-enp0s8
+TYPE=Ethernet
+BOOTPROTO=none
+NAME=enp0s8
+DEVICE=enp0s8
+ONBOOT=yes
+IPADDR=192.168.56.110
+NETMASK=255.255.255.0
+
+ifdown enp0s8
+ifup enp0s8 -> activar nueva configuracion
+
+con lspci | grep Ethernet -> nos permite ver el slot pci de la tarjeta ethernet
+
+IP host 192.168.56.1

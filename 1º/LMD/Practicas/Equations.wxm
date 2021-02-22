@@ -1,0 +1,107 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 11.08.0 ] */
+
+/* [wxMaxima: comment start ]
+(1) Implementar una función "diophantic" que tenga por entrada
+tres números enteros "a, b, c" y por salida las soluciones, en su caso, 
+de la ecuación diofántica ax + by = c. 
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: input   start ] */
+DIOPHANTIC(a,b,c):=block([d,p,S],
+d:gcd(a,b),
+p:gcdex(a,b),
+if mod(c,d)=0 then (S:[(c/d)*p[1]+(b/d)*k,(c/d)*p[2]-(a/d)*k],print("x=",S[1],", y=",S[2],"."))
+   else print("La ecuación no tiene solución.")
+)$
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+DIOPHANTIC(121,-77,88);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+DIOPHANTIC(40,15,30);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: comment start ]
+Con salida en forma de lista:
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: input   start ] */
+diophantic(a,b,c):=block([d,p,S],
+d:gcd(a,b),
+p:gcdex(a,b),
+if mod(c,d)=0 then (S:[(c/d)*p[1]+(b/d)*k,(c/d)*p[2]-(a/d)*k])
+   else print("La ecuación no tiene solución.")
+)$
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+diophantic(40,15,30);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: comment start ]
+diophantic(a,b,c) devuelve una lista [x,y] tal que ax + by = c.
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: comment start ]
+(2) Implementar una función "congruence" que tenga por entrada tres 
+números enteros "a, b, m" y por salida las soluciones, en su caso,
+de la ecuación en congruencia ax ≡ b mod m.
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: comment start ]
+Utilizando explícitamente diophantic:
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: input   start ] */
+congruence(a,b,m):=block([d,P,S],
+d:gcd(a,m),
+if mod(b,d)=0 then diophantic(a,m,b)[1] 
+   else print("La ecuación no tiene solución.")
+)$
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+congruence(121,2,196);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+congruence(54,6,34);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: comment start ]
+Alternativamente,
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: input   start ] */
+CONGRUENCE(a,b,m):=block([],
+d:gcd(a,m),
+if mod(b,d)=0 then S:gcdex(a,m)[1]*b/d+(m/d)*k 
+else print("La ecuación no tiene solución.")
+)$
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+CONGRUENCE(54,6,34);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+CONGRUENCE(121,2,196);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+CONGRUENCE(a,b,m):=block([],
+d:gcd(a,m),
+if mod(b,d)=0 then (S:gcdex(a,m)[1]*b/d+(m/d)*k,print(S," k=0,...",gcd(a,m)-1,".")) 
+else print("La ecuación no tiene solución.")
+)$
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+CONGRUENCE(54,6,24);
+/* [wxMaxima: input   end   ] */
+
+/* Maxima can't load/batch files which end with a comment! */
+"Created with wxMaxima"$

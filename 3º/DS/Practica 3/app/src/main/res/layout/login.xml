@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="64dp"
+        android:text="Introducir usuario"
+        android:textColor="#000000"
+        android:textSize="@dimen/abc_dropdownitem_icon_width" />
+
+    <EditText
+        android:id="@+id/passwd"
+        android:layout_width="278dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="186dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:text="prueba" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="283dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/passwd"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginLeft="47dp"
+        android:layout_marginRight="54dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:text="correo@ejemplo.com" />
+
+    <Button
+        android:id="@+id/acceder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/textView"
+        android:layout_marginBottom="86dp"
+        android:text="Entrar" />
+
+    <!--<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="registrar"
+        android:id="@+id/registar"
+        android:layout_marginTop="55dp"
+        android:textSize="@dimen/abc_action_bar_icon_vertical_padding_material"
+        android:textColor="@color/accent_material_light"
+        android:layout_below="@+id/acceder_boton"
+        android:layout_toLeftOf="@+id/acceder_boton"
+        android:layout_toStartOf="@+id/acceder_boton" />-->
+
+    <Button
+        android:id="@+id/registro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/acceder"
+        android:layout_marginEnd="82dp"
+        android:text="registrarse" />
+
+</RelativeLayout>

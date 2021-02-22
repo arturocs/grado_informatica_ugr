@@ -1,0 +1,374 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+ <HEAD>
+  <TITLE>03-ecuaciones</TITLE>
+  <META NAME="generator" CONTENT="wxMaxima">
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+  <STYLE TYPE="text/css">
+body {
+  background-color: rgb(255,255,255);
+}
+.input {
+  color: rgb(0,0,255);
+}
+.comment {
+  color: rgb(0,0,0);
+  background-color: rgb(255,255,255);
+  padding: 2mm;
+}
+.image {
+  color: rgb(0,0,0);
+  padding: 2mm;
+}
+.section {
+  color: rgb(0,0,0);
+  font-size: 1.5em;
+  padding: 2mm;
+}
+.subsect {
+  color: rgb(0,0,0);
+  font-size: 1.2em;
+  padding: 2mm;
+}
+.title {
+  color: rgb(0,0,0);
+  font-size: 2em;
+  padding: 2mm;
+}
+.prompt {
+  color: rgb(255,0,0);
+}
+table {
+  border: 0px;
+}
+td {
+  vertical-align: top;
+  padding: 1mm;
+}
+  </STYLE>
+ </HEAD>
+ <BODY>
+
+<!---------------------------------------------------------->
+<!--          Created with wxMaxima version 14.12.1         -->
+<!---------------------------------------------------------->
+
+
+<!-- Title cell -->
+
+
+<P CLASS="title">
+Resolución de ecuaciones
+</P>
+
+
+<!-- Section cell -->
+
+
+<P CLASS="section">
+ 1 Listas
+</P>
+
+
+<!-- Section cell -->
+
+
+<P CLASS="section">
+ 2 Ecuaciones
+</P>
+
+
+<!-- Section cell -->
+
+
+<P CLASS="section">
+ 3 Resolución de ecuaciones con solve
+</P>
+
+
+<!-- Section cell -->
+
+
+<P CLASS="section">
+ 4 to_poly_solve
+</P>
+
+
+<!-- Section cell -->
+
+
+<P CLASS="section">
+ 5 Resolución numérica de ecuaciones
+</P>
+
+
+<!-- Subsection cell -->
+
+
+<P CLASS="subsect">
+  5.1 Raíces de polinomios
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+Para encontrar las raíces de un polinomio tenemos varias opciones<BR>
+<BR>
+allroots(polinomio) todas las raíces de un polinomio<BR>
+<BR>
+bfallroots(polinomio) todas las raíces de un polinomio con reales grandes
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i1) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+allroots(x^4+x+1);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="03-ecuaciones_img/03-ecuaciones_0.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i2) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+fpprec:20;
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="03-ecuaciones_img/03-ecuaciones_1.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i3) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+bfallroots(x^4+x+1);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="03-ecuaciones_img/03-ecuaciones_2.png">
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+La orden realroots(polinomio) nos da únicamente las solucines reales
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i4) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+realroots(x^5-2*x+1);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="03-ecuaciones_img/03-ecuaciones_3.png">
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+La cota del error cometido es, por defecto, 1.0*10^(-7). Dicho valor está<BR>
+controlado por el valor de la variable rootsepsilon.<BR>
+<BR>
+Se puede pasar como opción una cota del error distinta a la orden realroots<BR>
+
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i5) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+realroots(x^5-2*x+1,10^(-3)),numer;
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="03-ecuaciones_img/03-ecuaciones_4.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i6) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+realroots(x^5-2*x+1,10^(-10)),numer;
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="03-ecuaciones_img/03-ecuaciones_5.png">
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+La orden realroots guarda las multiplicidades de las raíces en la variable<BR>
+multiplicities
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i7) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+multiplicities;
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="03-ecuaciones_img/03-ecuaciones_6.png">
+</P>
+
+
+<!-- Subsection cell -->
+
+
+<P CLASS="subsect">
+  5.2 find_root<BR>
+
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+find_root(funcion,x,a,b)<BR>
+find_root(ecuacion,x,a,b)<BR>
+bf_find_root(funcion,x,a,b)<BR>
+bf_find_root(ecuacion,x,a,b)<BR>
+<BR>
+todas estas órdenes encuentran una solucion entre a y b de la función o de la ecuación. Con <BR>
+el prefijo bf_ se obtiene el mismo resultado, pero con números reales grandes.<BR>
+<BR>
+Cuando hay más de una solución, no se tiene control sobre cuál de ellas será el resultado<BR>
+que se obtenga.
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i8) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+define(f(x),exp(-x^2)+atan(x+1)-x);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="03-ecuaciones_img/03-ecuaciones_7.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i9) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+wxplot2d([f(x)],[x,-3,3]);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="03-ecuaciones_img/03-ecuaciones_8.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i10) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+find_root(f(x),x,0,3);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="03-ecuaciones_img/03-ecuaciones_9.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i11) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+bf_find_root(f(x),x,0,3);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="03-ecuaciones_img/03-ecuaciones_10.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+
+  </SPAN></TD>
+</TR></TABLE>
+
+</P>
+
+ <HR>
+ <SMALL> Created with <A HREF="http://wxmaxima.sourceforge.net/">wxMaxima</A>.</SMALL>
+
+ </BODY>
+</HTML>

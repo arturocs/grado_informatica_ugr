@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Ejemplo de Shaders Personalizados con Three.js</title>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="./libs/three.js"></script>
+    <script type="text/javascript" src="./libs/jquery-1.9.0.js"></script>
+    <script type="text/javascript" src="./libs/stats.js"></script>
+    <script type="text/javascript" src="./libs/dat.gui.js"></script>
+    <script type="text/javascript" src="./libs/TrackballControls.js"></script>
+    <script type="text/javascript" src="TheScene.js"></script>    
+    <script type="text/javascript" src="script.js"></script>    
+    
+    <!-- ************************************* -->
+    <!-- ******* Gouraud Vertex Shader ******* -->
+    <!-- ************************************* -->
+    
+    <script type="x-shader/x-vertex" id="vertexS-gouraud">
+// ------- Uniforms, se usan para un material Lambert
+uniform vec3 ambient;
+uniform vec3 diffuse;
+uniform vec3 specular;
+uniform float shininess;
+
+struct DirectionalLight {
+	vec3 direction;
+	vec3 color;
+	int shadow;
+	float shadowBias;
+	float shadowRadius;
+	vec2 shadowMapSize;
+};
+
+uniform vec3 ambientLightColor;
+uniform DirectionalLight directionalLights[NUM_DIR_LIGHTS];
+
+
+
+// ------- Salida para el fragment shader -------
+varying vec4 v_color;
+
+    void light(
+        in    vec3 normal,
+        in    vec3 lD,
+        in    vec3 lC,
+        inout vec4 diffuse,
+        inout vec4 specular,
+        in vec4 camera) {
+
+        // Normalized light direction and half vector
+        vec3 lightDirection = normalize(lD);
+        vec3 halfVector = normalize (lightDirection+normalize(vec3(camera)));
+
+        float nDotVP; // normal . light_direction
+        float nDotHV; // normal . light_half_vector
+        float pf; // power factor
+
+        nDotVP = max (0.0, dot(normal, lightDirection));
+        nDotHV = max (0.0, dot(normal, halfVector));
+
+        if (nDotHV == 0.0) {
+            pf = 0.0;
+        } else {
+            pf = pow (nDotHV, shininess);
+        }
+
+        diffuse += vec4(lC,1.0) * nDotVP;
+        specular += vec4(lC,1.0) * pf;
+    }
+
+void main() {
+  // Cálculo del vértice en coordenadas de dispositivo
+  vec4 mvPosition = modelViewMatrix * vec4 (position, 1.0);
+  gl_Position = projectionMatrix * mvPosition;
+
+  // Cálculo de la normal en coordenadas de vista
+  vec3 newNormal = normalize (vec3 (normalMatrix * normal));
+
+  // Cálculo del color por Lambert
+  vec4 amb  = vec4(ambientLightColor, 1.0);
+  vec4 diff = vec4 (0.0);
+  vec4 spec = vec4 (0.0);
+
+  for (int i = 0; i < NUM_DIR_LIGHTS; i++) {
+    light (newNormal, 
+        directionalLights[i].direction, directionalLights[i].color,  
+        diff, spec, -mvPosition);
+  }
+
+  v_color = min (amb*vec4(ambient,1.0) +
+        diff*vec4(diffuse,1.0) +
+        spec*vec4(specular,1.0), 
+        vec4 (1,1,1,1));
+
+}
+    </script>
+    
+    <!-- *************************************** -->
+    <!-- ******* Gouraud Fragment Shader ******* -->
+    <!-- *************************************** -->
+    
+    <script type="x-shader/x-fragment" id="fragmentS-gouraud">
+  // Entrada: Un color interpolado
+  varying vec4 v_color;
+  
+  // En el caso de Gouraud no son necesarios más cálculos
+  void main()
+  {
+    gl_FragColor = v_color;
+  }
+    </script>
+    
+    <!-- ************************************* -->
+    <!-- ******** Phong Vertex Shader ******** -->
+    <!-- ************************************* -->
+
+    <script type="x-shader/x-vertex" id="vertexS-phong">
+
+// ------- Salida para el fragment shader -------
+varying vec3 v_normal;
+varying vec4 v_position;
+
+void main() {
+  // Cálculo del vértice en coordenadas de dispositivo
+  v_position = modelViewMatrix * vec4 (position, 1.0);
+  gl_Position = projectionMatrix * v_position;
+
+  // Cálculo de la normal en coordenadas de vista
+  v_normal = normalize (vec3 (normalMatrix * normal));
+
+
+}
+    </script>
+    
+    <!-- ******************************************************** -->
+    <!-- ******** Phong Vertex Shader CON desplazamiento ******** -->
+    <!-- ******************************************************** -->
+
+    <script type="x-shader/x-vertex" id="vertexS-phongDisplacement">
+
+// ------- Salida para el fragment shader -------
+
+uniform float amplitude;
+attribute float displacement;
+
+varying vec3 v_normal;
+varying vec4 v_position;
+
+void main() {
+  vec3 newPosition = position + normal * displacement * amplitude;
+  v_position = modelViewMatrix * vec4 (newPosition, 1.0);
+  gl_Position = projectionMatrix * v_position;
+
+  // Cálculo de la normal en coordenadas de vista
+  v_normal = normalize (vec3 (normalMatrix * normal));
+
+
+}
+    </script>
+    
+    <!-- ************************************* -->
+    <!-- ******* Phong Fragment Shader ******* -->
+    <!-- ************************************* -->
+    
+    <script type="x-shader/x-fragment" id="fragmentS-phong">
+ 
+    varying vec3 v_normal;
+    varying vec4 v_position;
+  
+    uniform vec3 ambient;
+    uniform vec3 diffuse;
+    uniform vec3 specular;
+    uniform float shininess;
+
+    struct DirectionalLight {
+            vec3 direction;
+            vec3 color;
+            int shadow;
+            float shadowBias;
+            float shadowRadius;
+            vec2 shadowMapSize;
+    };
+
+    uniform DirectionalLight directionalLights[NUM_DIR_LIGHTS];
+    uniform vec3 ambientLightColor;
+    
+    void light(
+        in    vec3 normal,
+        in    vec3 lD,
+        in    vec3 lC,
+        inout vec4 diffuse,
+        inout vec4 specular,
+        in vec4 camera) {
+
+        // Normalized light direction and half vector
+        vec3 lightDirection = normalize(lD);
+        vec3 halfVector = normalize (lightDirection+normalize(vec3(camera)));
+
+        float nDotVP; // normal . light_direction
+        float nDotHV; // normal . light_half_vector
+        float pf; // power factor
+
+        nDotVP = max (0.0, dot(normal, lightDirection));
+        nDotHV = max (0.0, dot(normal, halfVector));
+
+        if (nDotHV == 0.0) {
+            pf = 0.0;
+        } else {
+            pf = pow (nDotHV, shininess);
+        }
+
+        diffuse += vec4(lC,1.0) * nDotVP;
+        specular += vec4(lC,1.0) * pf;
+    }
+
+  // En el caso de Gouraud no son necesarios más cálculos
+  void main()
+  {
+    vec3 newNormal = normalize (v_normal);
+  // Cálculo del color por Lambert
+  vec4 amb  = vec4(ambientLightColor, 1.0);
+  vec4 diff = vec4 (0.0);
+  vec4 spec = vec4 (0.0);
+
+  for (int i = 0; i < NUM_DIR_LIGHTS; i++) {
+    light (newNormal, 
+        directionalLights[i].direction, directionalLights[i].color,  
+        diff, spec, -v_position);
+  }
+
+  gl_FragColor = min (amb*vec4(ambient,1.0) +
+        diff*vec4(diffuse,1.0) +
+        spec*vec4(specular,1.0), 
+        vec4 (1,1,1,1));
+  }
+    </script>
+    
+    <!-- ************************************* -->
+    <!-- ******* Texture Vertex Shader ******* -->
+    <!-- ************************************* -->
+    
+    <script type="x-shader/x-vertex" id="vertexS-texture">
+
+// ------- Salida para el fragment shader -------
+varying vec2 v_texCoord;
+
+void main() {
+  // Cálculo del vértice en coordenadas de dispositivo
+  gl_Position = projectionMatrix * modelViewMatrix * vec4 (position, 1.0);
+
+  // Reenvío al fragment shader de las coordenadas de textura
+  v_texCoord = uv;
+}
+
+</script>
+
+    <!-- ************************************* -->
+    <!-- ******* Texture Vertex Shader ******* -->
+    <!-- ************************************* -->
+
+    <script type="x-shader/x-fragment" id="fragmentS-texture">
+    
+  // La textura
+  uniform sampler2D u_texture;
+
+  // Entrada: Unas coordenadas de textura interpoladas
+  varying vec2 v_texCoord;
+  
+  // En el caso de Gouraud no son necesarios más cálculos
+  void main()
+  {
+    gl_FragColor = vec4 (texture2D (u_texture, v_texCoord));
+  }
+
+  </script>
+  
+    <!-- ************************************* -->
+    <!-- ************ FIN Shaders ************ -->
+    <!-- ************************************* -->
+    
+    <style>
+        body{
+            margin: 0;
+            overflow: hidden; 
+        }
+    </style>
+</head>
+<body>
+
+<!-- Div which will show statistical information -->
+<div id="Stats-output">
+</div>
+
+<!-- Div which will show several messages -->
+<div style="position:absolute; left:100px; top:10px" id="Messages">
+</div>
+
+<!-- Div which will hold the Output -->
+<div id="WebGL-output">
+</div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+ssh -> secure shell
+sudo tasksel
+ssh ip
+/etc/ssh/sshd_config -> cambiamos la linea port a 22022
+systemctl restart sshd
+
+sed -> string editor
+sed s/'Port 22'/'Port 22022'/ -i /etc/ssh/sshd_config
+
+sshd viene por defecto en centos
+
+sed s/'#Port 22'/'Port 22022'/ -i /etc/ssh/sshd_config -> importante almohadilla
+
+systemctl restart sshd -> da error por selinux
+
+yum install policycoreutils-python
+semanage port -l | grep ssh
+
+que sintaxis usa semanage para mostrar un puerto? ssh_port_t
+
+semanage port -a -t ssh_port_t -p tcp 22022
+semanage gestioname los puertos y añademe al tipo de puerto ssh el puerto tcp 'puerto'
+
+firewall
+
+firewall-cmd --add-port=22022/tcp -> cambios temporales pero al momento
+firewall-cmd --permanent --add-port=22022/tcp -> cambios permanentes pero no los hace al instante, requiere un reload
+
+firewall --reload -> aplica los cambios del comando superior
+
+
+firewall ubuntu
+
+ufw enable
+ufw status
+ufw allow 22022
+
+bloquear root
+
+/etc/ssh/sshd_config -> PermitRootLogin no
+systemctl restart sshd
+
+acceder sin contraseña
+
+ssh-keygen -i file.pub -> genera dos archivos clave publica y privada
+ssh-copy-id -p 22022 usuario@ip
+
+fail2ban

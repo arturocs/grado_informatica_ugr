@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Cookies</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-control" content="no-cache, no-store, must-revalidate, max-age=0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="http://studia3.elka.pw.edu.pl/favicon.ico">
+<link rel="stylesheet" href="/css/studia3.css">
+</head>
+<body class="tlo" onclick='studia_keep_logged()'>
+<div data-role='page'><!-- page beg -->
+<h1>WEiTI Cookies</h1>
+<p align='justify'>This server uses cookies for user authorization.
+To use this server You have to agree to
+save cookies in your browser.
+More information can be found in:
+<a href="/EN/help/cookies.html">cookies.html</a></p>
+<form method='POST'>
+<input type='submit' name='cookie_ok' value='Accept'>
+<input type='submit' name='cookie_no' value='Decline'>
+</form>
+</div><!-- page_tabs end -->
+<div data-role='footer' id='page_tail'>
+  <div id='page_tail_lbl'>
+    Serwer STUDIA3 WEiTI
+  </div>
+  <div id='page_tail_rem'>
+    Uwagi: <a href='mailto:studia3@elka.pw.edu.pl'>
+      studia3@elka.pw.edu.pl</a>
+  </div>
+  <div id='page_tail_time'>
+    2019.10.15 12:31.45
+  </div>
+  <div style='clear: both;'></div>
+</div>
+<script type='text/javascript' language='javascript'>
+$(document).ready(function() {
+  studia_keep_logged();
+});
+studia_session_time_url = '/en/19Z/Time/login/';
+studia_auto_close_url = '/en/19Z/-/close/';
+studia_xid = '';
+studia_popup = 'You have been logged out.\nTo enable login page to appear automatically\nYou have to enable in your browser \nopening popup windows by this server.';
+studia_logout = 'You have been logged out.';
+studia_notlogged = 'Not logged';
+setInterval( function() { studia_step_session_timer(); },  1000 )
+</script>
+</div><!-- page end -->
+</body>
+</html>

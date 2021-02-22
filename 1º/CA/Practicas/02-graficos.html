@@ -1,0 +1,249 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+ <HEAD>
+  <TITLE>02-graficos</TITLE>
+  <META NAME="generator" CONTENT="wxMaxima">
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+  <STYLE TYPE="text/css">
+body {
+  background-color: rgb(255,255,255);
+}
+.input {
+  color: rgb(0,0,255);
+}
+.comment {
+  color: rgb(0,0,0);
+  background-color: rgb(255,255,255);
+  padding: 2mm;
+}
+.image {
+  color: rgb(0,0,0);
+  padding: 2mm;
+}
+.section {
+  color: rgb(0,0,0);
+  font-size: 1.5em;
+  padding: 2mm;
+}
+.subsect {
+  color: rgb(0,0,0);
+  font-size: 1.2em;
+  padding: 2mm;
+}
+.title {
+  color: rgb(0,0,0);
+  font-size: 2em;
+  padding: 2mm;
+}
+.prompt {
+  color: rgb(255,0,0);
+}
+table {
+  border: 0px;
+}
+td {
+  vertical-align: top;
+  padding: 1mm;
+}
+  </STYLE>
+ </HEAD>
+ <BODY>
+
+<!---------------------------------------------------------->
+<!--          Created with wxMaxima version 14.12.1         -->
+<!---------------------------------------------------------->
+
+
+<!-- Title cell -->
+
+
+<P CLASS="title">
+Gráficos con Maxima
+</P>
+
+
+<!-- Section cell -->
+
+
+<P CLASS="section">
+ 1 Funciones
+</P>
+
+
+<!-- Section cell -->
+
+
+<P CLASS="section">
+ 2 Gráficos con plot2d
+</P>
+
+
+<!-- Section cell -->
+
+
+<P CLASS="section">
+ 3 Gráficos con draw
+</P>
+
+
+<!-- Section cell -->
+
+
+<P CLASS="section">
+ 4 Animaciones
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+Una animacion es un grafico que varia con un parametro. 
+</P>
+
+
+<!-- Subsection cell -->
+
+
+<P CLASS="subsect">
+  4.1 Animaciones con plot
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+with_slider(<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;parametro,<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;valores del parametro,<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;grafico que depende del parametro<BR>
+);
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i1) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+with_slider(<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;k,<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;[1,2,3,4,5,6,7,8,9,10],<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;x^(k/10),[x,0,3],[y,0,2] /* esta linea se pasa a la orden plot2d */<BR>
+);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="02-graficos_img/02-graficos_0.png">
+</P>
+
+
+<!-- Subsection cell -->
+
+
+<P CLASS="subsect">
+  4.2 Animaciones con draw2d
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+with_slider_draw(<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;parametro,<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;valores del parametro,<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;grafico para draw2d que depende del parametro<BR>
+);
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+Podemos ir aumentando el dominio donde dibujamos una funcion
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i2) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+with_slider_draw(<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;k,<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;makelist(2*%pi*k/30,k,1,30),<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;explicit(cos(x),x,0,k),<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;xrange = [0,2*%pi],<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;yrange = [-1,1],<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;user_preamble = "set size ratio 0.3",<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;title = "la funcion coseno"<BR>
+);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="02-graficos_img/02-graficos_1.png">
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+Podemos añadir varias objetos a una misma animacion
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i3) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+with_slider_draw(<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;k,<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;makelist(2*%pi*k/40,k,1,40),<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;color = blue,<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;key = "seno",<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;explicit(sin(x),x,0,k),<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;color = red, <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;key = "coseno",<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;parametric(cos(x),x,x,0,k),<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;key = "",<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;head_length = 0.1,<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;head_angle = 25,<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;color = purple,<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;vector([0,0],[cos(k),sin(k)]),<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;color = red,<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;vector([0,0],[cos(k),0]),<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;color = blue,<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;vector([0,0],[0,sin(k)]),<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;color = green,<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;transparent = true,<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;ellipse(0,0,1,1,0,360*k/(2*%pi)),<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;xrange = [-1,2*%pi],<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;yrange = [-1,2*%pi],<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;user_preamble = "set size ratio 1;set zeroaxis",<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;title = "la funcion coseno y la funcion seno"<BR>
+);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="02-graficos_img/02-graficos_2.png">
+</P>
+
+ <HR>
+ <SMALL> Created with <A HREF="http://wxmaxima.sourceforge.net/">wxMaxima</A>.</SMALL>
+
+ </BODY>
+</HTML>

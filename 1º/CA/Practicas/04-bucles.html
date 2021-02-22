@@ -1,0 +1,851 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<HTML>
+ <HEAD>
+  <TITLE>04-bucles</TITLE>
+  <META NAME="generator" CONTENT="wxMaxima">
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+  <STYLE TYPE="text/css">
+body {
+  background-color: rgb(255,255,255);
+}
+.input {
+  color: rgb(0,0,255);
+}
+.comment {
+  color: rgb(0,0,0);
+  background-color: rgb(255,255,255);
+  padding: 2mm;
+}
+.image {
+  color: rgb(0,0,0);
+  padding: 2mm;
+}
+.section {
+  color: rgb(0,0,0);
+  font-size: 1.5em;
+  padding: 2mm;
+}
+.subsect {
+  color: rgb(0,0,0);
+  font-size: 1.2em;
+  padding: 2mm;
+}
+.title {
+  color: rgb(0,0,0);
+  font-size: 2em;
+  padding: 2mm;
+}
+.prompt {
+  color: rgb(255,0,0);
+}
+table {
+  border: 0px;
+}
+td {
+  vertical-align: top;
+  padding: 1mm;
+}
+  </STYLE>
+ </HEAD>
+ <BODY>
+
+<!---------------------------------------------------------->
+<!--          Created with wxMaxima version 14.12.1         -->
+<!---------------------------------------------------------->
+
+
+<!-- Title cell -->
+
+
+<P CLASS="title">
+Resolución numérica de ecuaciones
+</P>
+
+
+<!-- Section cell -->
+
+
+<P CLASS="section">
+ 1 Números y errores
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+Los números que maneja Maxima pueden tener precisión <BR>
+arbitraria, sqrt(2) o %pi, lo que significa que podemos <BR>
+calcular tantos decimales como queramos
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i1) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+fpprec:20;<BR>
+bfloat(%pi),numer;<BR>
+bfloat(sqrt(2)),numer;
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="04-bucles_img/04-bucles_0.png">
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+O trabajar con la precisión por defecto
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i4) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+float(%pi);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="04-bucles_img/04-bucles_1.png">
+</P>
+
+
+<!-- Subsection cell -->
+
+
+<P CLASS="subsect">
+  1.1 Errores
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+Hay varias fuentes de errores.
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+Errores de redondeo tanto por disminuir la precisión
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i5) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+fpprec:4;<BR>
+bfloat(1.1);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="04-bucles_img/04-bucles_2.png">
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+como por aumentarla
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i7) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+fpprec:20;<BR>
+bfloat(1.1);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="04-bucles_img/04-bucles_3.png">
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+Si nos salimos del rango de números que se puede usar obtenemos<BR>
+resultados, cuanto menos, curiosos:
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i10) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+h:1.0*10^(-18);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="04-bucles_img/04-bucles_4.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i9) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+is(1.0=1+h);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="04-bucles_img/04-bucles_5.png">
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+Cuando operamos con números parecidos, su diferencia produce<BR>
+el mismo efecto
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i11) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+a:12345.89;<BR>
+b:12345.88;<BR>
+(a-b)*(a+b);<BR>
+a^2-b^2;
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="04-bucles_img/04-bucles_6.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i15) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+(100*a)^2-(100*b)^2;
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="04-bucles_img/04-bucles_7.png">
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+¿Cuál crees que la respuesta correcta?
+</P>
+
+
+<!-- Section cell -->
+
+
+<P CLASS="section">
+ 2 Programación
+</P>
+
+
+<!-- Subsection cell -->
+
+
+<P CLASS="subsect">
+  2.1 Un "programa básico
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+(expr1,expr2,...) evalua una tras otra las expresiones y devuelve la última
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i16) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+(a:2,b:4,a+b);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="04-bucles_img/04-bucles_8.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i17) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+a;
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="04-bucles_img/04-bucles_9.png">
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+Si queremos salirnos en algún punto intermedio usamos bloques. Además<BR>
+permiten usar variables y locales que son locales a dicho bloque, esto<BR>
+es, su valor no se ve afectado ni afecta al resto de la sesión.
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+block([variables locales],local(funciones),expr1,expr2,...)
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i18) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+block([a:3,b:4],a+b);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="04-bucles_img/04-bucles_10.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i19) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+a;
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="04-bucles_img/04-bucles_11.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i20) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+block([a:3,b:4], /* variable locales */<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;local(f,g), /* funciones locales al bloque */<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;define(f(x),x^2),<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;define(g(x),x^3),<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;f(a+b)<BR>
+);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="04-bucles_img/04-bucles_12.png">
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+Para salirnos en algún punto intermedio podemos usa<BR>
+<BR>
+return() devuelve un valor y sale<BR>
+
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i21) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+block(a:2,b:4, return(a),a+b);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="04-bucles_img/04-bucles_13.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i22) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+a;
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="04-bucles_img/04-bucles_14.png">
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+Si sólo queremos mostrar un valor intermedio y continuar podemos <BR>
+usar print o disp para mostrar algo por pantalla
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i23) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+block(a:2,b:4,print(a),a+b);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="04-bucles_img/04-bucles_15.png">
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+error() devuelve un mensaje de error y sale
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i24) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+loga(x,a):=block(<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;if a<=0 then error("La base debe ser un numero positivo"),<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;if a=1 then error("La base no puede ser 1"),<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;log(x)/log(a)<BR>
+);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="04-bucles_img/04-bucles_16.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i25) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+loga(10,5);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="04-bucles_img/04-bucles_17.png">
+</P>
+
+
+<!-- Subsection cell -->
+
+
+<P CLASS="subsect">
+  2.2 Funciones con parámetros opcionales
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+funcion(x1,x2,...,[var]) permite definir una función con variables<BR>
+obligatorias (x1,x2,...) y opcionales (var)
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i27) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+logb(x,[a]):=block(<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;if length(a)=0 then return(log(x)),<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;if length(a)>=2 then error("Solo una base"),<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;if length(a)=1 then loga(x,a[1])<BR>
+);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="04-bucles_img/04-bucles_18.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i26) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+logb(10,2,3);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="04-bucles_img/04-bucles_19.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i28) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+logb(10,2);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="04-bucles_img/04-bucles_20.png">
+</P>
+
+
+<!-- Subsection cell -->
+
+
+<P CLASS="subsect">
+  2.3 Bucles
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+for i:valor_inicial thru valor_final step pasos do ...<BR>
+<BR>
+while condicion do ...<BR>
+<BR>
+unless condicion do ...
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+La suma de los cien primeros naturales
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i32) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+suma:0$<BR>
+for i:1 thru 100 step 1 do(<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;suma:suma+i<BR>
+)$<BR>
+suma;
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="04-bucles_img/04-bucles_21.png">
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+La siguiente función calcula la suma de los <BR>
+naturales entre n y m. Observa que no se comprueba<BR>
+que n<m lo cuál puede dar lugar a errores. Añade<BR>
+tu un condicional que se encargue de ello.
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+-->  
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+suma_entre(n,m):=block(<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[suma:0], <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for i:n thru m do suma:suma+i, <BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;suma);
+  </SPAN></TD>
+</TR></TABLE>
+
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i35) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+suma_entre(400,450);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="04-bucles_img/04-bucles_22.png">
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+Media aritmética de los cuadrados de los primeros mil naturales
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i36) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+suma:0;<BR>
+for i:1 thru 1000 do (<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;suma:suma+i^2<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;);<BR>
+suma/1000,numer;
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="04-bucles_img/04-bucles_23.png">
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+La siguiente función calcula la media de los cuadrados<BR>
+de los primeros n naturales
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i39) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+media_cuad(n):=block(<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;[resultado:0],<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;for i:1 thru n do resultado:resultado+i^2,<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;resultado/n<BR>
+);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="04-bucles_img/04-bucles_24.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i40) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+media_cuad(1000);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="04-bucles_img/04-bucles_25.png">
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+La función factorial
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i41) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+fact(n):=block([f:1],for k:1 thru n do f:f*k,f);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="04-bucles_img/04-bucles_26.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i42) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+fact(3);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="04-bucles_img/04-bucles_27.png">
+</P>
+
+
+<!-- Code cell -->
+
+
+<P><TABLE><TR><TD>
+  <SPAN CLASS="prompt">
+(%i43) 
+  </SPAN></TD>
+  <TD><SPAN CLASS="input">
+fact(8);
+  </SPAN></TD>
+</TR></TABLE>
+  <BR>
+  <IMG ALT="Result" SRC="04-bucles_img/04-bucles_28.png">
+</P>
+
+
+<!-- Subsection cell -->
+
+
+<P CLASS="subsect">
+  2.4 Condicionales
+</P>
+
+
+<!-- Text cell -->
+
+
+<P CLASS="comment">
+if condicion then (...) else (...)<BR>
+<BR>
+La segunda parte, else, es opcional
+</P>
+
+
+<!-- Section cell -->
+
+
+<P CLASS="section">
+ 3 Método de bisección
+</P>
+
+
+<!-- Section cell -->
+
+
+<P CLASS="section">
+ 4 Métodos de iteración funcional
+</P>
+
+ <HR>
+ <SMALL> Created with <A HREF="http://wxmaxima.sourceforge.net/">wxMaxima</A>.</SMALL>
+
+ </BODY>
+</HTML>

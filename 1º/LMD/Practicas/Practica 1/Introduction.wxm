@@ -1,0 +1,584 @@
+/* [wxMaxima batch file version 1] [ DO NOT EDIT BY HAND! ]*/
+/* [ Created with wxMaxima version 11.08.0 ] */
+
+/* [wxMaxima: title   start ]
+Tutorial - Introducción a Maxima :)
+   [wxMaxima: title   end   ] */
+
+/* [wxMaxima: comment start ]
+¡Bienvenido a wxMaxima :)! En este tutorial introductorio aprenderemos
+lo (muy) básico de wxMaxima y Maxima. Maxima es un Sistema de Álgebra por 
+Computador ("Computar Algebra System", CAS, por sus siglas en inglés) 
+similar a sistemas como Mathematica, Maple y otros. Maxima, sin embargo, 
+es una aplicación en línea de comandos, lo cual dificulta un poco su uso
+si no se está familizarizado con ello. Para hacer nuestro uso de Maxima 
+más simple y amigable, contamos con wxMaxima, que es una Interfaz Gráfica 
+de Usuario ("Graphical User Interface", GUI, por sus siglas en inglés). 
+(Para consultar las versiones de Maxima y wxMaxima que estamos usando, 
+podemos seguir la ruta "Ayuda --> Acerca de" en el menú superior).
+
+Maxima, además, es Software Libre (su codigo fuente se distribuye bajo
+la licencia GPL - "General Public License").  
+
+¡Comencemos con algunos cálculos simples! Abajo aparece una celda (cell)
+de entrada (input) con una simple suma. Colocamos el cursor en ella y
+presionamos SHIFT-ENTER para evaluarla.
+
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: section start ]
+Aritmética básica.
+   [wxMaxima: section end   ] */
+
+/* [wxMaxima: input   start ] */
+1+1;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: comment start ]
+Si no obtuvimos ningún error, Maxima está configurado apropiadamente.
+Si se produjo algún error, deberíamos examinar la configuración de wxMaxima
+o visitar la página web de wxMaxima (http://wxmaxima.sourceforge.net/)
+para buscar instrucciones sobre cómo configurar wxMaxima y Maxima adecuadamente.
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: comment start ]
+NOTA: Para obtener información acerca de alguna función en Maxima, podemos 
+seleccionarla con el curso y presionar fn + f1. De esta manera se mostrará 
+inmediatamente la información sobre la función correspondiente disponible en
+el menú Ayuda de Maxima. También podemos acceder a dicha información desde 
+el menú superior, siguiendo "Ayuda --> Ayuda de Maxima --> Index (e introduciendo
+en la casilla la función o comando en cuestión)".
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: comment start ]
+Para las operaciones aritméticas y funciones básicas los símbolos empleados en 
+wxMaxima son los siguientes:
+
+suma                           +
+
+diferencia                     -
+
+producto                       * (también puede usarse . precedido y pospuesto de un espacio)
+
+cociente                       /
+
+potencia                       ^ (también puede usarse **)
+
+raíz cuadrada                  sqrt()
+
+multiplicación matricial       .
+
+factorial                      ! (también puede usarse la función factorial())
+
+módulo                         mod   
+
+máximo común divisor           gcd
+
+mínimo común múltiplo          lcm  
+
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: input   start ] */
+5!;
+% * 10;
+%o1 * 100;
+1 / 3;
+1.0 / 3.0;
+2**10;
+2^10;
+sqrt(2);
+factorial(5);
+mod(18,4);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: comment start ]
+En la celda de entrada de arriba, enviamos 10 "líneas" a Maxima. 
+
+(1) Cada línea debe terminar con un ";" o un "$". 
+En caso de que la línea termine en ";", Maxima mostrará los resultados 
+de la línea, mientras que los resultados de las líneas terminadas en "$" 
+serán omitidos. Por tanto, "$" es muy útil cuando se realizan cálculos 
+largos de los que no es interesante ver el resultado. 
+
+(2) Nótese además que los resultados de "1/3" y "1.0/3.0" difieren. Esto es
+debido a que Maxima, a diferencia de paquetes numéricos como (Matlab, Octave, 
+Scilab, etc.), trata de conservar los cálculos exactos ---no evalúa expresiones 
+como 1/3 o sqrt(2) a menos que se le pida hacerlo. En "1.0/3.0" se usaron números 
+en punto flotante, luego Maxima no dejó la expresión sin evaluar.
+Podemos, no obstante, decirle a Maxima que queremos una aproximación
+decimal de una expresión. Evaluemos la celda de abajo y observemos los resultados.
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: input   start ] */
+sqrt(2 * %pi);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+sqrt(3* %phi);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: comment start ]
+En la línea "float(%);" usamos el símbolo "%". Este símbolo guarda el
+resultado de la última línea evaluada. Los símbolos enumerados "%o1",
+"%o2",... guardan los resultados que aparecen cuando las celdas de
+entrada son evaluadas. 
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: input   start ] */
+float(%o12);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: comment start ]
+Cuando el resultado de un cálculo es largo, Maxima omitirá algunos de sus
+dígitos, informando de cuántos están siendo omitidos:
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: input   start ] */
+2^1000;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: comment start ]
+Si estamos interesados en visualizar la cifra completa, podemos usar
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: input   start ] */
+set_display('ascii);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+2^1000;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: comment start ]
+Como vemos, de esta manera se muestra la cifra completa 'partiéndola' 
+mediante el símbolo \. Para evitar esto, podemos usar
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: input   start ] */
+set_display('none);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+2^1000;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: comment start ]
+Para volver al modo en que Maxima omite dígitos de cifras largas, usamos
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: input   start ] */
+set_display('xml);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+2^1000;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: section start ]
+Conjuntos.
+   [wxMaxima: section end   ] */
+
+/* [wxMaxima: comment start ]
+En Maxima podemos definir conjuntos usando llaves ({}) o  través de la función set:
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: input   start ] */
+A:{1,2,3,4,5};
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+B:set(1,2,3,4);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: comment start ]
+Podemos preguntarnos muchas cosas acerca de los conjuntos definidos. Por ejemplo:
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: comment start ]
+Pertenencia de un elemento a un conjunto:
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: input   start ] */
+elementp(1,A);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+elementp(7,A);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: comment start ]
+Comparación de conjuntos:
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: input   start ] */
+is(A=B);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+is(A=A);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: comment start ]
+Contención de un conjunto en otro (¿es B subconjunto de A?):
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: input   start ] */
+subsetp(B,A);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: comment start ]
+Unión de conjuntos:
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: input   start ] */
+union(A,B);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+C:{21,105};
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+union(A,B,C);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: comment start ]
+Intersección de conjuntos:
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: input   start ] */
+intersection(A,B);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: comment start ]
+Complemento de un conjunto en otro:
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: input   start ] */
+setdifference(A,B);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: comment start ]
+Conjunto "partes de un conjunto":
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: input   start ] */
+powerset(B);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: comment start ]
+Nótese la notación {} que usa wxMaxima para el conjunto vacío.
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: comment start ]
+Producto cartesiano:
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: input   start ] */
+cartesian_product(A,B);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: comment start ]
+Cardinalidad (número de elementos) de un conjunto:
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: input   start ] */
+cardinality(%);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: comment start ]
+Podemos seleccionar el subconjunto de elementos de un conjunto que verifican una propiedad booleana:
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: input   start ] */
+subset(A,primep);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+f(x):=is(x>3);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+subset(A,f);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: section start ]
+Listas.
+   [wxMaxima: section end   ] */
+
+/* [wxMaxima: comment start ]
+Muy frecuentemente, trabajaremos con listas. En Maxima podemos definir listas de 
+diversas formas. Una es a través del uso de corchetes ([]):
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: input   start ] */
+L:[1,2,3,4,5];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: comment start ]
+Nota que L es una lista y que, pese a su aparente similitud, es una estructura 
+distinta que A, que es un conjunto. Por defecto, en un conjunto 'no hay orden', 
+en una lista sí. Observemos lo siguiente:
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: input   start ] */
+A:{1,2,3,4,5};
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+C:{2,4,3,1,5};
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+is(A=C);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+is(A=L);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: comment start ]
+El orden importa en listas:
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: input   start ] */
+M:[2,4,3,1,5];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+is(L=M);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: comment start ]
+Podemos llamar a los elementos de una lista:
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: input   start ] */
+L[1];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+M[2];
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: comment start ]
+También podemos definir listas usando la orden makelist:
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: input   start ] */
+makelist(i,i,1,30);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+makelist(2^k,k,0,20);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: comment start ]
+Podemos convertir listas en conjuntos con la orden setify, y también transformar 
+conjuntos en listas usando listify:
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: input   start ] */
+setify(L);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+listify(A);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+is(A=L);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+is(A=setify(L));
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: section start ]
+Estructuras de control.
+   [wxMaxima: section end   ] */
+
+/* [wxMaxima: comment start ]
+"for":
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: input   start ] */
+for i:1 thru 10 do display(i);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+for i:1 thru 10 do print(i);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: comment start ]
+Por defecto, 'el paso' (esto es, el valor del contador en el bucle for), es 1. 
+Podemos variar 'el paso' ('step' en inglés) como sigue:
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: input   start ] */
+for i:1 thru 10 step 3 do display(i);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: comment start ]
+Con 'while', un cuerpo de operaciones se itera 'mientras' una condición 
+(aritmética, booleana,...) sea cierta.
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: input   start ] */
+s:0$
+for i:1 while i<=3 do s:s+i;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+s;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+for n:0 while primep(2^n+1)=true do print(n);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: comment start ]
+Podemos condicionar:
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: input   start ] */
+B0:1;
+B1:2;
+B[n]:=if n=0 then B0 else if n>1 then 2*B[n-1]+B[n-2] else B1;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: comment start ]
+"Block":
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: input   start ] */
+Prime(n,m):=block([X,Y,i],
+X:setify(makelist(i,i,n,m)),
+Y:subset(X,primep))$
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+Prime(15,27);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: comment start ]
+Nótese el uso de variables *locales* en la función Prime. Variables locales son aquellas a las que 
+se le otorga un ámbito local. Tales variables sólo pueden accederse desde la función o bloque de 
+instrucciones donde se declaran. Se contraponen a las variables *globales*, accesible en todos los 
+ámbitos de un programa informático. Una variable global puede ser modificada en cualquier parte del 
+programa y cualquier parte del programa depende de ella. Es por ello que han de ser utilizadas con cuidado,
+dado el riesgo que conlleva su uso al tener un potencial ilimitado para crear dependencias.
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: input   start ] */
+Noprime(m,n):=block([X,Y,i],
+if is(m<=n)=true then m:m else (aux:m,m:n,n:aux),
+X:setify(makelist(i,i,m,n)),
+Y:subset(X,primep),
+Z:setdifference(X,Y),
+return(Z)
+)$
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+Noprime(15,27);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: section start ]
+Asignaciones y definiciones.
+   [wxMaxima: section end   ] */
+
+/* [wxMaxima: comment start ]
+Asignemos a la variable 'a' el valor 'b':
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: input   start ] */
+a:b;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: comment start ]
+Si ahora asignamos a 'b' el  valor 7,
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: input   start ] */
+b:7;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: comment start ]
+Observamos que al preguntar a Maxima por la variable 'a', ésta no ha 
+modificado su valor:
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: input   start ] */
+a;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: comment start ]
+Esto es, no ha tomado el valor 7 que asignamos a 'b'. Si asignamos a una nueva 
+variable 'c' una expresión involucrando a 'a' y 'b',
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: input   start ] */
+c:2*a+b;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: comment start ]
+Notamos cómo Maxima deja 'a' intacta.
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: comment start ]
+EJERCICIO: Buscar información sobre "evaluación ansiosa" (eager evaluation) y 
+"evaluación perezosa" (lazy evaluation).
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: comment start ]
+Observemos también la diferencia entre asignación y definición. La siguiente es una 
+asignación a la variable 'a' de un número natural aleatorio entre 0 y 10.
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: input   start ] */
+a:random(11);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a;
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: comment start ]
+Lo siguiente define una función sin argumento. Se trata de una función 
+que asigna un número natural aleatorio entre 0 y 10.
+   [wxMaxima: comment end   ] */
+
+/* [wxMaxima: input   start ] */
+a():=random(11);
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a();
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: input   start ] */
+a();
+/* [wxMaxima: input   end   ] */
+
+/* [wxMaxima: section start ]
+Ejercicios propuestos.
+   [wxMaxima: section end   ] */
+
+/* [wxMaxima: comment start ]
+
+(1) Implementar una función "diophantic" que tenga por entrada
+tres números enteros "a, b, c" y por salida las soluciones, en su caso, 
+de la ecuación diofántica ax + by = c. 
+
+(2) Implementar una función "congruence" que tenga por entrada tres 
+números enteros "a, b, m" y por salida las soluciones, en su caso,
+de la ecuación en congruencia ax 

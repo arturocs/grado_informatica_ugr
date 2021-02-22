@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Esquivar</title>
+	<script src="../js/aframe.min.js"></script>
+</head>
+
+<body>
+	<script src="../js/esquivar.js"></script>
+	<a-scene>
+		<a-assets>
+			<img id="anomalia" src="../skybox/anomalia.jpg">
+		</a-assets>
+		<a-sky id="skybox" color="black"></a-sky>
+		<a-sky id="skybox2" src="../skybox/esquivar.jpg" rotation="0 -50 0" visible="false"></a-sky>
+
+		<a-entity id="cuerpo" position="0 0 0" avanzar>
+			<a-camera id="camera" look-controls wasd-controls-enabled="false">
+				<a-text id="txt" value="Esquiva los obstaculos" position="-0.5 0 -1.5"></a-text>
+				<a-entity position="0 0 -5" geometry="primitive: ring; radiusInner: 0.13; radiusOuter: 0.2;" material="color: black; shader: flat"
+				    cursor="fuse: true">
+				</a-entity>
+			</a-camera>
+		</a-entity>
+		<a-entity id="modelos" visible="false">
+			<a-sphere id="bola1" position="6 1.25 -7" radius="5" material="src: #anomalia" matar="radio: 5"></a-sphere>
+			<a-sphere id="bola2" position="-4 1.25 -15" radius="5" material="src: #anomalia" matar="radio: 5"></a-sphere>
+			<a-sphere id="bola3" position="5 1.25 5.5" radius="5" material="src: #anomalia" matar="radio: 5"></a-sphere>
+			<a-sphere id="bola4" position="-7 1.25 -3" radius="5" material="src: #anomalia" matar="radio: 5"></a-sphere>
+			<a-sphere id="bola5" position="7 1.25 -16" radius="5" material="src: #anomalia" matar="radio: 5"></a-sphere>
+			<a-torus id="meta" color="green" radius="5" radius-tubular="0.1" position="0 0 -30"></a-torus>
+		</a-entity>
+
+	</a-scene>
+	<script>
+		var skybox = document.querySelector("#skybox")
+		var skybox2 = document.querySelector("#skybox2")
+		var txt = document.querySelector("#txt")
+		var cuerpo = document.querySelector("#cuerpo")
+
+		var texto = setInterval(function () {
+			txt.setAttribute("visible", "false")
+			skybox.setAttribute("visible", "false")
+			skybox2.setAttribute("visible", "true")
+			cuerpo.setAttribute("avanzar", "activo: true")
+			var modelos = document.querySelector("#modelos")
+			modelos.setAttribute("visible", "true")
+			clearInterval(texto)
+		}, 2500);
+	</script>
+</body>
+
+</html>

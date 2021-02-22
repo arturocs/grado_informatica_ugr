@@ -1,0 +1,4 @@
+#!/bin/sh
+
+g++ dns1_client.c -O2 dns1_clnt.c dns1_xdr.c -o dns1_client -lnsl -fpermissive
+g++ dns1_server.c -O2 dns1_svc.c dns1_xdr.c -o dns1_server -lnsl -fpermissive

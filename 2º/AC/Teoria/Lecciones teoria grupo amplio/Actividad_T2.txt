@@ -1,0 +1,19 @@
+1) Descripción del algoritmo
+    1.1 Expresión matemática (si la tiene) o un ejemplo de ejecución para un tamaño de problema pequeño.
+    1.2 Código secuencial
+2) Paralelización
+    1.1 Grafo de tareas para un tamaño de problema pequeño con asignación a flujo de instrucciones
+    1.2 Código paralelo 
+3) Evaluación de prestaciones
+    1.1 Descripción de la arquitectura
+      lscpu
+      lstopo (si está instalado)
+    1.2 Escalabilidad fuerte 
+      Tabla de tiempos de ejecución y ganancias en función del nº de procesadores
+      Representar tiempo de ejecución paralelo y ganancia en función del nº de procesadores
+
+Entrega: Un zip en SWAD (Arhivos>Trabajos>Grupo grande>Tema2) para cada algoritmo con:
+    pdf  (apartados 1, 2, 3)
+    Código fuente
+    Script utilizado para obtener los tiempos
+    Hoja de cálculo o código Python usado para obtener las gráficas
