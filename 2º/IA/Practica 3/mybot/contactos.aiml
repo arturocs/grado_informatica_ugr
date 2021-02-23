@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+
+<category>
+<pattern>
+  ^ agregar ^ contacto
+</pattern>
+<template>
+  oki, dime el apellido 
+  <set name=“topic”>contacto</set>
+</template>
+</category>
+
+<topic name=“contacto”>
+<category>
+<pattern> *</pattern>
+<template>
+    <set name="nombre"><star index="1"/></set>
+    <get name="nombre"/> es un bonito nombre.
+
+
+ <condition name="nombre">
+        <li value="unknown">kk</li>
+        <li>Tu nombre es <get name="nombre"/></li>
+    </condition>
+<!-- </template> -->
+
+<!-- regla 1<template> -->
+<addtomap>
+<name>telefono</name>
+<key><get name="nombre"/></key>
+<value>111222333</value>
+</addtomap>
+listo
+</template>
+</category>
+</topic>
+
+</aiml> 
