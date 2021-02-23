@@ -228,7 +228,7 @@ function render() {
 }
 
 /// The main function
-$(function () {
+window.onload = function () {
 	// create a render and set the size
 	renderer = createRenderer();
 	// add the output of the renderer to the html element
@@ -244,5 +244,5 @@ $(function () {
 	createGUI(true);
 
 	render();
-});
+}
 

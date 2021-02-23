@@ -5,34 +5,36 @@
 <head>
     <title>Grúa</title>
     <meta charset="utf-8">
-    <script type="text/javascript" src="../libs/three.js"></script>
-    <script type="text/javascript" src="../libs/jquery-1.9.0.js"></script>
-    <script type="text/javascript" src="../libs/stats.js"></script>
-    <script type="text/javascript" src="../libs/dat.gui.js"></script>
-    <script type="text/javascript" src="../libs/TrackballControls.js"></script>
-    <script type="text/javascript" src="Ground.js"></script>    
-    <script type="text/javascript" src="Crane.js"></script>    
-    <script type="text/javascript" src="TheScene.js"></script>    
-    <script type="text/javascript" src="script.js"></script>    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/87/three.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.0/jquery.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/r11/Stats.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5.1/dat.gui.js"></script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/mrdoob/three.js/40b18a6be690497568ed84fb0542ef9a1db330f3/examples/js/controls/TrackballControls.js"></script>
+    <script type="text/javascript" src="Ground.js"></script>
+    <script type="text/javascript" src="Crane.js"></script>
+    <script type="text/javascript" src="TheScene.js"></script>
+    <script type="text/javascript" src="script.js"></script>
     <style>
-        body{
+        body {
             margin: 0;
-            overflow: hidden; 
+            overflow: hidden;
         }
     </style>
 </head>
+
 <body>
 
-<!-- Div which will show statistical information -->
-<div id="Stats-output">
-</div>
+    <!-- Div which will show statistical information -->
+    <div id="Stats-output">
+    </div>
 
-<!-- Div which will show several messages -->
-<div style="position:absolute; left:100px; top:10px" id="Messages">
-</div>
+    <!-- Div which will show several messages -->
+    <div style="position:absolute; left:100px; top:10px" id="Messages">
+    </div>
 
-<!-- Div which will hold the Output -->
-<div id="WebGL-output">
-</div>
+    <!-- Div which will hold the Output -->
+    <div id="WebGL-output">
+    </div>
 </body>
+
 </html>
